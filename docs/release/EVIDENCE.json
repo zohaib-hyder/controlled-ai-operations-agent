@@ -1,0 +1,1642 @@
+{
+  "phase": 12,
+  "verdict": "PARTIAL",
+  "candidate_accepted": false,
+  "baseline_commit": "private-baseline",
+  "final_coordinator": "20261019T090855157172Z",
+  "coordinator_exit_code": 1,
+  "execution_complete": true,
+  "required_evidence_missing": [
+    "Rebuilt-image vulnerability scanning blocked pending explicit external-service approval"
+  ],
+  "checks": [
+    {
+      "name": "compose",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.285
+    },
+    {
+      "name": "runtime-mode",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.302
+    },
+    {
+      "name": "ruff",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.131
+    },
+    {
+      "name": "format",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.022
+    },
+    {
+      "name": "migrations",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 3.812
+    },
+    {
+      "name": "backend-security",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 745.053
+    },
+    {
+      "name": "lint",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 4.949
+    },
+    {
+      "name": "typecheck",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.113
+    },
+    {
+      "name": "test",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.267
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 21.103
+    },
+    {
+      "name": "browser-fixtures-operations",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 8.209
+    },
+    {
+      "name": "browser-fixtures-approvals",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 3.33
+    },
+    {
+      "name": "worker-stop-cancellation-tests",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.407
+    },
+    {
+      "name": "browser",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 76.105
+    },
+    {
+      "name": "worker-start",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.022
+    },
+    {
+      "name": "release-browser-fixtures",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 1.029
+    },
+    {
+      "name": "release-browser",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 22.048
+    },
+    {
+      "name": "performance-smoke",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 2.494
+    },
+    {
+      "name": "images",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 51.613
+    },
+    {
+      "name": "isolated-install",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 32.236
+    },
+    {
+      "name": "isolated-release-fixtures",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.993
+    },
+    {
+      "name": "isolated-release-browser",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 21.518
+    },
+    {
+      "name": "isolated-negative-browser",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 44.813
+    },
+    {
+      "name": "isolated-workload",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 63.304
+    },
+    {
+      "name": "isolated-persisted-timings",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 0.821
+    },
+    {
+      "name": "isolated-queue-load",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 26.795
+    },
+    {
+      "name": "restart-recovery",
+      "status": "PASS",
+      "exit_code": 0,
+      "duration_seconds": 26.711
+    }
+  ],
+  "cleanup": {
+    "name": "worker-finally-restore",
+    "status": "PASS",
+    "exit_code": 0
+  },
+  "backend_full_runs": [
+    {
+      "passed": 720,
+      "failed": 0,
+      "seconds": 908.37,
+      "catalog_passed": 601,
+      "catalog_total": 601,
+      "scope": "Before final auth fix/test additions"
+    },
+    {
+      "passed": 722,
+      "failed": 1,
+      "seconds": 900.95,
+      "catalog_passed": 600,
+      "catalog_total": 601,
+      "failure": "missing_policy wall_clock_limit; root cause unconfirmed"
+    },
+    {
+      "passed": 723,
+      "failed": 0,
+      "seconds": 743.41,
+      "catalog_passed": 601,
+      "catalog_total": 601,
+      "scope": "Final backend source"
+    }
+  ],
+  "security": {
+    "dataset_sha256": "a0f62c2f6a407ab911ba5956948e5568392b5a653fc976939b30f2c382e4e17b",
+    "source_sha256": {
+      "backend/app/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/agents/checkpoints.py": "2d07b6602ea62cdbe27abda0c2b620883e31b4eedfc448f0dff4c001104b2a19",
+      "backend/app/agents/contracts.py": "8dd245431041dd0a663e35731ca7782731074280cf2a28b35962fac80543c4ab",
+      "backend/app/agents/orchestrator.py": "a716f64d77a955ee645d87dc5113a8ede4f9eeb175175ffc34590443046e1a24",
+      "backend/app/agents/persistence_contracts.py": "3daea2a3f0aa99a8291eaf4a4f2cce5f0994b6a3e8c4877b3b98f022f0663438",
+      "backend/app/agents/planner.py": "b0dbec6d913daaa8d731a4ac9e3f442d2a847447e4327b88357b1ac39dc98273",
+      "backend/app/agents/providers.py": "65429e30737f64bd67ddb178f31d7a1ad8eb8688670da237a3e0f1c25097c034",
+      "backend/app/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/api/actions.py": "6eb07ff5f438d169becf2c54b6f4f436af4f082005b9083ad6210367e5dcf4ff",
+      "backend/app/api/auth.py": "0a80d43bdfd6d9e143607dd9b8c08aca0b6e0ae6400977dc34ab69cd37323c27",
+      "backend/app/api/business.py": "5411c88caee4bab804280c34abcbdda2942eee9c16753e5d9abb96e204ed66a2",
+      "backend/app/api/execution.py": "6c4ae2e06a729adf7d06ce529f1c9c37752c9af02ec6496226d2fe848551df78",
+      "backend/app/api/investigations.py": "c7065f91bc5d52da70575d356bdb9cdd7f3460dec77315dfef293711e356b0ab",
+      "backend/app/api/jobs.py": "b9539809c5a4035384a556847029080f1ee83fce44f8fd19a383f5e02919da70",
+      "backend/app/api/operations.py": "68200a439a47d4030c29fdf2ce452d4de0147fe9cd9be90b880b2d2a6cd5ce26",
+      "backend/app/api/system.py": "5de1fe57fcddd3848e4fed4c6cdb75b7e1887580fc0af92ddca79d93a92176a2",
+      "backend/app/api/tools.py": "09d10d6c28663944dbdae41dca19446ac0c9a4a7c2bc61528ee84665947f19aa",
+      "backend/app/core/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/core/config.py": "c88aa8e3152d9ca44742bfb5ca5eb23190545b2cd3b239c82d7fd2de32bf4255",
+      "backend/app/core/logging.py": "31407563fdfe64a9661492076e7c7071a41c7953357feac3b32580c002614002",
+      "backend/app/core/passwords.py": "6f9ec87aa982c8b9d2d29b2f4d455c78aa89df2076e1207068a2d2b27f21f533",
+      "backend/app/core/permissions.py": "86c368ec19823d77468dee1798c124fe7ab6ddec8e3f1a7d94c0f3b74c98eb92",
+      "backend/app/core/tool_body_limit.py": "0d315de9b41827249b7a003cd1445bc6291ab3fc4bd39f25b588edc3fcee31f6",
+      "backend/app/db/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/db/seed.py": "67458f2f38dbd0aae2af132de59f119d56d86dbd99ceafa4f99019b1833a1091",
+      "backend/app/db/seed_auth.py": "9600afb33aac380bd7908fbf46a2e21b3899f2f433e997a15372a2e4bf474a94",
+      "backend/app/db/session.py": "9252fe0e7e45dc622083e8239a72b2dc69cf7c30d7b925d519f996110e35b1c4",
+      "backend/app/evaluations/__init__.py": "857dbbd1ba67520a3a3d99725fbd87a2835f2b991aa1db545555a3ce52a195cf",
+      "backend/app/evaluations/isolation.py": "a3476abc3edf8f34448f05fcecb4acbc6d89b7be5a2136643e4e003cfcb0d209",
+      "backend/app/evaluations/measurements.py": "aaed3728d25854a3d70c3cefce49e5b39410863a0f701fe1055219cc9163c1a5",
+      "backend/app/evaluations/pytest_plugin.py": "d6837d06fabb816066b0cb56af5603f5ebea484bb10c80e8073e86210de15d7a",
+      "backend/app/evaluations/red_team.py": "c62541d01da41661e76ffd95c2d534255fb2e9a94e668b2caa715aff55c87c2e",
+      "backend/app/evaluations/reporting.py": "102178e6e3b1bcbaf766a57da3eb7d913cda4700a6c686604c764a47d2601b5d",
+      "backend/app/execution/service.py": "e94332757647636cbf9c945355711e8a7eeae8e41e897b24a373492c987f61b1",
+      "backend/app/jobs/authority.py": "bf0cc01a793f8104961195f90303f21034ae579982e62c0237e92ecc3051bdf0",
+      "backend/app/jobs/contracts.py": "c55486ecf01299f5ae7744ddb8f893a86388b5797e9dc7980b25da591979e736",
+      "backend/app/jobs/metrics.py": "3650a44f1e29d7df46f674f1b6e30fe7350ca8b34e6117d96a8c8391cb83381c",
+      "backend/app/jobs/service.py": "a0edee065dfcc67baefaa3c52622da7644849a60b12aa0a739912c00ed64c7f7",
+      "backend/app/jobs/worker.py": "45515d1cfa65435f0a48ffafed62459787b4d253db1ee54b7b203cdeed12bd2a",
+      "backend/app/main.py": "1461c9d7a618d66017129e0885f2584a05aea7cfac6e4cda8d7b14d34cf0cdf9",
+      "backend/app/models/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/models/entities.py": "cb8acafc7c19f063d963eb3b0b51a415ac6b656fa7e889fe1d250765e58b436d",
+      "backend/app/operations/contracts.py": "398b192b7f777d43fed50c583ce615df2fd6e06e33145a406c1ba21ed4278ba2",
+      "backend/app/operations/incidents.py": "9c4f0ccc360475884f36091b336bab5fa05e8ef762f0e53485049e59671fd44d",
+      "backend/app/operations/service.py": "9a90bd3cc1af9eb533b0f176fba9e32cd67852ab3f218b38807f55b22ee55580",
+      "backend/app/operations/worker.py": "0da7d95730847121887717b9e08efa9037a08598c566b4a901546c29fe4af3c0",
+      "backend/app/policies/catalog.py": "91d698c82da730aa926b5baa917bd6e00ced0b3ce595ebe4c2191e6e603c6db4",
+      "backend/app/policies/engine.py": "561ececd046fc4e484d1789acf44eeec3bfd165be9a6065db1854840458010b1",
+      "backend/app/schemas/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/schemas/actions.py": "71f665954f258fe11862ca5272349abb9a4c2b26488d5dfc2753fcd4615d7f7b",
+      "backend/app/schemas/auth.py": "9444b374a76ea87cec65add8f35c25c0b1b0e87a0e4108cfd0d1ddcac7c88680",
+      "backend/app/schemas/business.py": "5bf28beebec2aeadbc9698ed89f09301e20eabe2b54fe329d5cd46f5f5dfe1b3",
+      "backend/app/schemas/evidence.py": "071f15e4742f15352a5ecb9dc8e1b23951f21450b8a9d29f7d5d23a93a444790",
+      "backend/app/schemas/execution.py": "fd9a2d805c0aea45842b5909c52844b7f08b634e4da7308fdf94699dd1dba280",
+      "backend/app/schemas/planning.py": "2f5f1839889839108c404f1dc0adaa9543f5eccabb6ed853037519362595c126",
+      "backend/app/schemas/system.py": "f14e6aba89587f3185f734f6fcfecc90a3e6acfccf777422d96a05bd9ce9de0f",
+      "backend/app/services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/services/authentication.py": "2f9d1f8c355a33d4afdef1615710c52050813495f4717d2de6844d2487f99420",
+      "backend/app/services/evidence.py": "bb6d67f6fa02e1bee3550d7a3c9bb516e5e115ded4971b6e311bf7576dbcb603",
+      "backend/app/services/investigations.py": "afbead8e19ffacb862b30eca85b9daeb5d3a661bea34c13b7d7fe85015dee49e",
+      "backend/app/services/repository.py": "60f5d2f77d7ce2127e5cc2d13be7ef70631866c5f5454eb2e8ad21643de291f4",
+      "backend/app/services/security_audit.py": "1a6e2603296f6fdd1dc2562f8c0f601c33a514278231043b76716d98ca73e6e5",
+      "backend/app/services/tenants.py": "3a1e31d733d6fdec641d8d2b9f9d62ac7d33f46ab48ca275a96a8b7694f55089",
+      "backend/app/tools/__init__.py": "53fedba566209f71e09ef95f506ecb5d813794f7e8189789aa5dd87c518e73a2",
+      "backend/app/tools/context.py": "e5e55e385bf4755e9cc4eb4fa055dd38bbd7e7b59e1cfccf96f4a5b12973ed3c",
+      "backend/app/tools/contracts.py": "6182612718b3a0f6a37db269889df98f9aaaa8716400ed95f33b26c666a34f9d",
+      "backend/app/tools/errors.py": "76401f0ba8da76ea5896f481ddb8a63318d422c324f925f4184d4215d0cf0dfc",
+      "backend/app/tools/executor.py": "f11e5508d7b08119cbefb5c7b1299afa2ba3be638c0816ec93ca0aecbb05a572",
+      "backend/app/tools/handlers.py": "cb40b3975d86a8311ce5755d85f87995469f9ad37c5fbaf804ba5a6006e4660d",
+      "backend/app/tools/registry.py": "5bfd4be2ef0666e48b5ca53055616da8a14f2a118997dbd1ac11a0fbcecd9bb0",
+      "backend/tests/conftest.py": "89941c4502c93acab8edc0f546c0c2df9b72bf922add9936851911ef8d076e46",
+      "backend/tests/test_agents.py": "bd5cdab86ce10f5b9daa47a96546fcb7fb7c86b456fb8d2108a6aa18d00e7192",
+      "backend/tests/test_authentication.py": "346fa2799abbc315ce350b032067a2654d5f68aa17ffe2c1ffdb05ebff1ef557",
+      "backend/tests/test_authentication_pool.py": "aba8a0c9c3e8167125b2f659ff6f9302bca29ab5b0532e65af2fe214fb744ac0",
+      "backend/tests/test_contracts.py": "b6db17bfebf0ebd1a6fa8ed12c4dfa88b62dead4b3e5a55a90f4ad9dedb53d82",
+      "backend/tests/test_controlled_execution.py": "54e254033d2f9d3b8bb422e9f3268288c94187bb02d56d5ca1d98e79d11185c6",
+      "backend/tests/test_data.py": "28c637b26433d84df222a7d3f655587c94e057cacba42290d01e87ef2d255f51",
+      "backend/tests/test_durable_jobs.py": "b18428e42b514c43e861f632e7d06d77994bce3619ee93223562b805d6022eaa",
+      "backend/tests/test_dynamic_planning.py": "397ffef777f7d4a6aa8cd734fa3479d8f2c9eba7917a988086a7d1234a11452e",
+      "backend/tests/test_evaluation_harness.py": "b1f194041fb8c9cad565d75faa29ec17755dc87a4743e2c4092ba251fc7db84f",
+      "backend/tests/test_evidence.py": "6f17a42b81bb000d40419cedda5f84280c4506779e5a5f822ef95cded3c0594c",
+      "backend/tests/test_execution_eval.py": "a4bfb95b3bdf47318ead6ca268e516a0219cf6eb200f96727e8363b322280c29",
+      "backend/tests/test_operations.py": "f2e8d0d5a47559132cdac51a5e017f69d570caddea72810f62203884072eca1e",
+      "backend/tests/test_persistence.py": "ff26506b68c14f432f7fd7bd7a1a7419c95eb3c7c7b75f57a4676db20452b5e2",
+      "backend/tests/test_phase11_boundaries.py": "5b6f9209816e7e9b5881da2ae3e0c28caf480413553b1588f826a7f2ab63c3ac",
+      "backend/tests/test_policy_engine.py": "0d950b5a62e4093857c2990a78e3bc73638f8b30c68f36b614f4fdd5e172f889",
+      "backend/tests/test_red_team.py": "d5c31d5016f541ded38713dbec7b950ba5747876b4a1847fddfb03db496d1b80",
+      "backend/tests/test_release_tooling.py": "098beaf1627d9937d7e7a58953f8de0c70c946fa7c622b9c818c6bf66ef501f5",
+      "backend/tests/test_retrieval_evaluation.py": "749ed52b92ce5a0ba0a672fc2e31f666fa7e9b5604319d06bfb1e862c019187e",
+      "backend/tests/test_system.py": "60503852b2d37a88c64d4a25e932c8595de82db4efb46fa24c320d82130aced2",
+      "backend/tests/test_tools.py": "127e1f5fd63c9df3ad8fa0aee145f7bc08546631b0888e90476d33a3743f8bd0"
+    },
+    "scenario_count": 601,
+    "counts": {
+      "passed": 601
+    },
+    "critical_failure": false,
+    "critical_measured_failures": [],
+    "evidence_gaps": [],
+    "invariants": {
+      "approval_concurrency": {
+        "verified": 1,
+        "probes": 1,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "audit_completeness": {
+        "verified": 31,
+        "probes": 31,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "bounded_tool_execution": {
+        "verified": 30,
+        "probes": 30,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "citation_validity": {
+        "verified": 30,
+        "probes": 30,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "correct_reconciliation": {
+        "verified": 55,
+        "probes": 55,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "correlation_completeness": {
+        "verified": 36,
+        "probes": 36,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "dead_letter_correctness": {
+        "verified": 55,
+        "probes": 55,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "incident_deduplication": {
+        "verified": 40,
+        "probes": 40,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "incident_detection": {
+        "verified": 40,
+        "probes": 40,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "metric_accuracy": {
+        "verified": 40,
+        "probes": 40,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_approval_bypass": {
+        "verified": 19,
+        "probes": 19,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_cross_tenant_leakage": {
+        "verified": 50,
+        "probes": 50,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_duplicate_mutation": {
+        "verified": 107,
+        "probes": 107,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_security_override": {
+        "verified": 4,
+        "probes": 4,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_unauthorized_mutation": {
+        "verified": 140,
+        "probes": 140,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_unauthorized_tool_execution": {
+        "verified": 30,
+        "probes": 30,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_unsafe_allow": {
+        "verified": 28,
+        "probes": 28,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "no_unsafe_require_approval": {
+        "verified": 25,
+        "probes": 25,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "prompt_injection_containment": {
+        "verified": 30,
+        "probes": 30,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "retry_classification": {
+        "verified": 55,
+        "probes": 55,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      },
+      "safe_recovery": {
+        "verified": 55,
+        "probes": 55,
+        "violations": 0,
+        "meaning": "Assertion-backed invariant probes; a failed or missing test is unknown, not an inferred successful attack"
+      }
+    },
+    "measurements_valid_for_acceptance": true
+  },
+  "browser_unique_cases": 64,
+  "full_journey_scenarios": 1,
+  "final_primary_and_isolated_journey_executions": 4,
+  "browser_cohorts": {
+    "default": {
+      "startTime": "2026-10-19T09:22:09.437Z",
+      "duration": 73605.733,
+      "expected": 52,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "primary-release": {
+      "startTime": "2026-10-19T09:23:27.003Z",
+      "duration": 20211.061999999998,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "isolated-release": {
+      "startTime": "2026-10-19T09:25:16.389Z",
+      "duration": 19623.458,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "negative": {
+      "startTime": "2026-10-19T09:25:37.648Z",
+      "duration": 43197.21,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "repeat-default": {
+      "startTime": "2026-10-19T09:31:15.722Z",
+      "duration": 73487.182,
+      "expected": 52,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "repeat-release": {
+      "startTime": "2026-10-19T09:32:32.906Z",
+      "duration": 20490.071,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "repeat-negative": {
+      "startTime": "2026-10-19T09:32:54.997Z",
+      "duration": 39453.958,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "failed-repeat-default": {
+      "startTime": "2026-10-19T09:28:40.613Z",
+      "duration": 80925.907,
+      "expected": 51,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    }
+  },
+  "stability": {
+    "targeted_resource_repetitions": 5,
+    "targeted_passes": 25,
+    "reverse_order_passes": 52,
+    "admission_cap_passes": 3,
+    "exact_missing_policy_repetitions_passed": 5,
+    "historical_root_cause_confirmed": false
+  },
+  "read_baselines": {
+    "c1": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 1,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 2.314749499987556,
+          "p95_ms": 3.1250000000113687,
+          "p99_ms": null,
+          "throughput_per_second": 410.2160870667944,
+          "duration_seconds": 0.048754792000011093
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 3.341208499989534,
+          "p95_ms": 3.6859160000517477,
+          "p99_ms": null,
+          "throughput_per_second": 291.57069131427124,
+          "duration_seconds": 0.06859399999996185
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 5.9187920000169925,
+          "p95_ms": 6.805708000001687,
+          "p99_ms": null,
+          "throughput_per_second": 129.64857644862175,
+          "duration_seconds": 0.15426316699995368
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 15.131542000034415,
+          "p95_ms": 56.61600000001954,
+          "p99_ms": null,
+          "throughput_per_second": 49.751919268594044,
+          "duration_seconds": 0.4019945420000113
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 9.298229500018351,
+          "p95_ms": 13.523332999966442,
+          "p99_ms": null,
+          "throughput_per_second": 101.14116770389083,
+          "duration_seconds": 0.1977434160000371
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 8.833395999971572,
+          "p95_ms": 10.182999999983622,
+          "p99_ms": null,
+          "throughput_per_second": 109.19648243407288,
+          "duration_seconds": 0.18315608299997166
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 39.75933399999576,
+          "p95_ms": 67.24125000005188,
+          "p99_ms": null,
+          "throughput_per_second": 22.072987367766476,
+          "duration_seconds": 0.9060848750000332
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 11.733458500003735,
+          "p95_ms": 25.050082999996448,
+          "p99_ms": null,
+          "throughput_per_second": 56.58719113561653,
+          "duration_seconds": 0.3534368749999999
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 281.1800000000062,
+          "p95_ms": 281.1800000000062,
+          "p99_ms": null,
+          "throughput_per_second": 3.556413836761663,
+          "duration_seconds": 0.2811821249999866
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    },
+    "c5": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 5,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 6.1573744999918745,
+          "p95_ms": 9.915290999970239,
+          "p99_ms": null,
+          "throughput_per_second": 576.6243688673669,
+          "duration_seconds": 0.034684624999954394
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 10.327541500032567,
+          "p95_ms": 32.64233300001251,
+          "p99_ms": null,
+          "throughput_per_second": 334.437439521809,
+          "duration_seconds": 0.059801917000072535
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 20.001979000028314,
+          "p95_ms": 47.90504200002488,
+          "p99_ms": null,
+          "throughput_per_second": 185.51821614955026,
+          "duration_seconds": 0.10780612500002462
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 83.74627100005227,
+          "p95_ms": 144.77437499999724,
+          "p99_ms": null,
+          "throughput_per_second": 51.74679388185037,
+          "duration_seconds": 0.3864973749999763
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 43.84412500007784,
+          "p95_ms": 77.86595799996121,
+          "p99_ms": null,
+          "throughput_per_second": 99.37050869521308,
+          "duration_seconds": 0.20126695800001926
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 58.08504100002665,
+          "p95_ms": 86.58837500001937,
+          "p99_ms": null,
+          "throughput_per_second": 80.94174358845939,
+          "duration_seconds": 0.2470912919999364
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 267.48758299999054,
+          "p95_ms": 318.9921250000225,
+          "p99_ms": null,
+          "throughput_per_second": 19.11455183663365,
+          "duration_seconds": 1.0463232500000004
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 112.17072950000784,
+          "p95_ms": 170.66633299998557,
+          "p99_ms": null,
+          "throughput_per_second": 43.48987001764289,
+          "duration_seconds": 0.4598772080000799
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 254.65516599990679,
+          "p95_ms": 254.65516599990679,
+          "p99_ms": null,
+          "throughput_per_second": 3.9268615594507725,
+          "duration_seconds": 0.2546562909999466
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    },
+    "c10": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 10,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 11.98908300000312,
+          "p95_ms": 21.547334000047158,
+          "p99_ms": null,
+          "throughput_per_second": 560.4458346630568,
+          "duration_seconds": 0.03568587499989917
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 24.512791500001185,
+          "p95_ms": 43.34520899999461,
+          "p99_ms": null,
+          "throughput_per_second": 323.1561550000244,
+          "duration_seconds": 0.06188958400002775
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 80.4584790000149,
+          "p95_ms": 127.85095799995361,
+          "p99_ms": null,
+          "throughput_per_second": 114.05871007858903,
+          "duration_seconds": 0.17534829199996693
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 162.94029200003024,
+          "p95_ms": 204.7667919999867,
+          "p99_ms": null,
+          "throughput_per_second": 55.38076003169439,
+          "duration_seconds": 0.3611362500000723
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 106.80235450001874,
+          "p95_ms": 181.73891699996148,
+          "p99_ms": null,
+          "throughput_per_second": 74.51995178561592,
+          "duration_seconds": 0.268384499999911
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 80.190125500053,
+          "p95_ms": 114.44433299993761,
+          "p99_ms": null,
+          "throughput_per_second": 106.12751511734322,
+          "duration_seconds": 0.18845254199993633
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 465.0151250000363,
+          "p95_ms": 591.6700000000219,
+          "p99_ms": null,
+          "throughput_per_second": 18.405699098703625,
+          "duration_seconds": 1.0866199590000178
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 164.93495849999817,
+          "p95_ms": 279.00862500007406,
+          "p99_ms": null,
+          "throughput_per_second": 53.47149783753319,
+          "duration_seconds": 0.37403104099996654
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 199.4907499999954,
+          "p95_ms": 199.4907499999954,
+          "p99_ms": null,
+          "throughput_per_second": 5.012735481080739,
+          "duration_seconds": 0.19949187500003518
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    },
+    "c20": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 20,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 18.59964549993265,
+          "p95_ms": 21.11083400006919,
+          "p99_ms": null,
+          "throughput_per_second": 619.2142171590715,
+          "duration_seconds": 0.03229899999996633
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 54.826249499967616,
+          "p95_ms": 67.30558300000666,
+          "p99_ms": null,
+          "throughput_per_second": 279.045921345642,
+          "duration_seconds": 0.07167279099996904
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 115.44831249995013,
+          "p95_ms": 148.51624999994328,
+          "p99_ms": null,
+          "throughput_per_second": 130.44555826253776,
+          "duration_seconds": 0.15332066700000269
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 7,
+          "error_count": 13,
+          "p50_ms": 3092.876958500028,
+          "p95_ms": 3190.6131659999346,
+          "p99_ms": null,
+          "throughput_per_second": 6.255681998816577,
+          "duration_seconds": 3.197093458999916
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 6,
+          "error_count": 14,
+          "p50_ms": 3087.3110000000565,
+          "p95_ms": 3117.4385000000484,
+          "p99_ms": null,
+          "throughput_per_second": 6.386006981502033,
+          "duration_seconds": 3.131847500000049
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 10,
+          "error_count": 10,
+          "p50_ms": 3075.052291499958,
+          "p95_ms": 3104.799875000026,
+          "p99_ms": null,
+          "throughput_per_second": 6.4286078190837035,
+          "duration_seconds": 3.1110934999999245
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 6,
+          "error_count": 14,
+          "p50_ms": 3076.833395499989,
+          "p95_ms": 3267.6585829999567,
+          "p99_ms": null,
+          "throughput_per_second": 6.095184303437032,
+          "duration_seconds": 3.28127895800003
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 2,
+          "error_count": 18,
+          "p50_ms": 3130.0721454999803,
+          "p95_ms": 3178.453500000046,
+          "p99_ms": null,
+          "throughput_per_second": 6.277748549051318,
+          "duration_seconds": 3.1858555410000235
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 204.47283399994376,
+          "p95_ms": 204.47283399994376,
+          "p99_ms": null,
+          "throughput_per_second": 4.8905983181950345,
+          "duration_seconds": 0.20447395899998355
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    },
+    "c20-after": {
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 20,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 20.11574950006434,
+          "p95_ms": 24.540166999940993,
+          "p99_ms": null,
+          "throughput_per_second": 598.8457129114603,
+          "duration_seconds": 0.03339758399999937
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 61.52970850001793,
+          "p95_ms": 66.35141700007807,
+          "p99_ms": null,
+          "throughput_per_second": 284.51120974126513,
+          "duration_seconds": 0.0702960000000985
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 132.45731249998016,
+          "p95_ms": 151.97891699995125,
+          "p99_ms": null,
+          "throughput_per_second": 129.01779558586477,
+          "duration_seconds": 0.15501737499994306
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 306.5203960000531,
+          "p95_ms": 355.45300000001134,
+          "p99_ms": null,
+          "throughput_per_second": 54.66985948850372,
+          "duration_seconds": 0.3658322920000501
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 167.95797900005027,
+          "p95_ms": 213.32399999994323,
+          "p99_ms": null,
+          "throughput_per_second": 88.96714715935767,
+          "duration_seconds": 0.22480208300009963
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 144.12581250002177,
+          "p95_ms": 157.6596250000648,
+          "p99_ms": null,
+          "throughput_per_second": 122.63772230010287,
+          "duration_seconds": 0.1630819590000101
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 495.66891699998905,
+          "p95_ms": 687.2959580000497,
+          "p99_ms": null,
+          "throughput_per_second": 28.637449798211357,
+          "duration_seconds": 0.6983862089999775
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 216.5381874999639,
+          "p95_ms": 245.39425000000392,
+          "p99_ms": null,
+          "throughput_per_second": 78.35901828985136,
+          "duration_seconds": 0.255235459000005
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 259.79545799998505,
+          "p95_ms": 259.79545799998505,
+          "p99_ms": null,
+          "throughput_per_second": 3.849166559210869,
+          "duration_seconds": 0.2597964999999931
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    },
+    "c20-final": {
+      "max_read_p95_ms": 1500.0,
+      "target_violations": [],
+      "environment": {
+        "python": "3.12.14",
+        "platform": "macOS-26.3.1-arm64-arm-64bit",
+        "logical_cpus": 8
+      },
+      "concurrency": 20,
+      "samples_per_read_endpoint": 20,
+      "measurements": {
+        "health": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 64.37593749978987,
+          "p95_ms": 66.3190420018509,
+          "p99_ms": null,
+          "throughput_per_second": 255.67178451747048,
+          "duration_seconds": 0.07822529199984274
+        },
+        "ready": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 61.19581249913608,
+          "p95_ms": 71.81308299914235,
+          "p99_ms": null,
+          "throughput_per_second": 247.38225661721165,
+          "duration_seconds": 0.08084654200138175
+        },
+        "customers": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 130.33427099981054,
+          "p95_ms": 147.46283299973584,
+          "p99_ms": null,
+          "throughput_per_second": 131.3120754442543,
+          "duration_seconds": 0.15230891700048232
+        },
+        "investigation_history": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 385.1433330000873,
+          "p95_ms": 447.99649999913527,
+          "p99_ms": null,
+          "throughput_per_second": 44.196839801346805,
+          "duration_seconds": 0.45252104199971654
+        },
+        "approval_queue": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 130.9430005003378,
+          "p95_ms": 178.36937500032946,
+          "p99_ms": null,
+          "throughput_per_second": 107.88148409696804,
+          "duration_seconds": 0.1853886250028154
+        },
+        "execution_jobs": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 140.45008349967247,
+          "p95_ms": 147.04058300048928,
+          "p99_ms": null,
+          "throughput_per_second": 129.30125389149262,
+          "duration_seconds": 0.15467754099881859
+        },
+        "operations": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 610.5583539992949,
+          "p95_ms": 744.3977920011093,
+          "p99_ms": null,
+          "throughput_per_second": 26.394493999783812,
+          "duration_seconds": 0.7577337910006463
+        },
+        "incidents": {
+          "request_count": 20,
+          "success_count": 20,
+          "error_count": 0,
+          "p50_ms": 199.2345415001182,
+          "p95_ms": 222.33041700019385,
+          "p99_ms": null,
+          "throughput_per_second": 88.39907589534954,
+          "duration_seconds": 0.22624670900040655
+        },
+        "authentication": {
+          "request_count": 1,
+          "success_count": 1,
+          "error_count": 0,
+          "p50_ms": 248.76154199955636,
+          "p95_ms": 248.76154199955636,
+          "p99_ms": null,
+          "throughput_per_second": 4.019899176282314,
+          "duration_seconds": 0.24876245799896424
+        }
+      },
+      "logout_status": 204,
+      "limitations": [
+        "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+        "Single authentication sample; no authentication percentiles inferred",
+        "p99 omitted below 100 samples",
+        "Latency includes response failures, if any; no warmup discarded"
+      ]
+    }
+  },
+  "workload": {
+    "status": "PASS",
+    "counts": {
+      "completed": 8,
+      "failed": 0,
+      "approval_grants": 4,
+      "duplicate_mutations": 0
+    },
+    "per_tenant_completed": [
+      4,
+      4
+    ],
+    "duration_seconds": 60.00007737499982,
+    "requested_seconds": 60,
+    "concurrency": 1,
+    "backlog_samples": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "errors": [],
+    "measurements": {
+      "authentication": {
+        "request_count": 6,
+        "success_count": 6,
+        "error_count": 0,
+        "p50_ms": 187.10054149960342,
+        "p95_ms": 200.17637500131968,
+        "p99_ms": null,
+        "throughput_per_second": 0.09999987104183328,
+        "duration_seconds": 60.00007737499982
+      },
+      "investigation": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 480.82047950083506,
+        "p95_ms": 676.3438749985653,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "policy_evaluation": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 24.672937499417458,
+        "p95_ms": 26.835082997422433,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "approval_creation": {
+        "request_count": 4,
+        "success_count": 4,
+        "error_count": 0,
+        "p50_ms": 29.605416499180137,
+        "p95_ms": 32.56474999943748,
+        "p99_ms": null,
+        "throughput_per_second": 0.06666658069455551,
+        "duration_seconds": 60.00007737499982
+      },
+      "approval_review": {
+        "request_count": 4,
+        "success_count": 4,
+        "error_count": 0,
+        "p50_ms": 28.30091649957467,
+        "p95_ms": 29.004749998421175,
+        "p99_ms": null,
+        "throughput_per_second": 0.06666658069455551,
+        "duration_seconds": 60.00007737499982
+      },
+      "job_submission": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 40.45193749880127,
+        "p95_ms": 50.394166999467416,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "job_poll": {
+        "request_count": 26,
+        "success_count": 26,
+        "error_count": 0,
+        "p50_ms": 14.737833000253886,
+        "p95_ms": 26.650416999473237,
+        "p99_ms": null,
+        "throughput_per_second": 0.43333277451461083,
+        "duration_seconds": 60.00007737499982
+      },
+      "submission_to_completion": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 553.5835004993714,
+        "p95_ms": 1124.5018749978044,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "receipt": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 14.78049999968789,
+        "p95_ms": 18.324708002182888,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "idempotent_replay": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 12.991583500479464,
+        "p95_ms": 15.060207999340491,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "operations_overview": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 43.782771499536466,
+        "p95_ms": 57.343583001056686,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "incident_detection": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 23.53239599869994,
+        "p95_ms": 26.428375000250526,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "queue": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 10.245833000226412,
+        "p95_ms": 15.637207998224767,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      }
+    },
+    "limitations": [
+      "Short local paced workflow soak, not production endurance",
+      "Serial submissions across two tenants, not strict fairness proof",
+      "No deliberate ambiguous-commit or lease faults",
+      "No unexpected process exits observed only if separately monitored; not asserted here",
+      "No rejected-job load cohort in this harness"
+    ]
+  },
+  "persisted_timings": {
+    "status": "PASS",
+    "job_count": 8,
+    "measurements": {
+      "queue_wait": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 364.265,
+        "p95_ms": 862.4549999999999,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "worker_attempt_elapsed": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 79.055,
+        "p95_ms": 110.043,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "tool_execution": {
+        "request_count": 48,
+        "success_count": 48,
+        "error_count": 0,
+        "p50_ms": 6.7095,
+        "p95_ms": 9.576,
+        "p99_ms": null,
+        "throughput_per_second": 0.7999989683346662,
+        "duration_seconds": 60.00007737499982
+      },
+      "get_customer": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 7.035,
+        "p95_ms": 8.525,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "list_customer_tickets": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 7.944,
+        "p95_ms": 9.694,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "get_ticket": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 6.281000000000001,
+        "p95_ms": 9.864,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "get_account_status": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 5.1325,
+        "p95_ms": 6.627,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "list_recent_transactions": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 6.3945,
+        "p95_ms": 6.837,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      },
+      "search_policy": {
+        "request_count": 8,
+        "success_count": 8,
+        "error_count": 0,
+        "p50_ms": 8.850999999999999,
+        "p95_ms": 9.531,
+        "p99_ms": null,
+        "throughput_per_second": 0.13333316138911103,
+        "duration_seconds": 60.00007737499982
+      }
+    },
+    "limitations": [
+      "Tool executor time excludes downstream evidence normalization",
+      "Worker-attempt time includes authorization, controlled execution and scheduler persistence; not mutation-only time",
+      "Queue wait and attempt times use one PostgreSQL clock",
+      "Execution event timestamps use transaction time and are not used as elapsed-time measurements",
+      "No p99 below 100 samples"
+    ]
+  },
+  "queue": {
+    "status": "PASS",
+    "submitted": 20,
+    "configured_workers": 4,
+    "tenant_count": 5,
+    "committed_mutations": 19,
+    "expected_stale_rejections": 1,
+    "duplicate_mutations": 0,
+    "unauthorized_mutations": 0,
+    "foreign_probe_denials": 5,
+    "observed_peak_global": 4,
+    "observed_peak_per_tenant": 1,
+    "processing_seconds": 8.574670415997389,
+    "duration_seconds": 24.7483089999987,
+    "limitations": [
+      "50ms sampled concurrency plus transactional admission tests; not continuous observation",
+      "Finite queue drain establishes no starvation only for this bounded cohort",
+      "Due-time ordering is not strict round-robin fairness",
+      "No production throughput or external exactly-once claim"
+    ]
+  },
+  "recovery": {
+    "status": "PASS",
+    "scope": "Local queued-job persistence and process restarts; not failover or interrupted-commit proof",
+    "durable_snapshot_preserved": true,
+    "queued_job_completed": true,
+    "receipt_count": 1,
+    "business_record_count": 1,
+    "duplicate_mutations": 0,
+    "backend_restart": true,
+    "frontend_restart": true,
+    "database_restart": true,
+    "worker_restart": true,
+    "duration_seconds": 24.19392987500032
+  },
+  "clean_install": {
+    "status": "PASS",
+    "project": "northstar-release12",
+    "scope": "Fresh Compose volume, migration, seed, authentication, readiness and frontend",
+    "seed_customer_count_in_tenant": 10,
+    "authenticated": true,
+    "frontend_status": 200,
+    "ready": true,
+    "duration_seconds": 30.4530863330001
+  },
+  "dependencies": {
+    "python_runtime_known_vulnerabilities": 0,
+    "npm_runtime_known_vulnerabilities": 0,
+    "npm_all_high_entries": 5,
+    "baseline_backend_image_findings": 46,
+    "rebuilt_image_scan": "Automatic approval review rejected external transmission; no bypass"
+  },
+  "limitations": [
+    "Synthetic local mock only",
+    "Unconfirmed historical and observed transient wall-budget failures",
+    "No production capacity or strict fairness guarantee",
+    "Queued restart is not OS-kill-at-commit verification",
+    "No hosted CI or live LLM verification",
+    "No rebuilt-image scan acceptance"
+  ],
+  "read_smoke_final": {
+    "max_read_p95_ms": 250.0,
+    "target_violations": [],
+    "environment": {
+      "python": "3.12.14",
+      "platform": "macOS-26.3.1-arm64-arm-64bit",
+      "logical_cpus": 8
+    },
+    "concurrency": 1,
+    "samples_per_read_endpoint": 20,
+    "measurements": {
+      "health": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 2.2020000014890684,
+        "p95_ms": 3.109375000349246,
+        "p99_ms": null,
+        "throughput_per_second": 426.2714686856081,
+        "duration_seconds": 0.04691845799970906
+      },
+      "ready": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 2.8378539991535945,
+        "p95_ms": 3.0850000002828892,
+        "p99_ms": null,
+        "throughput_per_second": 345.9658915370873,
+        "duration_seconds": 0.05780916699950467
+      },
+      "customers": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 6.589979499040055,
+        "p95_ms": 7.162332996813348,
+        "p99_ms": null,
+        "throughput_per_second": 148.70422926642368,
+        "duration_seconds": 0.1344951659993967
+      },
+      "investigation_history": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 15.377165998870623,
+        "p95_ms": 16.208584002015414,
+        "p99_ms": null,
+        "throughput_per_second": 64.45793495296424,
+        "duration_seconds": 0.3102798750005604
+      },
+      "approval_queue": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 8.778499999607448,
+        "p95_ms": 10.053208003228065,
+        "p99_ms": null,
+        "throughput_per_second": 110.58356056388068,
+        "duration_seconds": 0.18085870899813017
+      },
+      "execution_jobs": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 8.745229000851396,
+        "p95_ms": 9.84654099738691,
+        "p99_ms": null,
+        "throughput_per_second": 110.61095540993826,
+        "duration_seconds": 0.1808139159984421
+      },
+      "operations": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 39.64968800028146,
+        "p95_ms": 44.82645800089813,
+        "p99_ms": null,
+        "throughput_per_second": 24.95557648466568,
+        "duration_seconds": 0.8014240830016206
+      },
+      "incidents": {
+        "request_count": 20,
+        "success_count": 20,
+        "error_count": 0,
+        "p50_ms": 17.17725000162318,
+        "p95_ms": 25.600000000849832,
+        "p99_ms": null,
+        "throughput_per_second": 59.376972391761754,
+        "duration_seconds": 0.3368309159995988
+      },
+      "authentication": {
+        "request_count": 1,
+        "success_count": 1,
+        "error_count": 0,
+        "p50_ms": 188.12004199935473,
+        "p95_ms": 188.12004199935473,
+        "p99_ms": null,
+        "throughput_per_second": 5.315725298059857,
+        "duration_seconds": 0.18812108299971442
+      }
+    },
+    "logout_status": 204,
+    "limitations": [
+      "Read-only HTTP baseline; no write workflow or worker capacity evidence",
+      "Single authentication sample; no authentication percentiles inferred",
+      "p99 omitted below 100 samples",
+      "Latency includes response failures, if any; no warmup discarded"
+    ]
+  },
+  "browser_repeat_correction": "Test now waits for logout response, sign-in heading and auth/me 401 before next actor login; no application authorization change",
+  "live_health": {
+    "health": 200,
+    "ready": 200,
+    "backend_nonroot": true,
+    "frontend_nonroot": true,
+    "backend_pytest_ruff_uv_pip_absent": true,
+    "frontend_eslint_typescript_vitest_absent": true
+  },
+  "backend_source_hashes_match_final_files": true,
+  "security_gate_followup": {
+    "report": "IMAGE_SECURITY.json",
+    "review": "IMAGE_SECURITY.md",
+    "verdict": "PARTIAL",
+    "scans_complete": true,
+    "unresolved_high_matches_backend": 55,
+    "unresolved_high_matches_worker": 55,
+    "frontend_high_matches": 0,
+    "whole_task_metadata_transmission_exception": true
+  },
+  "final_runtime_followup": {
+    "report": "RUNTIME_VERIFICATION.json",
+    "review": "RUNTIME_REVIEW.md",
+    "verdict": "PARTIAL",
+    "full_pytest_passed": 727,
+    "catalog_passed": 601,
+    "browser_passed": 64,
+    "vitest_passed": 50,
+    "recovery": "PASS",
+    "image_high_unique_cves": 14,
+    "vendor_additional_high_cves": 2,
+    "new_project_metadata_uploads": false,
+    "historical_transmission_exception_preserved": true
+  },
+  "historical_scope": "Original coordinator/performance/clean-install fields retain their original timestamps and scope. security_gate_followup is the earlier scan follow-up. final_runtime_followup and RUNTIME_VERIFICATION.json supersede backend/frontend/browser/recovery and image-risk status for the final runtime investigation."
+}

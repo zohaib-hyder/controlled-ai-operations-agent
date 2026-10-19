@@ -1,0 +1,197 @@
+{
+  "fixture_preparation": "explicit synthetic timestamps, eligible account and duplicate ticket; no production connector",
+  "A_customer_note": {
+    "status": "COMMITTED",
+    "verified": true,
+    "replayed": false,
+    "error_code": null,
+    "execution_id": "e9a2e862-1166-49e1-aad9-280a9b5e97cb",
+    "proposal_id": "4aebdbb2-a199-44f1-bfcc-0891f6454766",
+    "approval_id": null,
+    "actor_id": "ce1013c4-c0a2-5763-9f3e-461e0057f421",
+    "tenant_id": "4ea35c0e-fece-5f2c-b631-c09a5800ca07",
+    "action_name": "create_customer_note",
+    "action_version": "1.0",
+    "target_resource_id": "761d83c6-7a83-5c9e-a9de-5cb826569dd4",
+    "canonical_arguments_hash": "ea9420b2a75022cc89153638c3ed79f9d1893e790280e9d979d3470724090190",
+    "decision_id": "e92e5e42-b66f-4165-820a-29c463aa80d5",
+    "before": {
+      "protected_hash": "92658f11658fcaef79587949667039e2a51e97c7a5961e8eec9f672e791b56ed",
+      "resource_hash": "a3341d212c8f10d08cb40862c0c718e92a240ebc8b04cab2dcaa7439ca93cd62",
+      "status": null,
+      "version": null
+    },
+    "after": {
+      "business_record_id": "72357816-2926-420f-9041-fe1c9882f6ea",
+      "resource_hash": "98208a9e4140a4d31407cb314852360311baff9fae9b114a88248eb19468f12d",
+      "status": null,
+      "version": null
+    },
+    "created_at": "2026-10-17T18:10:53.730387Z",
+    "idempotency_key": "live-797b06928d1a464094018da1deb31f88",
+    "events": []
+  },
+  "B_ticket_note": {
+    "status": "COMMITTED",
+    "verified": true,
+    "replayed": false,
+    "error_code": null,
+    "execution_id": "f3905fdf-352e-424f-aeaa-086b1d7d9496",
+    "proposal_id": "9bbe0e26-5db2-469a-b31c-1e90c5e778d6",
+    "approval_id": null,
+    "actor_id": "ce1013c4-c0a2-5763-9f3e-461e0057f421",
+    "tenant_id": "4ea35c0e-fece-5f2c-b631-c09a5800ca07",
+    "action_name": "add_ticket_note",
+    "action_version": "1.0",
+    "target_resource_id": "654351e9-5616-5219-9cfa-1f3e50a7c437",
+    "canonical_arguments_hash": "ea9420b2a75022cc89153638c3ed79f9d1893e790280e9d979d3470724090190",
+    "decision_id": "70bed337-f416-43e0-98f3-3a78a83395da",
+    "before": {
+      "protected_hash": "e77e02b21228dd17a983794fc87d6d89a177396b076afcf5b3d2240a617a88a8",
+      "resource_hash": "7afef0909600eaaa83b842a47fb9915aa88e4ecd92e168bc3679dcdf8b88387c",
+      "status": "open",
+      "version": null
+    },
+    "after": {
+      "business_record_id": "31421d18-9a47-48c6-b5bf-7c77e0b54c32",
+      "resource_hash": "3a4c322c62750d303667311e833df7f25f3508f6d983dfe105c6ee8bd83a2950",
+      "status": "open",
+      "version": null
+    },
+    "created_at": "2026-10-17T18:10:54.377860Z",
+    "idempotency_key": "live-27e60b7768a74ae889bc4bc576b08f92",
+    "events": []
+  },
+  "C_reactivation_request": {
+    "status": "COMMITTED",
+    "verified": true,
+    "replayed": false,
+    "error_code": null,
+    "execution_id": "49131348-3bb6-4db8-bb0c-332e8fcfb7ec",
+    "proposal_id": "64522ff1-99bb-4d4d-9712-760b3262f71c",
+    "approval_id": "42bd2670-ae91-48ef-8494-ab392df285e7",
+    "actor_id": "ee387cc0-abff-581c-b379-c63933773d08",
+    "tenant_id": "4ea35c0e-fece-5f2c-b631-c09a5800ca07",
+    "action_name": "request_account_reactivation",
+    "action_version": "1.0",
+    "target_resource_id": "ca688624-4f56-59a6-ba38-1821c9ef9900",
+    "canonical_arguments_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "decision_id": "f08be57c-60e3-440d-89d3-7475d6566c9f",
+    "before": {
+      "protected_hash": "a385aa6b50ef5217131f9e2b59fc0bd2958e2a778562ae294a665537e13a1623",
+      "resource_hash": "88959c18f7f6bc2bcdfb0d5537d74ffb4999e88272077ad57c9b6654f3f299fe",
+      "status": "blocked",
+      "version": 8
+    },
+    "after": {
+      "business_record_id": "2b0cdee5-87f5-436a-b9cb-0c24f536d402",
+      "resource_hash": "0426bc948848e31d9b70e6c707b49b4d700b3b08c7a5c3d24b0ccc55572ea694",
+      "status": "blocked",
+      "version": 9
+    },
+    "created_at": "2026-10-17T18:10:55.015066Z",
+    "idempotency_key": "live-7470ad9bd9f849ab9b3103f45a26b56a",
+    "events": []
+  },
+  "H_expired_approval": {
+    "status": "DENIED",
+    "verified": false,
+    "replayed": false,
+    "error_code": "approval_not_current",
+    "execution_id": null,
+    "proposal_id": null,
+    "approval_id": null,
+    "actor_id": null,
+    "tenant_id": null,
+    "action_name": null,
+    "action_version": null,
+    "target_resource_id": null,
+    "canonical_arguments_hash": null,
+    "decision_id": null,
+    "before": {},
+    "after": {},
+    "created_at": null,
+    "idempotency_key": null,
+    "events": []
+  },
+  "D_account_reactivation": {
+    "status": "COMMITTED",
+    "verified": true,
+    "replayed": false,
+    "error_code": null,
+    "execution_id": "af509b90-fb25-4238-a68a-76a834eb1fcb",
+    "proposal_id": "c628df5f-8dad-44d1-804f-3c16d280a064",
+    "approval_id": "432c941e-ad3e-4326-a60d-0f5fd02fd18b",
+    "actor_id": "ee387cc0-abff-581c-b379-c63933773d08",
+    "tenant_id": "4ea35c0e-fece-5f2c-b631-c09a5800ca07",
+    "action_name": "reactivate_account",
+    "action_version": "1.0",
+    "target_resource_id": "ca688624-4f56-59a6-ba38-1821c9ef9900",
+    "canonical_arguments_hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "decision_id": "47593363-0819-4635-b4f0-c6fbcd7ab7e3",
+    "before": {
+      "protected_hash": "04dc1b973824f46003b5a51bc4a887e7d0dc55fc7f5f825e5c59709a1a75ebd9",
+      "resource_hash": "0426bc948848e31d9b70e6c707b49b4d700b3b08c7a5c3d24b0ccc55572ea694",
+      "status": "blocked",
+      "version": 9
+    },
+    "after": {
+      "business_record_id": null,
+      "resource_hash": "1d5fda69f3a7d27f03ee2e7f7b8103609265f9cc20b5b0956439707288633736",
+      "status": "active",
+      "version": 10
+    },
+    "created_at": "2026-10-17T18:10:56.373842Z",
+    "idempotency_key": "live-637908e7740f4be9a797919b9f5aecdb",
+    "events": []
+  },
+  "F_self_approval": {
+    "http_status": 403,
+    "business_mutations": 0
+  },
+  "E_duplicate_closure": {
+    "status": "COMMITTED",
+    "verified": true,
+    "replayed": false,
+    "error_code": null,
+    "execution_id": "981d65fc-49c5-48fc-a911-20022987ba6c",
+    "proposal_id": "d7f1cf07-d0d0-4c47-bdf2-e25d2b32ec4d",
+    "approval_id": "414407b5-b761-4ed8-b2e7-324a87c0e10a",
+    "actor_id": "ce1013c4-c0a2-5763-9f3e-461e0057f421",
+    "tenant_id": "4ea35c0e-fece-5f2c-b631-c09a5800ca07",
+    "action_name": "close_duplicate_ticket",
+    "action_version": "1.0",
+    "target_resource_id": "9556f210-0229-5043-be01-984942816e80",
+    "canonical_arguments_hash": "70e3d1188667925032ba0b6ff1ddbb94e13b827304810bb5abfe81effe140de7",
+    "decision_id": "0eb01d7d-2a40-4657-9626-c613cd69a555",
+    "before": {
+      "protected_hash": "5fc1f38a4bf73af4973563c169e3594bc8562858e127372898c74d5686a44bb7",
+      "resource_hash": "86c6e200a73f335278de641f3256b0fd1b0e71bf8e84caf0629bf606fe836fe4",
+      "status": "open",
+      "version": null
+    },
+    "after": {
+      "business_record_id": null,
+      "resource_hash": "b1a4f0fe25f45c1bf3ebb6bec5b01706be311c1a0668e161967cc7f1b5eba3d4",
+      "status": "closed",
+      "version": null
+    },
+    "created_at": "2026-10-17T18:10:57.008495Z",
+    "idempotency_key": "live-7d0e876ce3f34b0b9cd6cda2d240f5c9",
+    "events": []
+  },
+  "G_cross_tenant": {
+    "http_status": 404,
+    "business_mutations": 0
+  },
+  "I_replay": {
+    "execution_id": "e9a2e862-1166-49e1-aad9-280a9b5e97cb",
+    "replayed": true,
+    "extra_mutations": 0
+  },
+  "J_security_override": {
+    "decision": "DENY",
+    "business_mutations": 0
+  },
+  "critical_unsafe_mutations": 0
+}

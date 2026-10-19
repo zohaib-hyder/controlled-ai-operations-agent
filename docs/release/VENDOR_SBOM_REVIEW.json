@@ -1,0 +1,94 @@
+{
+  "profile": "Vendor-provided wheel SBOM with explicit AlmaLinux 8 source context; actual runtime images remain Debian",
+  "context_evidence": "auditwheel SBOM rpm/almalinux purls and el8 releases",
+  "scanner_image": "anchore/grype@sha256:e4a44ef45d285b829ce6efe2642980329661bd2d18eab5fc539138d4adaebbbe",
+  "network": "none",
+  "counts": {
+    "Low": 1,
+    "High": 2,
+    "Medium": 2
+  },
+  "findings": [
+    {
+      "id": "CVE-2022-41409",
+      "severity": "Low",
+      "package": "pcre2",
+      "version": "10.32-3.el8_6",
+      "fix": {
+        "versions": [],
+        "state": "not-fixed"
+      },
+      "data_source": "https://access.redhat.com/security/cve/CVE-2022-41409",
+      "description": "A flaw was found in PCRE2, where it is susceptible to an integer overflow vulnerability triggered by a negative repeat value in the pcre2test subject line that causes infinite looping. This flaw allows a remote attacker to pass specially crafted data to the application, initiating an integer overflow and executing a denial of service (DoS) attack."
+    },
+    {
+      "id": "CVE-2026-86145",
+      "severity": "High",
+      "package": "pcre2",
+      "version": "10.32-3.el8_6",
+      "fix": {
+        "versions": [
+          "10.32-4.el8_10"
+        ],
+        "state": "fixed"
+      },
+      "data_source": "https://access.redhat.com/security/cve/CVE-2026-86145",
+      "description": "A flaw was found in PCRE2. An out-of-bounds write vulnerability exists in the `pcre2_dfa_match` function due to improper size checking when reusing cached workspace blocks. A remote attacker could exploit this by providing a specially crafted regular expression or a recursive pattern in conjunction with a small heap limit. This could lead to data corruption or potentially arbitrary code execution, compromising the integrity and availability of the system."
+    },
+    {
+      "id": "CVE-2026-103111",
+      "severity": "High",
+      "package": "pcre2",
+      "version": "10.32-3.el8_6",
+      "fix": {
+        "versions": [
+          "10.32-4.el8_10"
+        ],
+        "state": "fixed"
+      },
+      "data_source": "https://access.redhat.com/security/cve/CVE-2026-103111",
+      "description": "A flaw was found in pcre2. When an application processes attacker-controlled regular expressions using certain Just-In-Time (JIT) compiler interfaces, an out-of-bounds write with arbitrary data can occur. An attacker could exploit this vulnerability to achieve arbitrary code execution, corrupt memory, or cause a denial of service (DoS)."
+    },
+    {
+      "id": "CVE-2026-89157",
+      "severity": "Medium",
+      "package": "pcre2",
+      "version": "10.32-3.el8_6",
+      "fix": {
+        "versions": [
+          "10.32-4.el8_10"
+        ],
+        "state": "fixed"
+      },
+      "data_source": "https://access.redhat.com/security/cve/CVE-2026-89157",
+      "description": "A flaw was found in PCRE2. On 32-bit platforms, an attacker can provide a specially crafted large pattern, leading to an out-of-bounds write within the pcre2_pattern_convert function. This vulnerability can result in high integrity impact, such as data corruption, and potentially a low availability impact, causing a denial of service."
+    },
+    {
+      "id": "CVE-2026-89158",
+      "severity": "Medium",
+      "package": "pcre2",
+      "version": "10.32-3.el8_6",
+      "fix": {
+        "versions": [
+          "10.32-4.el8_10"
+        ],
+        "state": "fixed"
+      },
+      "data_source": "https://access.redhat.com/security/cve/CVE-2026-89158",
+      "description": "A flaw was found in PCRE2. On 32-bit platforms, an integer overflow in the `pcre2_compile_32` function can lead to an out-of-bounds write. This vulnerability could allow a remote attacker to achieve a high integrity impact and a low availability impact, potentially leading to data corruption or denial of service."
+    }
+  ],
+  "affected_runtime_images": [
+    "controlled-ai-operations-backend:latest",
+    "controlled-ai-operations-worker:latest"
+  ],
+  "database": {
+    "schemaVersion": "v6.1.10",
+    "from": "https://grype.anchore.io/databases/v6/vulnerability-db_v6.1.10_2026-10-19T00:32:50Z_1792391955.tar.zst?checksum=sha256%3A13a192236b248579678bbf06cefb2a07a5dcbd00da110cfb5c3e26eb68a7ce58",
+    "built": "2026-10-19T06:39:15Z",
+    "path": "/db/6/vulnerability.db",
+    "valid": true
+  },
+  "timestamp": "2026-10-19T12:39:23.23520738Z",
+  "ignored_match_count": 0
+}

@@ -1,0 +1,142 @@
+name: Controlled agent security and execution checks
+on: [push, pull_request]
+permissions:
+  contents: read
+env:
+  NEXT_TELEMETRY_DISABLED: "1"
+  NPM_CONFIG_AUDIT: "false"
+  NPM_CONFIG_FUND: "false"
+  NPM_CONFIG_UPDATE_NOTIFIER: "false"
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: northstar
+          POSTGRES_PASSWORD: synthetic-local-only
+          POSTGRES_DB: northstar_test
+        ports: ["55432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U northstar -d northstar_test"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      APP_ENV: test
+      AI_PROVIDER: mock
+      PHASE6_EVALUATION_DIR: /tmp/northstar-phase6-evaluation
+      PHASE7_EVALUATION_DIR: /tmp/northstar-phase7-evaluation
+      PHASE8_EVALUATION_DIR: /tmp/northstar-phase8-evaluation
+      PHASE9_EVALUATION_DIR: /tmp/northstar-phase9-evaluation
+      PHASE10_EVALUATION_DIR: /tmp/northstar-phase10-evaluation
+      TEST_DATABASE_URL: postgresql+psycopg://northstar:synthetic-local-only@localhost:55432/northstar_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - run: uv sync --project backend --frozen --extra test
+      - run: backend/.venv/bin/ruff check --config backend/pyproject.toml backend scripts
+      - name: Full versioned adversarial evaluation and backend regression
+        run: .venv/bin/python -m app.evaluations.red_team --regression --output /tmp/northstar-phase11-evaluation
+        working-directory: backend
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: phase11-security-and-lifecycle-evaluation
+          path: /tmp/northstar-phase11-evaluation
+
+  frontend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: northstar
+          POSTGRES_PASSWORD: synthetic-local-only
+          POSTGRES_DB: northstar_e2e
+        ports: ["55432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U northstar -d northstar_e2e"
+          --health-interval 5s --health-timeout 3s --health-retries 20
+    env:
+      APP_ENV: test
+      AI_PROVIDER: mock
+      DATABASE_URL: postgresql+psycopg://northstar:synthetic-local-only@localhost:55432/northstar_e2e
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '26.12.0'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.12'
+      - name: Generate ephemeral demo credential without logging it
+        run: |
+          python - <<'PY'
+          import os, secrets
+          with open(os.environ['GITHUB_ENV'], 'a') as stream:
+              stream.write('DEMO_PASSWORD=' + secrets.token_urlsafe(32) + '\n')
+          PY
+      - run: uv sync --project backend --frozen --extra test
+      - run: uv run --frozen alembic upgrade head && uv run --frozen python -m app.db.seed_auth
+        working-directory: backend
+      - name: Start local API for browser tests
+        run: |
+          backend/.venv/bin/uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000 --no-access-log > "$RUNNER_TEMP/northstar-api.log" 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/api/v1/ready; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Seed explicit synthetic lifecycle browser fixtures
+        run: backend/.venv/bin/python scripts/investigation_fixtures.py --confirm-synthetic-fixtures --github-env
+      - run: npm ci
+        working-directory: frontend
+      - run: npm run lint && npm run typecheck && npm test && npm run build
+        working-directory: frontend
+      - run: npx playwright install --with-deps chromium
+        working-directory: frontend
+      - run: backend/.venv/bin/python scripts/prepare_phase10_browser.py --confirm-synthetic-local --no-compose-worker --github-env
+      - run: backend/.venv/bin/python scripts/prepare_phase8_browser.py --confirm-synthetic-local --github-env
+      - run: npm run test:e2e
+        working-directory: frontend
+      - name: Start actual synthetic worker for complete release journey
+        run: |
+          backend/.venv/bin/python -m app.jobs.worker > "$RUNNER_TEMP/northstar-worker.log" 2>&1 &
+        env:
+          PYTHONPATH: backend
+      - name: Prepare fresh release browser records
+        run: backend/.venv/bin/python scripts/prepare_release_browser.py --confirm-synthetic-local
+      - name: Complete independent-review durable execution browser journey
+        run: npm run test:e2e -- --config playwright.release.config.ts
+        working-directory: frontend
+      - name: Build isolated local runtime images for negative browser boundaries
+        run: docker compose build backend frontend worker
+        env:
+          POSTGRES_PASSWORD: synthetic-local-only
+          APP_ENV: development
+      - name: Install fresh isolated synthetic demo stack
+        run: backend/.venv/bin/python scripts/release_clean_install.py --confirm-new-synthetic-stack
+        env:
+          POSTGRES_PASSWORD: synthetic-local-only
+          APP_ENV: development
+      - name: Expiry, permission revocation and stale policy browser checks
+        run: npm run test:e2e -- --config playwright.negative.config.ts
+        working-directory: frontend
+      - name: Stop only this job's isolated demo project
+        if: always()
+        run: docker compose -p northstar-release12 -f docker-compose.yml -f infra/docker/release.compose.yml down --volumes
+        env:
+          POSTGRES_PASSWORD: synthetic-local-only
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-release-evidence
+          path: |
+            artifacts/release-browser-results.json
+            artifacts/release-negative-browser-results.json
+            artifacts/clean-install.json
+            frontend/test-results

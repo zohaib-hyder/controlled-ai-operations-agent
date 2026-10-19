@@ -1,0 +1,71 @@
+{
+  "scenarios": {
+    "A_blocked": {
+      "investigation_id": "dce450ac-3b15-4e5f-bea6-5ad1ed9692a8",
+      "status": "COMPLETED",
+      "stop_reason": "completed",
+      "source_count": 11,
+      "conflicts": [],
+      "gaps": [],
+      "tool_calls": 6
+    },
+    "B_payment_conflict": {
+      "investigation_id": "eb6b7d79-277b-499b-bd77-9f5ce0e225ff",
+      "status": "NEEDS_REVIEW",
+      "stop_reason": "conflicting_evidence",
+      "source_count": 11,
+      "conflicts": [
+        "payment_unresolved"
+      ],
+      "gaps": [],
+      "tool_calls": 6
+    },
+    "C_security": {
+      "investigation_id": "58240abf-8c76-498b-9b15-4466629981fc",
+      "status": "NEEDS_REVIEW",
+      "stop_reason": "security_review_required",
+      "source_count": 11,
+      "conflicts": [],
+      "gaps": [],
+      "tool_calls": 6
+    },
+    "D_missing": {
+      "investigation_id": "123ed99d-1148-4644-be36-6ea1218059ec",
+      "status": "NEEDS_REVIEW",
+      "stop_reason": "missing_evidence",
+      "source_count": 8,
+      "conflicts": [],
+      "gaps": [
+        "missing_transaction",
+        "missing_block_reason"
+      ],
+      "tool_calls": 6
+    },
+    "E_superseded_excluded": {
+      "reactivation_versions": [
+        2
+      ]
+    },
+    "F_foreign_denied": {
+      "tool_error": "not_found",
+      "investigation_status": 404
+    },
+    "G_restart_persistence": {
+      "investigation_id": "eb6b7d79-277b-499b-bd77-9f5ce0e225ff",
+      "identical_result": true,
+      "sha256": "d5983af976c5b5982fe9ab4394d90e1583babb8a3df1551cfc85ccc7c976f6ca"
+    },
+    "H_legacy_phase4_read": {
+      "investigation_id": "fa6448d2-c489-4996-ae88-a7bef3cd76fa",
+      "status": "COMPLETED",
+      "legacy_readable": true,
+      "evidence_envelopes": 6
+    }
+  },
+  "health": {
+    "status": "ok"
+  },
+  "ready": {
+    "status": "ready"
+  }
+}

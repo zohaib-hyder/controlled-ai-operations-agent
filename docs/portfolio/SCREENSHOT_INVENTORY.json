@@ -1,0 +1,107 @@
+{
+  "captured_at": "2026-10-19T14:02:46.592059+00:00",
+  "scope": "Actual desktop Chromium publication-stack screens; no fabricated or generated UI",
+  "images": [
+    {
+      "file": "assets/approval-evidence.png",
+      "width": 1440,
+      "height": 1417,
+      "sha256": "704e222722dc21605644eff8441dfa1ffcea0017bb1dbb9d2631828a4aae7748",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/approval-queue.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "ae305d13176c06c2e8bd3410aac410f4fd88dd7a761c6c6180caab6f4fba655a",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/controlled-execution-jobs.png",
+      "width": 1440,
+      "height": 1443,
+      "sha256": "704c6f2c0475eb565d83db98838fc4df714642441d93602af12668a34afdee89",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/correlation-diagnostics.png",
+      "width": 1440,
+      "height": 5640,
+      "sha256": "5e98c6614b0e72655eac7844da0572eb87b91a09fc2f27c2b896b99252d0702f",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/incidents-empty.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "984a92508bd98496fe2293980a296cc3a8dcc3281f703bd2471a87c3069938e7",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/investigation-evidence.png",
+      "width": 1440,
+      "height": 6908,
+      "sha256": "5d8e6c7681a5218b5bbf9f4faba6860eb5bd09089ac0f1811785139ddea77320",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/operations-command-center.png",
+      "width": 1440,
+      "height": 2335,
+      "sha256": "d3817bb0473a2af7207c6b00c579d74c3806d9774291ea2fc2aee78edd7bedef",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    },
+    {
+      "file": "assets/policy-proposal.png",
+      "width": 1440,
+      "height": 1496,
+      "sha256": "5b5d69da681b0ffcfbd9af43204fba34c626d68d8d60fead3da0feca712f8beb",
+      "png_chunks": [
+        "IDAT",
+        "IEND",
+        "IHDR"
+      ],
+      "visual_review": "Actual synthetic app screen reviewed; no credential/private workstation information visible; no redaction required"
+    }
+  ],
+  "limitations": [
+    "Incidents screenshot is a genuine empty state; no incident detail/response capture is claimed",
+    "Full-page evidence and correlation captures are tall; use original-resolution assets",
+    "Approval queue recaptured after loaded API data; shows real approved request"
+  ]
+}

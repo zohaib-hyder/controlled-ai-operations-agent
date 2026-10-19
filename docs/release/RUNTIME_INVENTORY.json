@@ -1,0 +1,708 @@
+{
+  "recorded_at": "2026-10-19T13:08:49.244656+00:00",
+  "scope": "Local offline image probes and actual process maps; no function-call tracing",
+  "running_image_binding": {
+    "main": {
+      "backend": {
+        "tag_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "container_image_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "exact_match": true
+      },
+      "frontend": {
+        "tag_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "container_image_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "exact_match": true
+      },
+      "worker": {
+        "tag_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "container_image_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "exact_match": true
+      }
+    },
+    "isolated": {
+      "backend": {
+        "tag_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "container_image_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "exact_match": true
+      },
+      "frontend": {
+        "tag_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "container_image_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "exact_match": true
+      },
+      "worker": {
+        "tag_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "container_image_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "exact_match": true
+      }
+    }
+  },
+  "images": {
+    "backend": {
+      "image_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+      "configured_user": "appuser",
+      "size_bytes_docker": 60714452,
+      "python": "3.12.15",
+      "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+      "zlib_compile": "1.3.1",
+      "zlib_runtime": "1.3.1",
+      "commands": {
+        "node": null,
+        "npm": null,
+        "npx": null,
+        "yarn": null,
+        "yarnpkg": null,
+        "corepack": null,
+        "gcc": null,
+        "g++": null,
+        "cc": null,
+        "make": null,
+        "apt": "/usr/bin/apt",
+        "apt-get": "/usr/bin/apt-get",
+        "dpkg": "/usr/bin/dpkg",
+        "pip": null,
+        "uv": null,
+        "perl": "/usr/bin/perl",
+        "mount": "/usr/bin/mount",
+        "nsenter": "/usr/bin/nsenter",
+        "infocmp": "/usr/bin/infocmp"
+      },
+      "distributions": [
+        [
+          "Mako",
+          "1.4.3"
+        ],
+        [
+          "MarkupSafe",
+          "3.0.4"
+        ],
+        [
+          "SQLAlchemy",
+          "2.0.54"
+        ],
+        [
+          "alembic",
+          "1.20.0"
+        ],
+        [
+          "annotated-doc",
+          "0.0.5"
+        ],
+        [
+          "annotated-types",
+          "0.8.0"
+        ],
+        [
+          "anyio",
+          "4.15.1"
+        ],
+        [
+          "argon2-cffi",
+          "25.1.0"
+        ],
+        [
+          "argon2-cffi-bindings",
+          "26.1.0"
+        ],
+        [
+          "certifi",
+          "2026.7.22"
+        ],
+        [
+          "cffi",
+          "2.1.1"
+        ],
+        [
+          "click",
+          "8.5.0"
+        ],
+        [
+          "fastapi",
+          "0.143.2"
+        ],
+        [
+          "greenlet",
+          "3.5.6"
+        ],
+        [
+          "h11",
+          "0.16.0"
+        ],
+        [
+          "httpcore",
+          "1.0.9"
+        ],
+        [
+          "httpx",
+          "0.28.1"
+        ],
+        [
+          "idna",
+          "3.20"
+        ],
+        [
+          "opentelemetry-api",
+          "1.45.1"
+        ],
+        [
+          "psycopg",
+          "3.3.6"
+        ],
+        [
+          "psycopg-binary",
+          "3.3.6"
+        ],
+        [
+          "pycparser",
+          "3.11"
+        ],
+        [
+          "pydantic",
+          "2.14.1"
+        ],
+        [
+          "pydantic-settings",
+          "2.16.0"
+        ],
+        [
+          "pydantic_core",
+          "2.50.1"
+        ],
+        [
+          "python-dotenv",
+          "1.2.4"
+        ],
+        [
+          "starlette",
+          "1.8.0"
+        ],
+        [
+          "typing-inspection",
+          "0.4.4"
+        ],
+        [
+          "typing_extensions",
+          "4.16.0"
+        ],
+        [
+          "uvicorn",
+          "0.54.0"
+        ]
+      ],
+      "os_packages": {
+        "adduser": "3.152",
+        "apt": "3.0.3",
+        "base-files": "13.8+deb13u7",
+        "base-passwd": "3.6.7",
+        "bash": "5.2.37-2+b10",
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "ca-certificates": "20250419",
+        "coreutils": "9.7-3",
+        "dash": "0.5.12-12",
+        "debconf": "1.5.91",
+        "debian-archive-keyring": "2025.1",
+        "debianutils": "5.23.2",
+        "diffutils": "1:3.10-4",
+        "dpkg": "1.22.22",
+        "findutils": "4.10.0-3",
+        "gcc-14-base:arm64": "14.2.0-19",
+        "grep": "3.11-4+b1",
+        "gzip": "1.13-1+deb13u1",
+        "hostname": "3.25",
+        "init-system-helpers": "1.69~deb13u1",
+        "libacl1:arm64": "2.3.2-2+b1",
+        "libapt-pkg7.0:arm64": "3.0.3",
+        "libattr1:arm64": "1:2.5.2-3",
+        "libaudit-common": "1:4.0.2-2+deb13u1",
+        "libaudit1:arm64": "1:4.0.2-2+deb13u1",
+        "libblkid1:arm64": "2.41.5-0+deb13u1",
+        "libbsd0:arm64": "0.12.2-2",
+        "libbz2-1.0:arm64": "1.0.8-6",
+        "libc-bin": "2.41-12+deb13u4",
+        "libc6:arm64": "2.41-12+deb13u4",
+        "libcap-ng0:arm64": "0.8.5-4+b1",
+        "libcap2:arm64": "1:2.75-10+deb13u1+b3",
+        "libcrypt1:arm64": "1:4.4.38-1",
+        "libdb5.3t64:arm64": "5.3.28+dfsg2-9",
+        "libdebconfclient0:arm64": "0.280",
+        "libffi8:arm64": "3.4.8-2",
+        "libgcc-s1:arm64": "14.2.0-19",
+        "libgdbm6t64:arm64": "1.24-2",
+        "libgmp10:arm64": "2:6.3.0+dfsg-3",
+        "libhogweed6t64:arm64": "3.10.1-1",
+        "liblastlog2-2:arm64": "2.41.5-0+deb13u1",
+        "liblz4-1:arm64": "1.10.0-4",
+        "liblzma5:arm64": "5.8.1-1+deb13u1",
+        "libmd0:arm64": "1.1.0-2+b1",
+        "libmount1:arm64": "2.41.5-0+deb13u1",
+        "libncursesw6:arm64": "6.5+20250216-2",
+        "libnettle8t64:arm64": "3.10.1-1",
+        "libpam-modules:arm64": "1.7.0-5",
+        "libpam-modules-bin": "1.7.0-5",
+        "libpam-runtime": "1.7.0-5",
+        "libpam0g:arm64": "1.7.0-5",
+        "libpcre2-8-0:arm64": "10.46-1~deb13u3",
+        "libreadline8t64:arm64": "8.2-6",
+        "libseccomp2:arm64": "2.6.0-2",
+        "libselinux1:arm64": "3.8.1-1",
+        "libsemanage-common": "3.8.1-1",
+        "libsemanage2:arm64": "3.8.1-1",
+        "libsepol2:arm64": "3.8.1-1",
+        "libsmartcols1:arm64": "2.41.5-0+deb13u1",
+        "libsqlite3-0:arm64": "3.46.1-7+deb13u2",
+        "libssl3t64:arm64": "3.5.7-1~deb13u3",
+        "libstdc++6:arm64": "14.2.0-19",
+        "libsystemd0:arm64": "257.13-1~deb13u1",
+        "libtinfo6:arm64": "6.5+20250216-2",
+        "libudev1:arm64": "257.13-1~deb13u1",
+        "libuuid1:arm64": "2.41.5-0+deb13u1",
+        "libxxhash0:arm64": "0.8.3-2",
+        "libzstd1:arm64": "1.5.7+dfsg-1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "login.defs": "1:4.17.4-2",
+        "mawk": "1.3.4.20250131-1",
+        "mount": "2.41.5-0+deb13u1",
+        "ncurses-base": "6.5+20250216-2",
+        "ncurses-bin": "6.5+20250216-2",
+        "netbase": "6.5",
+        "openssl": "3.5.7-1~deb13u3",
+        "openssl-provider-legacy": "3.5.7-1~deb13u3",
+        "passwd": "1:4.17.4-2",
+        "perl-base": "5.40.1-6+deb13u1",
+        "readline-common": "8.2-6",
+        "sed": "4.9-2+deb13u1",
+        "sqv": "1.3.0-3+b2",
+        "sysvinit-utils": "3.14-4",
+        "tar": "1.35+dfsg-3.1",
+        "tzdata": "2026c-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1",
+        "zlib1g:arm64": "1:1.3.dfsg+really1.3.1-1+b1"
+      },
+      "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.7\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+      "running_process_maps_exit": 0,
+      "running_process_libraries": [
+        "/app/.venv/lib/python3.12/site-packages/_argon2_cffi_bindings/_ffi.abi3.so",
+        "/app/.venv/lib/python3.12/site-packages/_cffi_backend.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcom_err-6d8d18aa.so.2.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypt-258f54d5.so.1.1.0",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypto-02bae65c.so.1.1.1k",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypto-cff3d539.so.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libgssapi_krb5-42536122.so.2.2",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libk5crypto-f5362a5f.so.3.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkeyutils-fe6e95a9.so.1.6",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkrb5-98c41d04.so.3.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkrb5support-beb3078f.so.0.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/liblber-e2ad9298.so.2.0.200",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libldap-1357b183.so.2.0.200",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libpcre2-8-8701a61e.so.0.7.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libpq-53e4e5f8.so.5.18",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libsasl2-076b3c1f.so.3.0.0",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libselinux-be7a4dc7.so.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libssl-c64c0f6b.so.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary/_psycopg.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary/pq.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-aarch64-linux-gnu.so",
+        "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+        "/usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4",
+        "/usr/lib/aarch64-linux-gnu/libc.so.6",
+        "/usr/lib/aarch64-linux-gnu/libcrypto.so.3",
+        "/usr/lib/aarch64-linux-gnu/libdl.so.2",
+        "/usr/lib/aarch64-linux-gnu/libffi.so.8.1.4",
+        "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+        "/usr/lib/aarch64-linux-gnu/liblzma.so.5.8.1",
+        "/usr/lib/aarch64-linux-gnu/libm.so.6",
+        "/usr/lib/aarch64-linux-gnu/libpthread.so.0",
+        "/usr/lib/aarch64-linux-gnu/libresolv.so.2",
+        "/usr/lib/aarch64-linux-gnu/libssl.so.3",
+        "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+        "/usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0",
+        "/usr/lib/aarch64-linux-gnu/libz.so.1.3.1",
+        "/usr/lib/aarch64-linux-gnu/libzstd.so.1.5.7",
+        "/usr/local/lib/libpython3.12.so.1.0",
+        "/usr/local/lib/python3.12/lib-dynload/_asyncio.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_bisect.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_blake2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_bz2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_contextvars.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_csv.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_ctypes.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_datetime.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_decimal.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_hashlib.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_heapq.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_json.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_lzma.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_multiprocessing.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_opcode.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_pickle.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_queue.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_random.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_sha2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_socket.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_ssl.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_struct.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_uuid.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/array.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/binascii.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/fcntl.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/math.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/select.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/unicodedata.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/zlib.cpython-312-aarch64-linux-gnu.so"
+      ]
+    },
+    "frontend": {
+      "image_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+      "configured_user": "node",
+      "size_bytes_docker": 86210498,
+      "node": "v26.12.0",
+      "openssl": "3.5.9",
+      "undici": "8.11.2",
+      "commands": {
+        "node": "/usr/local/bin/node",
+        "npm": null,
+        "npx": null,
+        "yarn": null,
+        "yarnpkg": null,
+        "corepack": null,
+        "gcc": null,
+        "g++": null,
+        "cc": null,
+        "make": null,
+        "apk": "/sbin/apk"
+      },
+      "ldd": "\t/lib/ld-musl-aarch64.so.1 (0xffff86ef0000)\n\tlibstdc++.so.6 => /usr/lib/libstdc++.so.6 (0xffff7f42a000)\n\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0xffff7f3f9000)\n\tlibc.musl-aarch64.so.1 => /lib/ld-musl-aarch64.so.1 (0xffff86ef0000)\n",
+      "os_packages": "C:Q17hOhjufinXWHIBdAPVnASE2s2WM=\nP:alpine-baselayout\nV:3.7.2-r1\nA:aarch64\nS:8265\nI:6552\nT:Alpine base dir structure and init scripts\nU:https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/alpine-baselayout\nL:GPL-2.0-only\no:alpine-baselayout\nt:1774381254\nc:60a7585bbab2fa0f762504eb617dbca90216e31f\nD:alpine-baselayout-data=3.7.2-r1 /bin/sh\nq:1000\nF:dev\nF:dev/pts\nF:dev/shm\nF:etc\nR:motd\nZ:Q1SLkS9hBidUbPwwrw+XR0Whv3ww8=\nF:etc/crontabs\nR:root\na:0:0:600\nZ:Q1vfk1apUWI4yLJGhhNRd0kJixfvY=\nF:etc/modprobe.d\nR:aliases.conf\nZ:Q1WUbh6TBYNVK7e4Y+uUvLs/7viqk=\nR:blacklist.conf\nZ:Q1aOF8uBj142eLXKB+WyA7KXUVmdE=\nR:i386.conf\nZ:Q1pnay/njn6ol9cCssL7KiZZ8etlc=\nF:etc/modules-load.d\nF:etc/network\nF:etc/network/if-down.d\nF:etc/network/if-post-down.d\nF:etc/network/if-pre-up.d\nF:etc/network/if-up.d\nF:etc/opt\nF:etc/periodic\nF:etc/periodic/15min\nF:etc/periodic/daily\nF:etc/periodic/hourly\nF:etc/periodic/monthly\nF:etc/periodic/weekly\nF:etc/profile.d\nR:20locale.sh\nZ:Q1lq29lQzPmSCFKVmQ+bvmZ/DPTE4=\nR:README\nZ:Q135OWsCzzvnB2fmFx62kbqm1Ax1k=\nR:color_prompt.sh.disabled\nZ:Q11XM9mde1Z29tWMGaOkeovD/m4uU=\nF:etc/sysctl.d\nF:home\nF:lib\nF:lib/firmware\nF:lib/modules-load.d\nF:lib/sysctl.d\nF:media\nF:media/cdrom\nF:media/floppy\nF:media/usb\nF:mnt\nF:opt\nF:proc\nF:root\nM:0:0:700\nF:run\nF:run/lock\nF:sbin\nF:srv\nF:sys\nF:tmp\nM:0:0:1777\nF:usr\nF:usr/bin\nF:usr/lib\nF:usr/lib/modules-load.d\nF:usr/lib/sysctl.d\nR:00-alpine.conf\nZ:Q1HpElzW1xEgmKfERtTy7oommnq6c=\nF:usr/local\nF:usr/local/bin\nF:usr/local/lib\nF:usr/local/share\nF:usr/sbin\nF:usr/share\nF:usr/share/misc\nF:var\nR:lock\na:0:0:777\nZ:Q1AlKRzNY2tL5VHCUulI/O8Gf3f+Y=\nR:run\na:0:0:777\nZ:Q17YsfxskJinWuZ3JoRSm9MMYXz1c=\nF:var/cache\nF:var/cache/misc\nF:var/empty\nM:0:0:555\nF:var/lib\nF:var/lib/misc\nF:var/local\nF:var/log\nF:var/mail\nF:var/opt\nF:var/spool\nR:mail\na:0:0:777\nZ:Q1UjAZ8b+Ffvgl10kRbACKOtFgZTw=\nF:var/spool/cron\nR:crontabs\na:0:0:777\nZ:Q1Urj2+WCTswmFlzElXjdLVF4LQ+s=\nF:var/tmp\nM:0:0:1777\n\nC:Q1MzfIPSHI6xFODUuydeVh3TSTvbg=\nP:alpine-baselayout-data\nV:3.7.2-r1\nA:aarch64\nS:10780\nI:19034\nT:Alpine base dir structure and init scripts\nU:https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/main/alpine-baselayout\nL:GPL-2.0-only\no:alpine-baselayout\nt:1774381254\nc:60a7585bbab2fa0f762504eb617dbca90216e31f\nr:alpine-baselayout\nq:1000\nF:etc\nR:fstab\nZ:Q11Q7hNe8QpDS531guqCdrXBzoA/o=\nR:group\nZ:Q12Otk4M39fP2Zjkobu0nC9FvlRI0=\nR:hostname\nZ:Q16nVwYVXP/tChvUPdukVD2ifXOmc=\nR:hosts\nZ:Q1BD6zJKZTRWyqGnPi4tSfd3krsMU=\nR:inittab\nZ:Q1zpWG0qzx2UYnZSWaIczE+WpAIVE=\nR:modules\nZ:Q1toogjUipHGcMgECgPJX64SwUT1M=\nR:mtab\na:0:0:777\nZ:Q1aFfANMgcqDT9yYrvPxy5ePVsaZg=\nR:nsswitch.conf\nZ:Q19DBsMnv0R2fajaTjoTv0C91NOqo=\nR:passwd\nZ:Q1r+bLonZkAyBix/HLgSeDsez22Zs=\nR:profile\nZ:Q1VN0dmawDg3mBE/ljB+6bUrC7Dzc=\nR:protocols\nZ:Q11fllRTkIm5bxsZVoSNeDUn2m+0c=\nR:services\nZ:Q1oNeiKb8En3/hfoRFImI25AJFNdA=\nR:shadow\na:0:0:640\nZ:Q1miRFe6MuYCWAiVxqiFzhddegBq4=\nR:shells\nZ:Q1ojm2YdpCJ6B/apGDaZ/Sdb2xJkA=\nR:sysctl.conf\nZ:Q14upz3tfnNxZkIEsUhWn7Xoiw96g=\n\nC:Q1ZEDSgayIcU2W6hJkHMark83sG4w=\nP:alpine-keys\nV:2.6-r0\nA:aarch64\nS:12708\nI:12510\nT:Public keys for Alpine Linux packages\nU:https://alpinelinux.org\nL:MIT\no:alpine-keys\nt:1758215632\nc:b9f23becced4d7b3ccc0fa0f28530243ccd314a0\nr:alpine-base\nF:etc\nF:etc/apk\nF:etc/apk/keys\nZ:Q1Oaxdcsa6AYoPdLi0U4lO3J2we18=\nZ:Q1V/a5P9pKRJb6tihE3e8O6xaPgLU=\nF:usr\nF:usr/share\nF:usr/share/apk\nF:usr/share/apk/keys\nZ:Q1OvCFSO94z97c80mIDCxqGkh2Og4=\nZ:Q1v7YWZYzAWoclaLDI45jEguI7YN0=\nZ:Q1BTqS+H/UUyhQuzHwiBl47+BTKuU=\nZ:Q1NnGuDsdQOx4ZNYfB3N97eLyGPkI=\nZ:Q1Oaxdcsa6AYoPdLi0U4lO3J2we18=\nZ:Q1yPq+su65ksNox3uXB+DR7P18+QU=\nZ:Q1MpZDNX0LeLHvSOwVUyXiXx11NN0=\nZ:Q1glCQ/eJbvA5xqcswdjFrWv5Fnk0=\nZ:Q1XUdDEoNTtjlvrS+iunk6ziFgIpU=\nZ:Q1lZlTESNrelWTNkL/oQzmAU8a99A=\nZ:Q1WNW6Sy87HpJ3IdemQy8pju33Kms=\nZ:Q1I9Dy6hryacL2YWXg+KlE6WvwEd4=\nZ:Q1NSnsgmcMbU4g7j5JaNs0tVHpHVA=\nZ:Q1VaMBBk4Rxv6boPLKF+I085Q8y2E=\nZ:Q13hJBMHAUquPbp5jpAPFjQI2Y1vQ=\nZ:Q1V/a5P9pKRJb6tihE3e8O6xaPgLU=\nZ:Q13wLJrcKQajql5a1p9Q45U+ZXENA=\nZ:Q1e9Du4tVYk3NWhpMqpHp8imbpFTs=\nF:usr/share/apk/keys/aarch64\na:0:0:777\nZ:Q17j9nWJkQ+wfIuVQzIFrmFZ7fSOc=\na:0:0:777\nZ:Q1snr+Q1UbfHyCr/cmmtVvMIS7SGs=\nF:usr/share/apk/keys/armhf\na:0:0:777\nZ:Q1U9QtsdN+rYZ9Zh76EfXy00JZHMg=\na:0:0:777\nZ:Q1bC+AdQ0qWBTmefXiI0PvmYOJoVQ=\nF:usr/share/apk/keys/armv7\na:0:0:777\nZ:Q1U9QtsdN+rYZ9Zh76EfXy00JZHMg=\na:0:0:777\nZ:Q1xbIVu7ScwqGHxXGwI22aSe5OdUY=\nF:usr/share/apk/keys/loongarch64\na:0:0:777\nZ:Q1o47jWpyhkXZ0dh3oYcbisQOB03E=\nF:usr/share/apk/keys/mips64\na:0:0:777\nZ:Q1hCZdFx+LvzbLtPs753je78gEEBQ=\nF:usr/share/apk/keys/ppc64le\na:0:0:777\nZ:Q1t21dhCLbTJmAHXSCeOMq/2vfSgo=\na:0:0:777\nZ:Q1PS9zNIPJanC8qcsc5qarEWqhV5Q=\nF:usr/share/apk/keys/riscv64\na:0:0:777\nZ:Q1NVPbZavaXpsItFwQYDWbpor7yYE=\na:0:0:777\nZ:Q1U6tfuKRy5J8C6iaKPMZaT/e8tbA=\nF:usr/share/apk/keys/s390x\na:0:0:777\nZ:Q1sjbV2r2w0Ih2vwdzC4Jq6UI7cMQ=\na:0:0:777\nZ:Q1l09xa7RnbOIC1dI9FqbaCfS/GXY=\nF:usr/share/apk/keys/x86\na:0:0:777\nZ:Q1Ii51i7Nrc4uft14HhqugaUqdH64=\na:0:0:777\nZ:Q1Y49eVxhpvftbQ3yAdvlLfcrPLTU=\na:0:0:777\nZ:Q1HjdvcVkpBZzr1aSe3p7oQfAtm/E=\nF:usr/share/apk/keys/x86_64\na:0:0:777\nZ:Q1Ii51i7Nrc4uft14HhqugaUqdH64=\na:0:0:777\nZ:Q1AUFY+fwSBTcrYetjT7NHvafrSQc=\na:0:0:777\nZ:Q1qKA23VzMUDle+Dqnrr5Kz+Xvty4=\n\nC:Q1tH9vSL07Dtx6XeOS8n1bskUv+1M=\nP:alpine-release\nV:3.24.2-r0\nA:aarch64\nS:2080\nI:343\nT:Alpine release data\nU:https://alpinelinux.org\nL:MIT\no:alpine-base\nt:1789666254\nc:d9d560d5de74ff9a7a73f3c903d6f126a0bf3142\nD:alpine-keys\nr:alpine-baselayout\nF:etc\nR:alpine-release\nZ:Q1QHii6oHtQge+s4fQhlgHxj+aO9E=\nR:issue\nZ:Q1mhieTzowHBwMDuPt9PehnOGvByI=\nR:os-release\na:0:0:777\nZ:Q1YY4yfoxDpIdGB3pha26gbRNf0Eo=\nF:etc/secfixes.d\nR:alpine\nZ:Q1iIBwk0cHWkzu3sZ9J0hlkgcbdHM=\nF:usr\nF:usr/lib\nR:os-release\nZ:Q1aOgi+F8Xu15sqQldYXHMBpN6jHU=\n\nC:Q1EfOebJKtWJwE97O8Tajr7Rhu+8o=\nP:apk-tools\nV:3.0.8-r0\nA:aarch64\nS:56412\nI:135248\nT:Alpine Package Keeper - package manager for alpine\nU:https://gitlab.alpinelinux.org/alpine/apk-tools\nL:GPL-2.0-only\no:apk-tools\nt:1788243861\nc:4588b452722bd4800efdc6cce4f6e980e02a997f\nD:musl>=1.2.3_git20230424 libcrypto3>=3.5 libapk=3.0.8-r0 ca-certificates-bundle so:libapk.so.3.0.0 so:libc.musl-aarch64.so.1 so:libz.so.1\np:apk-tools3=3.0.8-r0 cmd:apk=3.0.8-r0\nr:apk-tools3\nF:etc\nF:etc/apk\nF:etc/apk/keys\nF:etc/apk/protected_paths.d\nF:lib\nF:lib/apk\nF:lib/apk/db\nF:lib/apk/exec\nF:sbin\nR:apk\na:0:0:755\nZ:Q1Meuq9G9i75ebLRndV0sd3cGqA60=\nF:var\nF:var/cache\nF:var/cache/apk\n\nC:Q1cc/8KYHy1Us5N8Jb4vUWmz+wRTI=\nP:busybox\nV:1.37.0-r31\nA:aarch64\nS:521974\nI:928168\nT:Size optimized toolbox of many common UNIX utilities\nU:https://busybox.net/\nL:GPL-2.0-only\no:busybox\nt:1768059508\nc:c3ef5d10e6ef6528852c51f0564963e2f8c1be19\nD:so:libc.musl-aarch64.so.1\np:cmd:busybox=1.37.0-r31\nr:busybox-initscripts\nF:bin\nR:busybox\na:0:0:755\nZ:Q1orGkqWs+PawMe7TluvxfjHd0Udg=\nF:etc\nR:securetty\nZ:Q1DinOf6JRpCRgM6vNqjOexd3oSnU=\nF:etc/busybox-paths.d\nR:busybox\nZ:Q1BEo37rIoCv7PSXqjH+IN2nJm1DU=\nF:etc/logrotate.d\nR:acpid\nZ:Q1TylyCINVmnS+A/Tead4vZhE7Bks=\nF:etc/network\nF:etc/network/if-down.d\nF:etc/network/if-post-down.d\nF:etc/network/if-post-up.d\nF:etc/network/if-pre-down.d\nF:etc/network/if-pre-up.d\nF:etc/network/if-up.d\nR:dad\na:0:0:775\nZ:Q13dmbwZfDboqaq5Rjqu69pEp6gCk=\nF:etc/udhcpc\nR:udhcpc.conf\nZ:Q1m8Bp5DQijmykQYSL+3prrCP6FIo=\nF:sbin\nF:usr\nF:usr/sbin\nF:usr/share\nF:usr/share/udhcpc\nR:default.script\na:0:0:755\nZ:Q1we8+bp8eWkvyVyKXf78bRVikdp4=\n\nC:Q1ax93IqPnu5fQTo75Bv1ywGZ7pdA=\nP:busybox-binsh\nV:1.37.0-r31\nA:aarch64\nS:1547\nI:1\nT:busybox ash /bin/sh\nU:https://busybox.net/\nL:GPL-2.0-only\no:busybox\nt:1768059508\nc:c3ef5d10e6ef6528852c51f0564963e2f8c1be19\nk:100\nD:busybox=1.37.0-r31\np:/bin/sh cmd:sh=1.37.0-r31\nr:busybox-initscripts\nF:bin\nR:sh\na:0:0:777\nZ:Q1pcfTfDNEbNKQc2s1tia7da05M8Q=\n\nC:Q1FGTYu4SxbeFGQyIqvXBBZvKmLPY=\nP:ca-certificates-bundle\nV:20260909-r0\nA:aarch64\nS:108526\nI:181724\nT:Pre generated bundle of Mozilla certificates\nU:https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/\nL:MPL-2.0 AND MIT\no:ca-certificates\nt:1789650825\nc:eb7078df3a16d666e8f7723f94bb92e00d4b9236\np:ca-certificates-cacert=20260909-r0\nr:libressl2.7-libcrypto libcrypto1.1\nF:etc\nF:etc/ssl\nR:cert.pem\na:0:0:777\nZ:Q1Nj6gTBdkZpTFW/obJGdpfvK0StA=\nF:etc/ssl/certs\nR:ca-certificates.crt\nZ:Q1reWe8OzoZ6gWJYQl50oNHcmLboc=\nF:etc/ssl1.1\nR:cert.pem\na:0:0:777\nZ:Q1tlrPS9O4v/nypdyJVPoUkUfBJ3g=\nR:certs\na:0:0:777\nZ:Q1qE3WqZ1tRpwrmptYdQcZwzvJgds=\n\nC:Q1Ry4Nq4useKoU061sRzfPYEhlGXQ=\nP:libapk\nV:3.0.8-r0\nA:aarch64\nS:138168\nI:330360\nT:Alpine Package Keeper - package manager for alpine\nU:https://gitlab.alpinelinux.org/alpine/apk-tools\nL:GPL-2.0-only\no:apk-tools\nt:1788243861\nc:4588b452722bd4800efdc6cce4f6e980e02a997f\nD:so:libc.musl-aarch64.so.1 so:libcrypto.so.3 so:libssl.so.3 so:libz.so.1\np:libapk2=3.0.8-r0 so:libapk.so.3.0.0=3.0.0\nr:apk-tools3\nF:usr\nF:usr/lib\nR:libapk.so.3.0.0\na:0:0:755\nZ:Q1yT34COswzylR4TxbbgdjdOKDtrY=\n\nC:Q1+C05PC+bIc2dudfNkojDZ1Zi8zo=\nP:libatomic\nV:15.2.0-r5\nA:aarch64\nS:10362\nI:67168\nT:GCC Atomic library\nU:https://gcc.gnu.org\nL:GPL-2.0-or-later AND LGPL-2.1-or-later\no:gcc\nt:1780084766\nc:423a8ad043d07f2c7546c8ec3e2b0384cda360ae\nD:so:libc.musl-aarch64.so.1\np:so:libatomic.so.1=1.2.0\nr:gcc\nF:usr\nF:usr/lib\nR:libatomic.so.1\na:0:0:777\nZ:Q1EThIBsrguvQ9thViFgg9sXHtM6Y=\nR:libatomic.so.1.2.0\na:0:0:755\nZ:Q1OE0T9IFGpsOJbBIbMYIhZrWoYo0=\n\nC:Q1nd3DZ6uRv/vKf+I4jGECIMBUisw=\nP:libcrypto3\nV:3.5.9-r0\nA:aarch64\nS:2286800\nI:4961766\nT:Crypto library from openssl\nU:https://www.openssl.org/\nL:Apache-2.0\no:openssl\nt:1790752173\nc:29b9ec24b1b5b39aeef51fa2a044210e2ec5258e\nk:100\nD:so:libc.musl-aarch64.so.1\np:so:libcrypto.so.3=3\nr:libcrypto1.1\nF:etc\nF:etc/ssl\nR:ct_log_list.cnf\nZ:Q1olh8TpdAi2QnTl4FK3TjdUiSwTo=\nR:ct_log_list.cnf.dist\nZ:Q1olh8TpdAi2QnTl4FK3TjdUiSwTo=\nR:openssl.cnf\nZ:Q1X/gHDc6qdCBD2BcfmKvpXlq9AuU=\nR:openssl.cnf.dist\nZ:Q1X/gHDc6qdCBD2BcfmKvpXlq9AuU=\nF:etc/ssl/certs\nF:etc/ssl/private\nF:usr\nF:usr/lib\nR:libcrypto.so.3\na:0:0:755\nZ:Q1XGR9H5i4DRdL2CY1Zk6/qkLams4=\nF:usr/lib/engines-3\nR:afalg.so\na:0:0:755\nZ:Q1UCZEzLQql8ydLY33wYKC62KdVj4=\nR:capi.so\na:0:0:755\nZ:Q1SPqENdF6f5SJ/u2QQ3FV3n4snb4=\nR:loader_attic.so\na:0:0:755\nZ:Q1zH8NIgG2SoXKI8WPNgNx1TB6NyU=\nR:padlock.so\na:0:0:755\nZ:Q1KNRI4TGAIgyV5cTEbsjVmH68K4g=\nF:usr/lib/ossl-modules\nR:legacy.so\na:0:0:755\nZ:Q1EPilX2HBuDR5hBDWpvo5YEoO8KY=\n\nC:Q1JLUL+2dMZ+EpWBoaIsHD7VI7bUg=\nP:libgcc\nV:15.2.0-r5\nA:aarch64\nS:66323\nI:133008\nT:GNU C compiler runtime libraries\nU:https://gcc.gnu.org\nL:GPL-2.0-or-later AND LGPL-2.1-or-later\no:gcc\nt:1780084766\nc:423a8ad043d07f2c7546c8ec3e2b0384cda360ae\nD:so:libc.musl-aarch64.so.1\np:so:libgcc_s.so.1=1\nr:libstdc++ binutils\nF:usr\nF:usr/lib\nR:libgcc_s.so.1\nZ:Q1oLEjSe1l3ZPPNX36A67E60uPRjw=\n\nC:Q1fPvgmLY6scIS37WtG8V+V3AmPLY=\nP:libssl3\nV:3.5.9-r0\nA:aarch64\nS:373023\nI:868240\nT:SSL shared libraries\nU:https://www.openssl.org/\nL:Apache-2.0\no:openssl\nt:1790752173\nc:29b9ec24b1b5b39aeef51fa2a044210e2ec5258e\nk:100\nD:libcrypto3=3.5.9-r0 so:libc.musl-aarch64.so.1 so:libcrypto.so.3\np:so:libssl.so.3=3\nF:usr\nF:usr/lib\nR:libssl.so.3\na:0:0:755\nZ:Q1pV/TDlmOT55lmTX6pkEOSxLxmRw=\n\nC:Q16WWaNCGe8kVn4lkwb/3DGo6OyqY=\nP:libstdc++\nV:15.2.0-r5\nA:aarch64\nS:908984\nI:2820600\nT:GNU C++ standard runtime library\nU:https://gcc.gnu.org\nL:GPL-2.0-or-later AND LGPL-2.1-or-later\no:gcc\nt:1780084766\nc:423a8ad043d07f2c7546c8ec3e2b0384cda360ae\nD:so:libc.musl-aarch64.so.1 so:libgcc_s.so.1\np:so:libstdc++.so.6=6.0.34\nr:libstdc++ binutils\nF:usr\nF:usr/lib\nR:libstdc++.so.6\na:0:0:777\nZ:Q13xodqmmp7grmddqTm/uStPQKf24=\nR:libstdc++.so.6.0.34\na:0:0:755\nZ:Q148zKq2g7PieZXeMmr1lz+daDONs=\n\nC:Q1JNQts+O/Z+jaJ4QHLMXQ5svftIU=\nP:musl\nV:1.2.6-r2\nA:aarch64\nS:417710\nI:723480\nT:the musl c library (libc) implementation\nU:https://musl.libc.org/\nL:MIT\no:musl\nt:1775900007\nc:f5640d3a10f664c9119720c60515265d3d6f6d01\np:so:libc.musl-aarch64.so.1=1\nF:lib\nR:ld-musl-aarch64.so.1\na:0:0:755\nZ:Q1zIDMk6a3hga0KXHGz/ACqHqblWg=\nR:libc.musl-aarch64.so.1\na:0:0:777\nZ:Q14RpiCEfZIqcg1XDcVqp8QEpc9ks=\n\nC:Q1hGTPIwkax/QcCU2jiheeLotaa38=\nP:musl-utils\nV:1.2.6-r2\nA:aarch64\nS:16890\nI:202534\nT:the musl c library (libc) implementation\nU:https://musl.libc.org/\nL:MIT AND BSD-2-Clause AND GPL-2.0-or-later\no:musl\nt:1775900007\nc:f5640d3a10f664c9119720c60515265d3d6f6d01\nD:scanelf so:libc.musl-aarch64.so.1\np:libc-utils=1.2.6-r2 cmd:getconf=1.2.6-r2 cmd:getent=1.2.6-r2 cmd:iconv=1.2.6-r2 cmd:ldconfig=1.2.6-r2 cmd:ldd=1.2.6-r2\nr:libiconv\nF:sbin\nR:ldconfig\na:0:0:755\nZ:Q12JjFFXEpeHF9tQIdw3HhVmECi/E=\nF:usr\nF:usr/bin\nR:getconf\na:0:0:755\nZ:Q1OCazxtC2UtlSvDqZ1Pqw+akIVxY=\nR:getent\na:0:0:755\nZ:Q1WQzX7HSZnvR6kDMNG8Dn4jtuCmM=\nR:iconv\na:0:0:755\nZ:Q1JL23iVPqAJ2FPrSvTFMvk2yCpus=\nR:ldd\na:0:0:755\nZ:Q1r+KYty/HCLl4p4dvPt8kCb1mhB0=\n\nC:Q13IwcpjYtZI8DZAGEuviRS2K2Q/s=\nP:scanelf\nV:1.3.9-r1\nA:aarch64\nS:31798\nI:67424\nT:Scan ELF binaries for stuff\nU:https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities\nL:GPL-2.0-only\no:pax-utils\nt:1774640350\nc:c61801eeacb3ffcd9c2025b09e402153bb93fb39\nD:so:libc.musl-aarch64.so.1\np:cmd:scanelf=1.3.9-r1\nr:pax-utils\nF:usr\nF:usr/bin\nR:scanelf\na:0:0:755\nZ:Q15ZZZ8mLONDiPIPt8KIc4ahGHnDo=\n\nC:Q1QQfD9w3aMC4MPtRimUGSRaiigLQ=\nP:ssl_client\nV:1.37.0-r31\nA:aarch64\nS:5078\nI:67472\nT:External ssl_client for busybox wget\nU:https://busybox.net/\nL:GPL-2.0-only\no:busybox\nt:1768059508\nc:c3ef5d10e6ef6528852c51f0564963e2f8c1be19\nD:so:libc.musl-aarch64.so.1 so:libcrypto.so.3 so:libssl.so.3\np:cmd:ssl_client=1.37.0-r31\ni:busybox=1.37.0-r31 libssl3\nr:busybox-initscripts\nF:usr\nF:usr/bin\nR:ssl_client\na:0:0:755\nZ:Q1juklsxJUBhfQunt7L+qrW/iZ9nw=\n\nC:Q1jP3JcWVZiDTJ6FovhLCh8M8Qt1I=\nP:zlib\nV:1.3.2-r1\nA:aarch64\nS:54334\nI:133008\nT:A compression/decompression Library\nU:https://zlib.net/\nL:Zlib\no:zlib\nt:1791318860\nc:0afa2da0e8c8051c6f8f64a7a388e5a259904245\nD:so:libc.musl-aarch64.so.1\np:so:libz.so.1=1.3.2\nF:usr\nF:usr/lib\nR:libz.so.1\na:0:0:777\nZ:Q1tB+V0rGZ237TINW/WVwfykixU6w=\nR:libz.so.1.3.2\na:0:0:755\nZ:Q1MZeTwSPILS4UryChSXeWM+l0ypI=\n",
+      "os_release": "NAME=\"Alpine Linux\"\nID=alpine\nVERSION_ID=3.24.2\nPRETTY_NAME=\"Alpine Linux v3.24\"\nHOME_URL=\"https://alpinelinux.org/\"\nBUG_REPORT_URL=\"https://gitlab.alpinelinux.org/alpine/aports/-/issues\"\n"
+    },
+    "worker": {
+      "image_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+      "configured_user": "appuser",
+      "size_bytes_docker": 60714451,
+      "python": "3.12.15",
+      "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+      "zlib_compile": "1.3.1",
+      "zlib_runtime": "1.3.1",
+      "commands": {
+        "node": null,
+        "npm": null,
+        "npx": null,
+        "yarn": null,
+        "yarnpkg": null,
+        "corepack": null,
+        "gcc": null,
+        "g++": null,
+        "cc": null,
+        "make": null,
+        "apt": "/usr/bin/apt",
+        "apt-get": "/usr/bin/apt-get",
+        "dpkg": "/usr/bin/dpkg",
+        "pip": null,
+        "uv": null,
+        "perl": "/usr/bin/perl",
+        "mount": "/usr/bin/mount",
+        "nsenter": "/usr/bin/nsenter",
+        "infocmp": "/usr/bin/infocmp"
+      },
+      "distributions": [
+        [
+          "Mako",
+          "1.4.3"
+        ],
+        [
+          "MarkupSafe",
+          "3.0.4"
+        ],
+        [
+          "SQLAlchemy",
+          "2.0.54"
+        ],
+        [
+          "alembic",
+          "1.20.0"
+        ],
+        [
+          "annotated-doc",
+          "0.0.5"
+        ],
+        [
+          "annotated-types",
+          "0.8.0"
+        ],
+        [
+          "anyio",
+          "4.15.1"
+        ],
+        [
+          "argon2-cffi",
+          "25.1.0"
+        ],
+        [
+          "argon2-cffi-bindings",
+          "26.1.0"
+        ],
+        [
+          "certifi",
+          "2026.7.22"
+        ],
+        [
+          "cffi",
+          "2.1.1"
+        ],
+        [
+          "click",
+          "8.5.0"
+        ],
+        [
+          "fastapi",
+          "0.143.2"
+        ],
+        [
+          "greenlet",
+          "3.5.6"
+        ],
+        [
+          "h11",
+          "0.16.0"
+        ],
+        [
+          "httpcore",
+          "1.0.9"
+        ],
+        [
+          "httpx",
+          "0.28.1"
+        ],
+        [
+          "idna",
+          "3.20"
+        ],
+        [
+          "opentelemetry-api",
+          "1.45.1"
+        ],
+        [
+          "psycopg",
+          "3.3.6"
+        ],
+        [
+          "psycopg-binary",
+          "3.3.6"
+        ],
+        [
+          "pycparser",
+          "3.11"
+        ],
+        [
+          "pydantic",
+          "2.14.1"
+        ],
+        [
+          "pydantic-settings",
+          "2.16.0"
+        ],
+        [
+          "pydantic_core",
+          "2.50.1"
+        ],
+        [
+          "python-dotenv",
+          "1.2.4"
+        ],
+        [
+          "starlette",
+          "1.8.0"
+        ],
+        [
+          "typing-inspection",
+          "0.4.4"
+        ],
+        [
+          "typing_extensions",
+          "4.16.0"
+        ],
+        [
+          "uvicorn",
+          "0.54.0"
+        ]
+      ],
+      "os_packages": {
+        "adduser": "3.152",
+        "apt": "3.0.3",
+        "base-files": "13.8+deb13u7",
+        "base-passwd": "3.6.7",
+        "bash": "5.2.37-2+b10",
+        "bsdutils": "1:2.41.5-0+deb13u1",
+        "ca-certificates": "20250419",
+        "coreutils": "9.7-3",
+        "dash": "0.5.12-12",
+        "debconf": "1.5.91",
+        "debian-archive-keyring": "2025.1",
+        "debianutils": "5.23.2",
+        "diffutils": "1:3.10-4",
+        "dpkg": "1.22.22",
+        "findutils": "4.10.0-3",
+        "gcc-14-base:arm64": "14.2.0-19",
+        "grep": "3.11-4+b1",
+        "gzip": "1.13-1+deb13u1",
+        "hostname": "3.25",
+        "init-system-helpers": "1.69~deb13u1",
+        "libacl1:arm64": "2.3.2-2+b1",
+        "libapt-pkg7.0:arm64": "3.0.3",
+        "libattr1:arm64": "1:2.5.2-3",
+        "libaudit-common": "1:4.0.2-2+deb13u1",
+        "libaudit1:arm64": "1:4.0.2-2+deb13u1",
+        "libblkid1:arm64": "2.41.5-0+deb13u1",
+        "libbsd0:arm64": "0.12.2-2",
+        "libbz2-1.0:arm64": "1.0.8-6",
+        "libc-bin": "2.41-12+deb13u4",
+        "libc6:arm64": "2.41-12+deb13u4",
+        "libcap-ng0:arm64": "0.8.5-4+b1",
+        "libcap2:arm64": "1:2.75-10+deb13u1+b3",
+        "libcrypt1:arm64": "1:4.4.38-1",
+        "libdb5.3t64:arm64": "5.3.28+dfsg2-9",
+        "libdebconfclient0:arm64": "0.280",
+        "libffi8:arm64": "3.4.8-2",
+        "libgcc-s1:arm64": "14.2.0-19",
+        "libgdbm6t64:arm64": "1.24-2",
+        "libgmp10:arm64": "2:6.3.0+dfsg-3",
+        "libhogweed6t64:arm64": "3.10.1-1",
+        "liblastlog2-2:arm64": "2.41.5-0+deb13u1",
+        "liblz4-1:arm64": "1.10.0-4",
+        "liblzma5:arm64": "5.8.1-1+deb13u1",
+        "libmd0:arm64": "1.1.0-2+b1",
+        "libmount1:arm64": "2.41.5-0+deb13u1",
+        "libncursesw6:arm64": "6.5+20250216-2",
+        "libnettle8t64:arm64": "3.10.1-1",
+        "libpam-modules:arm64": "1.7.0-5",
+        "libpam-modules-bin": "1.7.0-5",
+        "libpam-runtime": "1.7.0-5",
+        "libpam0g:arm64": "1.7.0-5",
+        "libpcre2-8-0:arm64": "10.46-1~deb13u3",
+        "libreadline8t64:arm64": "8.2-6",
+        "libseccomp2:arm64": "2.6.0-2",
+        "libselinux1:arm64": "3.8.1-1",
+        "libsemanage-common": "3.8.1-1",
+        "libsemanage2:arm64": "3.8.1-1",
+        "libsepol2:arm64": "3.8.1-1",
+        "libsmartcols1:arm64": "2.41.5-0+deb13u1",
+        "libsqlite3-0:arm64": "3.46.1-7+deb13u2",
+        "libssl3t64:arm64": "3.5.7-1~deb13u3",
+        "libstdc++6:arm64": "14.2.0-19",
+        "libsystemd0:arm64": "257.13-1~deb13u1",
+        "libtinfo6:arm64": "6.5+20250216-2",
+        "libudev1:arm64": "257.13-1~deb13u1",
+        "libuuid1:arm64": "2.41.5-0+deb13u1",
+        "libxxhash0:arm64": "0.8.3-2",
+        "libzstd1:arm64": "1.5.7+dfsg-1",
+        "login": "1:4.16.0-2+really2.41.5-0+deb13u1",
+        "login.defs": "1:4.17.4-2",
+        "mawk": "1.3.4.20250131-1",
+        "mount": "2.41.5-0+deb13u1",
+        "ncurses-base": "6.5+20250216-2",
+        "ncurses-bin": "6.5+20250216-2",
+        "netbase": "6.5",
+        "openssl": "3.5.7-1~deb13u3",
+        "openssl-provider-legacy": "3.5.7-1~deb13u3",
+        "passwd": "1:4.17.4-2",
+        "perl-base": "5.40.1-6+deb13u1",
+        "readline-common": "8.2-6",
+        "sed": "4.9-2+deb13u1",
+        "sqv": "1.3.0-3+b2",
+        "sysvinit-utils": "3.14-4",
+        "tar": "1.35+dfsg-3.1",
+        "tzdata": "2026c-0+deb13u1",
+        "util-linux": "2.41.5-0+deb13u1",
+        "zlib1g:arm64": "1:1.3.dfsg+really1.3.1-1+b1"
+      },
+      "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.7\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+      "running_process_maps_exit": 0,
+      "running_process_libraries": [
+        "/app/.venv/lib/python3.12/site-packages/_argon2_cffi_bindings/_ffi.abi3.so",
+        "/app/.venv/lib/python3.12/site-packages/_cffi_backend.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/greenlet/_greenlet.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcom_err-6d8d18aa.so.2.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypt-258f54d5.so.1.1.0",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypto-02bae65c.so.1.1.1k",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libcrypto-cff3d539.so.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libgssapi_krb5-42536122.so.2.2",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libk5crypto-f5362a5f.so.3.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkeyutils-fe6e95a9.so.1.6",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkrb5-98c41d04.so.3.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libkrb5support-beb3078f.so.0.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/liblber-e2ad9298.so.2.0.200",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libldap-1357b183.so.2.0.200",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libpcre2-8-8701a61e.so.0.7.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libpq-53e4e5f8.so.5.18",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libsasl2-076b3c1f.so.3.0.0",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libselinux-be7a4dc7.so.1",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary.libs/libssl-c64c0f6b.so.3",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary/_psycopg.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/psycopg_binary/pq.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/pydantic_core/_pydantic_core.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/collections.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/immutabledict.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/processors.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/resultproxy.cpython-312-aarch64-linux-gnu.so",
+        "/app/.venv/lib/python3.12/site-packages/sqlalchemy/cyextension/util.cpython-312-aarch64-linux-gnu.so",
+        "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+        "/usr/lib/aarch64-linux-gnu/libbz2.so.1.0.4",
+        "/usr/lib/aarch64-linux-gnu/libc.so.6",
+        "/usr/lib/aarch64-linux-gnu/libcrypto.so.3",
+        "/usr/lib/aarch64-linux-gnu/libdl.so.2",
+        "/usr/lib/aarch64-linux-gnu/libffi.so.8.1.4",
+        "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+        "/usr/lib/aarch64-linux-gnu/liblzma.so.5.8.1",
+        "/usr/lib/aarch64-linux-gnu/libm.so.6",
+        "/usr/lib/aarch64-linux-gnu/libpthread.so.0",
+        "/usr/lib/aarch64-linux-gnu/libresolv.so.2",
+        "/usr/lib/aarch64-linux-gnu/libssl.so.3",
+        "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+        "/usr/lib/aarch64-linux-gnu/libuuid.so.1.3.0",
+        "/usr/lib/aarch64-linux-gnu/libz.so.1.3.1",
+        "/usr/lib/aarch64-linux-gnu/libzstd.so.1.5.7",
+        "/usr/local/lib/libpython3.12.so.1.0",
+        "/usr/local/lib/python3.12/lib-dynload/_asyncio.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_bisect.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_blake2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_bz2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_contextvars.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_csv.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_ctypes.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_datetime.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_decimal.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_hashlib.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_heapq.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_json.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_lzma.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_opcode.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_pickle.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_posixsubprocess.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_queue.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_random.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_sha2.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_socket.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_ssl.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_struct.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_uuid.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/_zoneinfo.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/array.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/binascii.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/fcntl.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/math.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/select.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/unicodedata.cpython-312-aarch64-linux-gnu.so",
+        "/usr/local/lib/python3.12/lib-dynload/zlib.cpython-312-aarch64-linux-gnu.so"
+      ]
+    }
+  },
+  "publication_sanitization": "Third-party package-maintainer contact fields omitted; package/version, native-library, vulnerability and fix evidence retained."
+}

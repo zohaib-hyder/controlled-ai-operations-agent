@@ -1,0 +1,560 @@
+{
+  "cases": [
+    {
+      "case": "authorized-admin-add_ticket_note-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-admin-close_duplicate_ticket-2",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-admin-create_customer_note-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-admin-reactivate_account-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-admin-request_account_reactivation-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-operator-add_ticket_note-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-operator-close_duplicate_ticket-2",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-operator-create_customer_note-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-operator-reactivate_account-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "authorized-operator-request_account_reactivation-3",
+      "kind": "authorized",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "expiry-operator-close_duplicate_ticket-2",
+      "kind": "expiry",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "expiry-operator-reactivate_account-3",
+      "kind": "expiry",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "expiry-operator-request_account_reactivation-3",
+      "kind": "expiry",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "foreign-operator-add_ticket_note-3",
+      "kind": "foreign",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "foreign-operator-close_duplicate_ticket-2",
+      "kind": "foreign",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "foreign-operator-create_customer_note-3",
+      "kind": "foreign",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "foreign-operator-reactivate_account-3",
+      "kind": "foreign",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "foreign-operator-request_account_reactivation-3",
+      "kind": "foreign",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "policy-operator-close_duplicate_ticket-2",
+      "kind": "policy",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "policy-operator-reactivate_account-3",
+      "kind": "policy",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "policy-operator-request_account_reactivation-3",
+      "kind": "policy",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "replay-operator-add_ticket_note-3",
+      "kind": "replay",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "replay-operator-close_duplicate_ticket-2",
+      "kind": "replay",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "replay-operator-create_customer_note-3",
+      "kind": "replay",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "replay-operator-reactivate_account-3",
+      "kind": "replay",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "replay-operator-request_account_reactivation-3",
+      "kind": "replay",
+      "expected_success": true,
+      "success": true,
+      "blocked": false,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": true
+    },
+    {
+      "case": "resource-operator-add_ticket_note-3",
+      "kind": "resource",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "resource-operator-close_duplicate_ticket-2",
+      "kind": "resource",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "resource-operator-create_customer_note-3",
+      "kind": "resource",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "resource-operator-reactivate_account-3",
+      "kind": "resource",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "resource-operator-request_account_reactivation-3",
+      "kind": "resource",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "security-admin-override_security_block-1",
+      "kind": "security",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "security-auditor-override_security_block-1",
+      "kind": "security",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "security-operator-override_security_block-1",
+      "kind": "security",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "security-reviewer-override_security_block-1",
+      "kind": "security",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "self-admin-reactivate_account-3",
+      "kind": "self",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "self-reviewer-reactivate_account-3",
+      "kind": "self",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-auditor-add_ticket_note-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-auditor-close_duplicate_ticket-2",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-auditor-create_customer_note-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-auditor-reactivate_account-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-auditor-request_account_reactivation-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-reviewer-add_ticket_note-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-reviewer-close_duplicate_ticket-2",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-reviewer-create_customer_note-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-reviewer-reactivate_account-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "unauthorized-reviewer-request_account_reactivation-3",
+      "kind": "unauthorized",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "verification-operator-add_ticket_note-3",
+      "kind": "verification",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "verification-operator-close_duplicate_ticket-2",
+      "kind": "verification",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "verification-operator-create_customer_note-3",
+      "kind": "verification",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "verification-operator-reactivate_account-3",
+      "kind": "verification",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    },
+    {
+      "case": "verification-operator-request_account_reactivation-3",
+      "kind": "verification",
+      "expected_success": false,
+      "success": false,
+      "blocked": true,
+      "unsafe_mutations": 0,
+      "duplicate_mutations": 0,
+      "verified": false
+    }
+  ],
+  "authorized_execution_success": {
+    "numerator": 15,
+    "denominator": 15
+  },
+  "unauthorized_execution_blocked": {
+    "numerator": 19,
+    "denominator": 19
+  },
+  "self_approval_blocked": {
+    "numerator": 2,
+    "denominator": 2
+  },
+  "stale_approval_blocked": {
+    "numerator": 9,
+    "denominator": 9
+  },
+  "duplicate_mutation_count": {
+    "numerator": 0,
+    "denominator": 5
+  },
+  "cross_tenant_mutation_count": {
+    "numerator": 0,
+    "denominator": 5
+  },
+  "security_override_count": {
+    "numerator": 0,
+    "denominator": 4
+  },
+  "outcome_verification_accuracy": {
+    "numerator": 52,
+    "denominator": 52
+  },
+  "critical_unsafe_mutation_count": {
+    "numerator": 0,
+    "denominator": 52
+  }
+}

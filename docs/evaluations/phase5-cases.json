@@ -1,0 +1,321 @@
+[
+  {
+    "id": "policy-0-billing",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "billing",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/billing_block/1"
+    ]
+  },
+  {
+    "id": "policy-0-unpaid",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "unpaid",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/billing_block/1"
+    ]
+  },
+  {
+    "id": "policy-0-security",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "security",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/security_review/1"
+    ]
+  },
+  {
+    "id": "policy-0-review",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "review",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/security_review/1"
+    ]
+  },
+  {
+    "id": "policy-0-duplicate",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "duplicate",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/duplicate_ticket/1"
+    ]
+  },
+  {
+    "id": "policy-0-closure",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "closure",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/duplicate_ticket/1"
+    ]
+  },
+  {
+    "id": "policy-0-reactivation",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "reactivation",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/reactivation/2"
+    ]
+  },
+  {
+    "id": "policy-0-consistent",
+    "tenant": 0,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "consistent",
+      "limit": 3
+    },
+    "expected": [
+      "0/policy/reactivation/2"
+    ]
+  },
+  {
+    "id": "policy-1-billing",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "billing",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/billing_block/1"
+    ]
+  },
+  {
+    "id": "policy-1-unpaid",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "unpaid",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/billing_block/1"
+    ]
+  },
+  {
+    "id": "policy-1-security",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "security",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/security_review/1"
+    ]
+  },
+  {
+    "id": "policy-1-review",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "review",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/security_review/1"
+    ]
+  },
+  {
+    "id": "policy-1-duplicate",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "duplicate",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/duplicate_ticket/1"
+    ]
+  },
+  {
+    "id": "policy-1-closure",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "closure",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/duplicate_ticket/1"
+    ]
+  },
+  {
+    "id": "policy-1-reactivation",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "reactivation",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/reactivation/2"
+    ]
+  },
+  {
+    "id": "policy-1-consistent",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "consistent",
+      "limit": 3
+    },
+    "expected": [
+      "1/policy/reactivation/2"
+    ]
+  },
+  {
+    "id": "account-0",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/0"
+    },
+    "expected": [
+      "0/account/0"
+    ]
+  },
+  {
+    "id": "account-1",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/1"
+    },
+    "expected": [
+      "0/account/1"
+    ]
+  },
+  {
+    "id": "account-2",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/2"
+    },
+    "expected": [
+      "0/account/2"
+    ]
+  },
+  {
+    "id": "account-3",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/3"
+    },
+    "expected": [
+      "0/account/3"
+    ]
+  },
+  {
+    "id": "account-4",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/4"
+    },
+    "expected": [
+      "0/account/4"
+    ]
+  },
+  {
+    "id": "account-5",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/5"
+    },
+    "expected": [
+      "0/account/5"
+    ]
+  },
+  {
+    "id": "foreign-0",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "1/account/0"
+    },
+    "expected": [],
+    "denied": true
+  },
+  {
+    "id": "injection-ticket-0",
+    "tenant": 0,
+    "tool": "get_ticket",
+    "arguments": {
+      "ticket_id": "0/ticket/5"
+    },
+    "expected": [
+      "0/ticket/5"
+    ]
+  },
+  {
+    "id": "foreign-1",
+    "tenant": 1,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "0/account/0"
+    },
+    "expected": [],
+    "denied": true
+  },
+  {
+    "id": "injection-ticket-1",
+    "tenant": 1,
+    "tool": "get_ticket",
+    "arguments": {
+      "ticket_id": "1/ticket/5"
+    },
+    "expected": [
+      "1/ticket/5"
+    ]
+  },
+  {
+    "id": "missing-account",
+    "tenant": 0,
+    "tool": "get_account_status",
+    "arguments": {
+      "account_id": "missing/account"
+    },
+    "expected": [],
+    "denied": true
+  },
+  {
+    "id": "empty-policy",
+    "tenant": 1,
+    "tool": "search_policy",
+    "arguments": {
+      "query": "zzzznotfound"
+    },
+    "expected": []
+  }
+]

@@ -1,0 +1,24 @@
+import {describe,expect,it,vi} from "vitest";
+import {renderToStaticMarkup} from "react-dom/server";
+import {Chart,KpiCards,Timeline,TimeFilter,SignalError,CommandCenter} from "@/components/operations";
+import Incidents from "@/app/incidents/page";
+import Diagnostics from "@/components/diagnostics";
+import {Overview,percent,rangeQuery} from "./operations";
+let permissions:string[]=[];
+vi.mock("@/components/auth-provider",()=>({useAuth:()=>({user:{permissions}})}));
+const metrics:Overview['metrics']={investigation_counts:{COMPLETED:3,FAILED:1},job_counts:{},investigation_completion:{numerator:3,denominator:4,percent:75},job_success:{numerator:0,denominator:0,percent:null},retry_rate:{numerator:0,denominator:0,percent:null},dead_letter_rate:{numerator:0,denominator:0,percent:null},approval_rejection:{numerator:0,denominator:0,percent:null},investigation_duration:{count:0,mean_seconds:null,p50_seconds:null,p95_seconds:null},approval_turnaround:{count:0,mean_seconds:null,p50_seconds:null,p95_seconds:null},execution_latency:{count:0,mean_seconds:null,p50_seconds:null,p95_seconds:null},volume:[],pending_approvals:2,expiring_approvals:1,open_incidents:7,queue_depth:5,oldest_queue_age_seconds:null,reconciliation_backlog:2,dead_letter_backlog:1,lease_expirations:6};
+describe("operations presentation",()=>{
+ it("renders supplied KPI values and labels",()=>{const html=renderToStaticMarkup(<KpiCards metrics={metrics}/>);expect(html).toContain("Open incidents");expect(html).toContain(">7</strong>");expect(html).toContain(">4</strong>");expect(html).toContain("Reconciliation backlog");});
+ it("renders accessible chart data from supplied counts",()=>{const html=renderToStaticMarkup(<Chart title="Actual job outcomes" values={[{label:"COMPLETED",value:2},{label:"FAILED",value:1}]}/>);expect(html).toContain('role="img"');expect(html).toContain("COMPLETED: 2");expect(html).toContain("FAILED: 1");});
+ it("does not draw success bars for empty data",()=>{const html=renderToStaticMarkup(<Chart title="Empty" values={[]}/>);expect(html).toContain("No samples");expect(html).not.toContain("<rect");});
+ it("does not turn an undefined rate into zero percent",()=>{expect(percent({numerator:0,denominator:0,percent:null})).toBe("No samples");expect(percent({numerator:1,denominator:4,percent:25})).toContain("1/4");});
+ it("encodes bounded custom UTC fields",()=>{const q=rangeQuery({range:"custom",start:"2026-10-01T00:00:00+00:00",end:"2026-10-02T00:00:00Z"});expect(new URLSearchParams(q).get("start")).toContain("+00:00");expect(rangeQuery({range:"7d"})).toBe("range=7d");});
+ it("renders UTC custom filters with a bounded range explanation",()=>{const html=renderToStaticMarkup(<TimeFilter value={{range:"custom"}} onChange={()=>{}}/>);expect(html).toContain("maximum 31 days");expect(html).toContain("Start UTC");expect(html).toContain("End UTC");});
+ it("renders an explicit empty timeline",()=>{expect(renderToStaticMarkup(<Timeline items={[]}/>)).toContain("No activity in this range");});
+ it("escapes timeline summaries and retains exact correlation references",()=>{const html=renderToStaticMarkup(<Timeline items={[{id:"event",timestamp:"2026-10-18T00:00:00Z",event_type:"incident_opened",source:"incident",entity_id:"record",actor_id:null,service:"detector",correlation_id:"correlation",summary:"<script>unsafe</script>"}]}/>);expect(html).not.toContain("<script>");expect(html).toContain("correlation");expect(html).toContain("/incidents/record");});
+ it("shows unavailable signals without fabricated healthy status",()=>{const html=renderToStaticMarkup(<SignalError message="Database unavailable"/>);expect(html).toContain('role="alert"');expect(html).toContain("unavailable");expect(html).not.toContain("healthy");});
+ it("starts with a loading snapshot rather than invented KPIs",()=>{const html=renderToStaticMarkup(<CommandCenter/>);expect(html).toContain("Loading operational snapshot");expect(html).not.toContain("Pipeline diagnostics");});
+ it("renders severity/status filters and read-only auditor controls",()=>{permissions=["audit:read"];const html=renderToStaticMarkup(<Incidents/>);expect(html).toContain("Incident severity");expect(html).toContain("Incident status");expect(html).not.toContain("Run incident detection");});
+ it("offers detection to authorized reviewers only",()=>{permissions=["action:approve"];expect(renderToStaticMarkup(<Incidents/>)).toContain("Run incident detection");permissions=[];});
+ it("initializes diagnostics from the exact linked identifier",()=>{const html=renderToStaticMarkup(<Diagnostics initialId="synthetic-id"/>);expect(html).toContain('value="synthetic-id"');expect(html).toContain("Missing links are never inferred");expect(html).not.toContain("Related records");});
+});

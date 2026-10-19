@@ -1,0 +1,88 @@
+name: controlled-ai-operations-publication
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-northstar}
+      POSTGRES_USER: ${POSTGRES_USER:-northstar}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Copy .env.example to .env first}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-55432}:5432"
+    volumes:
+      - northstar_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  backend:
+    build:
+      context: .
+      dockerfile: infra/docker/backend.Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-northstar}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-northstar}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DATABASE_TIMEOUT_SECONDS: ${DATABASE_TIMEOUT_SECONDS:-3}
+      AI_PROVIDER: ${AI_PROVIDER:-mock}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-2}
+      LLM_MAX_OUTPUT_TOKENS: ${LLM_MAX_OUTPUT_TOKENS:-1024}
+      LLM_MAX_REQUESTS: ${LLM_MAX_REQUESTS:-8}
+      LLM_TOTAL_OUTPUT_TOKENS: ${LLM_TOTAL_OUTPUT_TOKENS:-8192}
+      LLM_MAX_COST_MICROUSD: ${LLM_MAX_COST_MICROUSD:-100000}
+      LLM_INPUT_USD_PER_MILLION: ${LLM_INPUT_USD_PER_MILLION:-0}
+      LLM_OUTPUT_USD_PER_MILLION: ${LLM_OUTPUT_USD_PER_MILLION:-0}
+      PLANNER_CONTEXT_BYTES: ${PLANNER_CONTEXT_BYTES:-65536}
+      EVIDENCE_FRESHNESS_SECONDS: ${EVIDENCE_FRESHNESS_SECONDS:-86400}
+      AGENT_MAX_STEPS: ${AGENT_MAX_STEPS:-8}
+      AGENT_MAX_TOOL_CALLS: ${AGENT_MAX_TOOL_CALLS:-8}
+      AGENT_WALL_SECONDS: ${AGENT_WALL_SECONDS:-8}
+      AGENT_MAX_REPEATS: ${AGENT_MAX_REPEATS:-1}
+      AGENT_OBSERVATION_BYTES: ${AGENT_OBSERVATION_BYTES:-48000}
+      AGENT_PLANNING_ITERATIONS: ${AGENT_PLANNING_ITERATIONS:-8}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:-}
+      APP_ENV: ${APP_ENV:-development}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      TRUSTED_ORIGINS: ${TRUSTED_ORIGINS:-["http://localhost:3000","http://127.0.0.1:3000"]}
+      SESSION_TTL_SECONDS: ${SESSION_TTL_SECONDS:-3600}
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/ready', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 10
+  worker:
+    build:
+      context: .
+      dockerfile: infra/docker/backend.Dockerfile
+    command: ["python", "-m", "app.jobs.worker"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-northstar}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-northstar}
+      APP_ENV: ${APP_ENV:-development}
+      AI_PROVIDER: mock
+    depends_on:
+      db:
+        condition: service_healthy
+    stop_grace_period: 40s
+    restart: unless-stopped
+  frontend:
+    environment:
+      BACKEND_INTERNAL_URL: http://backend:8000
+    build:
+      context: .
+      dockerfile: infra/docker/frontend.Dockerfile
+    ports:
+      - "127.0.0.1:3000:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+volumes:
+  northstar_data:

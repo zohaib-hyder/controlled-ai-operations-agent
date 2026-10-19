@@ -1,0 +1,96 @@
+{
+  "recorded_at": "2026-10-19T16:02:12.718486+00:00",
+  "network_used": false,
+  "source_scope": "Owner-authored source, tests, documentation, lock metadata and reviewed synthetic application screenshots; no dependency source/binaries bundled",
+  "project_license": "MIT; explicitly owner-approved",
+  "public_copyright_name": "Zohaib Hyder",
+  "local_license_files_reviewed": [
+    {
+      "package": "certifi",
+      "installed_version": "2026.7.22",
+      "license_file": "certifi-2026.7.22.dist-info/licenses/LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "recognized_license_family": [
+        "MPL-2.0"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "h11",
+      "installed_version": "0.16.0",
+      "license_file": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+      "recognized_license_family": [
+        "MIT"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "httpx",
+      "installed_version": "0.28.1",
+      "license_file": "httpx-0.28.1.dist-info/licenses/LICENSE.md",
+      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+      "recognized_license_family": [
+        "BSD"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "pluggy",
+      "installed_version": "1.7.0",
+      "license_file": "pluggy-1.7.0.dist-info/licenses/LICENSE",
+      "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606",
+      "recognized_license_family": [
+        "MIT"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "python-dotenv",
+      "installed_version": "1.2.4",
+      "license_file": "python_dotenv-1.2.4.dist-info/licenses/LICENSE",
+      "sha256": "80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9",
+      "recognized_license_family": [
+        "BSD"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "sqlalchemy",
+      "installed_version": "2.0.54",
+      "license_file": "sqlalchemy-2.0.54.dist-info/licenses/LICENSE",
+      "sha256": "e862bb5b904fb5513c3e14288d7a25a12eb0ecc7847a0a965d310e9a955e7cb9",
+      "recognized_license_family": [
+        "MIT"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "psycopg",
+      "installed_version": "3.3.6",
+      "license_file": "psycopg-3.3.6.dist-info/licenses/LICENSE.txt",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "recognized_license_family": [
+        "LGPL"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    },
+    {
+      "package": "psycopg-binary",
+      "installed_version": "3.3.6",
+      "license_file": "psycopg_binary-3.3.6.dist-info/licenses/LICENSE.txt",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+      "recognized_license_family": [
+        "LGPL"
+      ],
+      "scope": "Local upstream license text inspected; third-party file not copied or relicensed"
+    }
+  ],
+  "platform_packages_not_installed": [
+    "colorama",
+    "greenlet",
+    "tzdata"
+  ],
+  "remaining_distribution_gate": "Exact platform/native notices and source obligations must be reviewed before any future third-party binary/container distribution; that distribution is not authorized or prepared here",
+  "limits": "Metadata and selected upstream license texts support a bounded source-only review, not independent legal/provenance certification"
+}

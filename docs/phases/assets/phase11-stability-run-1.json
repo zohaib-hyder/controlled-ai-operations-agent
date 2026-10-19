@@ -1,0 +1,47 @@
+{
+  "dataset_version": "1.0",
+  "dataset_sha256": "ca0fe73645a00239d101ed6471b74e09be1a53daf272f8f0e1483ef3387beeae",
+  "scenario_count": 598,
+  "counts": {
+    "passed": 598
+  },
+  "regression_test_counts": {
+    "passed": 702,
+    "failed": 0,
+    "skipped": 0
+  },
+  "critical_failure": false,
+  "categories": {
+    "approval_execution": {
+      "passed": 72,
+      "total": 72
+    },
+    "authorization_tenancy": {
+      "passed": 127,
+      "total": 127
+    },
+    "evidence_policy": {
+      "passed": 85,
+      "total": 85
+    },
+    "operations_audit": {
+      "passed": 52,
+      "total": 52
+    },
+    "ordinary_success": {
+      "passed": 21,
+      "total": 21
+    },
+    "planner_injection": {
+      "passed": 129,
+      "total": 129
+    },
+    "reliability_recovery": {
+      "passed": 112,
+      "total": 112
+    }
+  },
+  "pytest_duration_seconds": 867.03,
+  "source_manifest_recorded": false,
+  "note": "First full run; three additional scorer tests and report metadata refinements were added before the final full run."
+}

@@ -1,0 +1,22 @@
+{
+  "fixture_preparation": "explicit fictional admin, fresh source timestamps, eligible account and bounded worker crash/lease faults",
+  "A": "injected_goal_dispatched_only_read_tools_and_business_snapshots_unchanged",
+  "B": "foreign_investigation_404",
+  "C": "foreign_approval_read_and_write_404_no_business_change",
+  "E": "self_approval_403_no_business_change",
+  "D": "forged_decision_409_no_business_change",
+  "F": "changed_policy_denied_by_immediate_revalidation",
+  "G": "same_key_replay_one_receipt_one_actual_note_no_second_mutation",
+  "H": "three_injected_worker_crash_faults_reconciled_boundedly_dead_lettered_zero_receipts_or_mutations",
+  "I": "auditor_incident_mutation_403_business_and_job_state_unchanged",
+  "J": "actual_execution_audit_and_stored_correlation_complete_with_explicit_trace_cap",
+  "unauthorized_mutations": 0,
+  "duplicate_mutations": 0,
+  "cross_tenant_leaks": 0,
+  "live_llm_calls": 0,
+  "trace_ids": [
+    "8502bc62-5d7a-4101-9583-388700342f52",
+    "47f02bb0-b846-4d19-b2f6-7ab7199160d1",
+    "3bd703db-40a2-4f09-ab0b-97b5102baecb"
+  ]
+}

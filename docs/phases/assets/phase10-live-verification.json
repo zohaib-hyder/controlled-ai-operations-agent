@@ -1,0 +1,22 @@
+{
+  "A": "investigation_and_job_cohorts_match_postgresql",
+  "B": "durable_dead_letters_have_incidents",
+  "C": "uncertain_outcomes_have_incidents",
+  "D": "acknowledged_resolved_and_underlying_job_unchanged",
+  "E": {
+    "kinds": [
+      "decision",
+      "execution",
+      "investigation",
+      "job",
+      "proposal"
+    ],
+    "events": 50
+  },
+  "F": "foreign_incident_and_correlation_return_404",
+  "G": "auditor_incident_mutation_forbidden",
+  "H": "gracefully_stopped_worker_reported_unavailable_pipeline_degraded",
+  "I": "empty_cohort_null_rates_current_backlogs_preserved",
+  "J": "repeated_detection_created_zero_duplicates",
+  "unsafe_business_mutations": 0
+}

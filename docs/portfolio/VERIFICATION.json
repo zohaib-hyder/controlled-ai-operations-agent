@@ -1,0 +1,143 @@
+{
+  "recorded_at": "2026-10-19T14:02:46.594666+00:00",
+  "source_publication_decision": "READY_FOR_PUBLICATION_REVIEW",
+  "container_release_verdict": "PARTIAL",
+  "blockers": [],
+  "original_modified": false,
+  "git_initialized": true,
+  "project_artifacts_uploaded": false,
+  "downloads_during_publication_verification": false,
+  "dependency_strategy": "Read-only existing Python/Node toolchains and local images; publication source under test; fresh copied frontend production build, no dependency directory copied into source snapshot",
+  "new_copy_verification": {
+    "backend": {
+      "passed": 41,
+      "warnings": 1,
+      "seconds": 6.47,
+      "scope": "Publication audit guards, release/image tooling, data partitions/relationships, connection pool, health/readiness"
+    },
+    "earlier_backend": {
+      "passed": 37,
+      "warnings": 1,
+      "seconds": 7.48
+    },
+    "ruff": "PASS; 135 Python files format check",
+    "frontend": {
+      "node": "26.12.0",
+      "lint": "PASS",
+      "typecheck": "PASS",
+      "vitest_passed": 50,
+      "vitest_files": 9,
+      "production_build": "PASS; fresh .next; network disabled"
+    },
+    "browser": {
+      "startTime": "2026-10-19T13:58:20.491Z",
+      "duration": 10563.481,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "live": {
+      "health": 200,
+      "ready": 200,
+      "frontend": 200,
+      "mounted_publication_backend_hash_matches": true
+    },
+    "screenshots_reviewed": 8,
+    "final_audit_guards": {
+      "passed": 7,
+      "seconds": 0.04,
+      "scope": "Repeated after tightening exact synthetic-fixture allowlists; overlaps six tests in earlier 41-test run; one new guard added"
+    }
+  },
+  "historical_not_rerun": [
+    "Full 727-test backend suite",
+    "601-scenario source-bound catalog",
+    "Full 64-case browser suite",
+    "Full performance/restart/clean-install coordinator",
+    "Image vulnerability scans"
+  ],
+  "attempts_preserved": [
+    "First local scanner self-match corrected without suppressing real content",
+    "Initial browser config rejected string grep before tests; fixed to RegExp",
+    "Transient loading-state queue capture replaced with fully loaded real queue"
+  ],
+  "limitations": [
+    "Local patterns and manual review cannot prove complete secret/provenance absence",
+    "External links intentionally not fetched; Markdown fragment anchors not validated",
+    "No live provider, real enterprise write, hosted CI or production deployment verification",
+    "16 unique High CVEs remain unsuppressed across image and vendor-SBOM profiles"
+  ],
+  "known_private_value_comparison": {
+    "matching_candidate_files": 0,
+    "values_printed": false,
+    "scope": "Configured non-placeholder private credentials, private commit identity strings and workstation home identifier compared locally in memory"
+  },
+  "final_content_checks": {
+    "files_scanned": 369,
+    "local_links_checked": 160,
+    "broken_links": 0,
+    "blocking_pattern_matches": 0,
+    "json_files_parsed": 40,
+    "external_links_not_fetched": 17
+  },
+  "approved_public_author_name": "Zohaib Hyder",
+  "approved_public_email": "250129637+zohaib-hyder@users.noreply.github.com",
+  "project_license": "MIT; explicitly approved",
+  "license_review_scope": "Source-only snapshot; native/platform binary distribution notice qualification remains outside current scope and unapproved",
+  "license_identity_followup": {
+    "application_runtime_changed": false,
+    "private_repository_changed": false,
+    "commit_created": false,
+    "git_initialized": false,
+    "external_uploads": false,
+    "local_license_files_inspected": 8,
+    "checks": {
+      "audit_guards_passed": 7,
+      "audit_guards_seconds": 0.04,
+      "ruff": "PASS",
+      "format": "PASS; 135 Python files",
+      "original_head_tree_and_15_commits_unchanged": true,
+      "original_working_tree_clean": true,
+      "publication_has_git_metadata": false,
+      "runtime_regressions_rerun": false,
+      "reason": "License/documentation-only follow-up; runtime/dependency versions unchanged"
+    }
+  },
+  "initial_commit_authorized": true,
+  "commit_evidence_scope": "This file records pre-commit checks; resulting hash, root history, committed file count and clean status are verified and reported after commit.",
+  "identity_verification": {
+    "author_name": "Zohaib Hyder",
+    "author_email": "250129637+zohaib-hyder@users.noreply.github.com",
+    "committer_name": "Zohaib Hyder",
+    "committer_email": "250129637+zohaib-hyder@users.noreply.github.com",
+    "effective_identity_matches": true,
+    "config_scope": "repository-local .git/config",
+    "identity_environment_overrides_present": false,
+    "active_include_directives": 0,
+    "hook_or_signing_overrides": 0,
+    "remotes_present": false,
+    "existing_head_before_initial_commit": false
+  },
+  "decision_scope": "Local pre-commit source audit passed; exact index and post-commit checks are separately required and reported to the owner. No publication authorized.",
+  "identity_commit_followup": {
+    "audit_guard_tests_passed": 9,
+    "seconds": 0.06,
+    "ruff": "PASS",
+    "format": "PASS; 135 files",
+    "git_exclusion_probes_passed": 15,
+    "safe_source_example_lock_probes_passed": 5,
+    "runtime_changes": false,
+    "runtime_test_suites_rerun": false,
+    "original_repository_modified": false
+  },
+  "source_cleanup_before_fresh_git_init": {
+    "publication_test_stack_removed": true,
+    "task_created_disposable_volume_removed": true,
+    "generated_local_credential_deleted": true,
+    "raw_artifacts_moved_outside_source_copy": true,
+    "original_head_count_tree_unchanged": true,
+    "original_working_tree_clean": true,
+    "publication_has_git_metadata": false
+  }
+}

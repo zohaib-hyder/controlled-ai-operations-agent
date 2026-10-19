@@ -1,0 +1,525 @@
+{
+  "scenarios": 40,
+  "metrics_accuracy": {
+    "correct": 40,
+    "total": 40
+  },
+  "detection_accuracy": {
+    "correct": 40,
+    "total": 40
+  },
+  "deduplication": {
+    "correct": 40,
+    "total": 40
+  },
+  "correlation_completeness": {
+    "correct": 36,
+    "total": 36
+  },
+  "scoped_read_authorization": {
+    "correct": 40,
+    "total": 40
+  },
+  "incident_mutation_authorization": {
+    "correct": 4,
+    "total": 4
+  },
+  "foreign_correlation_denials": {
+    "correct": 4,
+    "total": 4
+  },
+  "cross_tenant_leaks": {
+    "count": 0,
+    "total": 4
+  },
+  "alert_accuracy": {
+    "correct": 40,
+    "total": 40
+  },
+  "unsafe_business_mutations": {
+    "count": 0,
+    "total": 40
+  },
+  "cases": [
+    {
+      "case": "completed-admin",
+      "kind": "completed",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "completed-auditor",
+      "kind": "completed",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "completed-operator",
+      "kind": "completed",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "completed-reviewer",
+      "kind": "completed",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "dead-admin",
+      "kind": "dead",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "dead-auditor",
+      "kind": "dead",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "dead-operator",
+      "kind": "dead",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "dead-reviewer",
+      "kind": "dead",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "denials-admin",
+      "kind": "denials",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "denials-auditor",
+      "kind": "denials",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "denials-operator",
+      "kind": "denials",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "denials-reviewer",
+      "kind": "denials",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "empty-admin",
+      "kind": "empty",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "empty-auditor",
+      "kind": "empty",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "empty-operator",
+      "kind": "empty",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "empty-reviewer",
+      "kind": "empty",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "failed-admin",
+      "kind": "failed",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "failed-auditor",
+      "kind": "failed",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "failed-operator",
+      "kind": "failed",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "failed-reviewer",
+      "kind": "failed",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "foreign-admin",
+      "kind": "foreign",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "foreign-auditor",
+      "kind": "foreign",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "foreign-operator",
+      "kind": "foreign",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "foreign-reviewer",
+      "kind": "foreign",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "queued-admin",
+      "kind": "queued",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "queued-auditor",
+      "kind": "queued",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "queued-operator",
+      "kind": "queued",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "queued-reviewer",
+      "kind": "queued",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "recon-admin",
+      "kind": "recon",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "recon-auditor",
+      "kind": "recon",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "recon-operator",
+      "kind": "recon",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "recon-reviewer",
+      "kind": "recon",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "response-admin",
+      "kind": "response",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "response-auditor",
+      "kind": "response",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "response-operator",
+      "kind": "response",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "response-reviewer",
+      "kind": "response",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "retry-admin",
+      "kind": "retry",
+      "role": "admin",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "retry-auditor",
+      "kind": "retry",
+      "role": "auditor",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "retry-operator",
+      "kind": "retry",
+      "role": "operator",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    },
+    {
+      "case": "retry-reviewer",
+      "kind": "retry",
+      "role": "reviewer",
+      "metrics_correct": true,
+      "detection_correct": true,
+      "dedup_correct": true,
+      "correlation_correct": true,
+      "authorization_correct": true,
+      "leaks": 0,
+      "alerts_correct": true
+    }
+  ]
+}

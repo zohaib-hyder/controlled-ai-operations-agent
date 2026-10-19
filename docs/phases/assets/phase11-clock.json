@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-10-18T17:59:25.570958+00:00",
+  "samples": 100,
+  "minimum_lower_offset_seconds": -0.010892,
+  "maximum_upper_offset_seconds": 0.005625,
+  "median_midpoint_offset_seconds": -0.00254025,
+  "maximum_round_trip_seconds": 0.016517,
+  "historical_root_cause_established": false
+}

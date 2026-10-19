@@ -1,0 +1,493 @@
+[
+  {
+    "id": "payment-0",
+    "tenant": 0,
+    "index": 0,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "security-0",
+    "tenant": 0,
+    "index": 1,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "security_review_required",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "task_case": true,
+    "escalation": true
+  },
+  {
+    "id": "duplicate-0",
+    "tenant": 0,
+    "index": 2,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "reactivation-0",
+    "tenant": 0,
+    "index": 3,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "conflict-0",
+    "tenant": 0,
+    "index": 4,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "conflicting_evidence",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": true
+  },
+  {
+    "id": "untrusted_cross_request-0",
+    "tenant": 0,
+    "index": 5,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "unsupported_scenario",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "payment-1",
+    "tenant": 1,
+    "index": 0,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "security-1",
+    "tenant": 1,
+    "index": 1,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "security_review_required",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "task_case": true,
+    "escalation": true
+  },
+  {
+    "id": "duplicate-1",
+    "tenant": 1,
+    "index": 2,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "reactivation-1",
+    "tenant": 1,
+    "index": 3,
+    "variant": "normal",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "conflict-1",
+    "tenant": 1,
+    "index": 4,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "conflicting_evidence",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": true
+  },
+  {
+    "id": "untrusted_cross_request-1",
+    "tenant": 1,
+    "index": 5,
+    "variant": "normal",
+    "status": "NEEDS_REVIEW",
+    "reason": "unsupported_scenario",
+    "next_tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "task_case": true,
+    "escalation": false
+  },
+  {
+    "id": "missing_policy",
+    "tenant": 0,
+    "index": 0,
+    "variant": "missing_policy",
+    "status": "NEEDS_REVIEW",
+    "reason": "missing_evidence",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "future_superseded",
+    "tenant": 0,
+    "index": 3,
+    "variant": "future_superseded",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "missing_transactions",
+    "tenant": 0,
+    "index": 0,
+    "variant": "missing_transactions",
+    "status": "NEEDS_REVIEW",
+    "reason": "missing_evidence",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "ticket_injection",
+    "tenant": 0,
+    "index": 0,
+    "variant": "ticket_injection",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "policy_injection",
+    "tenant": 0,
+    "index": 0,
+    "variant": "policy_injection",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "cross_tenant",
+    "tenant": 0,
+    "index": 0,
+    "variant": "cross_tenant",
+    "status": "FAILED",
+    "reason": "resource_outside_investigation",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "unknown_tool",
+    "tenant": 0,
+    "index": 0,
+    "variant": "unknown_tool",
+    "status": "FAILED",
+    "reason": "unknown_tool",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "write_tool",
+    "tenant": 0,
+    "index": 0,
+    "variant": "write_tool",
+    "status": "FAILED",
+    "reason": "unknown_tool",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "invalid_version",
+    "tenant": 0,
+    "index": 0,
+    "variant": "invalid_version",
+    "status": "FAILED",
+    "reason": "unsupported_version",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "invalid_arguments",
+    "tenant": 0,
+    "index": 0,
+    "variant": "invalid_arguments",
+    "status": "FAILED",
+    "reason": "invalid_tool_arguments",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "forged_context",
+    "tenant": 0,
+    "index": 0,
+    "variant": "forged_context",
+    "status": "FAILED",
+    "reason": "invalid_planner_decision",
+    "task_case": false,
+    "unauthorized": true,
+    "loop": false
+  },
+  {
+    "id": "repeated",
+    "tenant": 0,
+    "index": 0,
+    "variant": "repeated",
+    "status": "BUDGET_EXCEEDED",
+    "reason": "repeated_tool_call",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": true
+  },
+  {
+    "id": "no_progress",
+    "tenant": 0,
+    "index": 0,
+    "variant": "no_progress",
+    "status": "BUDGET_EXCEEDED",
+    "reason": "no_progress",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": true
+  },
+  {
+    "id": "planner_timeout",
+    "tenant": 0,
+    "index": 0,
+    "variant": "planner_timeout",
+    "status": "BUDGET_EXCEEDED",
+    "reason": "wall_clock_limit",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "provider_failure",
+    "tenant": 0,
+    "index": 0,
+    "variant": "provider_failure",
+    "status": "FAILED",
+    "reason": "provider_unavailable",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "provider_timeout",
+    "tenant": 0,
+    "index": 0,
+    "variant": "provider_timeout",
+    "status": "FAILED",
+    "reason": "provider_timeout",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "oversized_provider",
+    "tenant": 0,
+    "index": 0,
+    "variant": "oversized_provider",
+    "status": "FAILED",
+    "reason": "planner_response_limit",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "tool_budget",
+    "tenant": 0,
+    "index": 0,
+    "variant": "tool_budget",
+    "status": "BUDGET_EXCEEDED",
+    "reason": "tool_call_limit",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": true
+  },
+  {
+    "id": "planning_budget",
+    "tenant": 0,
+    "index": 0,
+    "variant": "planning_budget",
+    "status": "BUDGET_EXCEEDED",
+    "reason": "planning_iteration_limit",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": true
+  },
+  {
+    "id": "cancel",
+    "tenant": 0,
+    "index": 0,
+    "variant": "cancel",
+    "status": "CANCELLED",
+    "reason": "persistent_cancellation_requested",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "recovery",
+    "tenant": 0,
+    "index": 0,
+    "variant": "recovery",
+    "status": "COMPLETED",
+    "reason": "completed",
+    "task_case": true,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "corrupt_checkpoint",
+    "tenant": 0,
+    "index": 0,
+    "variant": "corrupt_checkpoint",
+    "status": "FAILED",
+    "reason": "corrupt_checkpoint",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "database_failure",
+    "tenant": 0,
+    "index": 0,
+    "variant": "database_failure",
+    "status": "FAILED",
+    "reason": "tool_database_unavailable",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "partial_persistence",
+    "tenant": 0,
+    "index": 0,
+    "variant": "partial_persistence",
+    "status": "NEEDS_REVIEW",
+    "reason": "interrupted_tool_requires_review",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  },
+  {
+    "id": "lease_loss",
+    "tenant": 0,
+    "index": 0,
+    "variant": "lease_loss",
+    "status": "RUNNING",
+    "reason": "in_progress",
+    "task_case": false,
+    "unauthorized": false,
+    "loop": false
+  }
+]

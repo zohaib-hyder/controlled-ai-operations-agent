@@ -1,0 +1,15 @@
+> Publication note: this inherited document records private-baseline phase evolution/evidence. Paths and commit references were sanitized. Current portfolio behavior is summarized in README and docs/portfolio; fresh-copy verification is in PHASE_13A. Historical source hashes are not a new certification of this sanitized snapshot.
+
+# Tool security and reliability
+
+The executor trusts only installed Python handlers and a server-validated opaque session. It reloads user activity, tenant ownership, session expiry/revocation and current role before constructing a frozen context. Spoofed identity roles and HTTP tenant headers cannot grant access. Frozen context and repository bindings prevent accidental reassignment; trusted Python handlers are not an arbitrary-code sandbox.
+
+Every resource lookup predicates on the authenticated tenant. Related tables use tenant-constrained joins. Parent ownership is checked before child lists; foreign and missing identifiers share a safe response. Strict allowlists reject extra fields, write modes, unknown tools and unsupported versions. Read-only PostgreSQL transactions also reject accidental business writes. The owner development database credential and deferred RLS remain limitations; least-privilege database roles and RLS require later deployment work.
+
+The API requires authentication and exact trusted Origin for cookie-authenticated POST. Bounded request bodies, arguments, list limits, output bytes, four workers and persisted per-actor rate limits constrain work. The frontend is only a convenience; backend contracts and permissions are authoritative. No unrestricted database, HTTP, shell, code execution or business-write tool exists. Ticket and policy text is displayed as escaped JSON and explicitly untrusted evidence.
+
+Timeouts are cooperative in-process deadlines, backed by PostgreSQL statement timeouts and a short lock timeout. A synchronous thread cannot safely be killed. Cancellation signals the worker and drains it, closes its session and records the outcome before releasing the worker slot. Cleanup and audit persistence can extend response latency beyond the two-second handler deadline. A malicious or permanently blocked trusted Python handler could retain its slot indefinitely; this design bounds concurrency, not arbitrary Python runtime. There are no automatic retries. Connection establishment and audit infrastructure can also add latency.
+
+Success is withheld if audit completion fails. A process crash or audit outage can leave a running record; reconciliation and retention are future work. Invalid outer requests, unauthenticated requests, capacity rejection before admission and failures before a trusted context is available cannot produce an authenticated execution row. They still receive safe API errors. Metadata does not include argument bodies, result contents, tokens or internal SQL errors. Audit records are not tamper-proof against a privileged database owner.
+
+No agent orchestration, LLM selection, approvals or business mutation is implemented. These checks demonstrate synthetic local behavior, not production readiness.

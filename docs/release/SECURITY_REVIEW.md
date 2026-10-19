@@ -1,0 +1,41 @@
+> Publication note: this inherited document records private-baseline phase evolution/evidence. Paths and commit references were sanitized. Current portfolio behavior is summarized in README and docs/portfolio; fresh-copy verification is in PHASE_13A. Historical source hashes are not a new certification of this sanitized snapshot.
+
+# Local release security review
+
+Scope: fictional Northstar data, loopback HTTP, deterministic mock provider. This is not a production security assessment.
+
+Authorization, strict tool schemas, approval bindings, immediate revalidation, transactional idempotency and worker fencing remain unchanged. No agent shell, arbitrary SQL or unrestricted HTTP capability was added. The release/performance/reset scripts are operator development tools, never registered agent tools or public endpoints.
+
+The former volume-wide reset was replaced by a marked, dedicated database reset. Initialization refuses any existing database. Reset requires explicit confirmation, loopback host, exact database name `northstar_demo`, development/test, mock mode, no URL query redirection, ownership marker and no other connected clients. The database owner can forge the marker; it prevents accidental targeting, not malicious owner action. A failure after schema removal requires operator repair; no automatic rollback can recover deleted history. Preserve backups when needed.
+
+Sessions use HttpOnly cookies, persisted hashed tokens, server expiry and current-principal revalidation. Local HTTP uses insecure transport cookies intentionally; production settings require Secure cookies and exact HTTPS origins, and prohibit the demo credential. Do not expose these ports publicly or reuse demo credentials. Login throttling is database-backed; authenticated operations have their existing route limits. These are not an edge DDoS defense.
+
+CSRF uses exact trusted Origin and cross-site validation, not synchronizer tokens. The browser proxy forwards only fixed routes and sanitized identity headers. The local design assumes browser origin isolation and a trusted reverse proxy; an XSS or compromised trusted origin can act with the user's session. SameSite/cookie controls and Origin validation do not eliminate that residual risk. Future deployment needs TLS, proxy/header review, trusted-origin inventory and a separate CSRF threat assessment.
+
+Compose binds published ports to loopback. Backend and frontend run as nonroot users. Multi-stage backend runtime excludes test/build tooling and the frontend uses Next standalone output; base images still use mutable tags. All three final runtime images have now been scanned offline; unresolved high findings remain (see IMAGE_SECURITY). PostgreSQL's local owner role can bypass ORM append-only behavior. No RLS, immutable external log store, secret manager, external connector or production privilege separation has been validated. Read-only root filesystems and dropped capabilities require separate compatibility checks before enabling.
+
+Logs are structured metadata; API errors are standardized. Release logs stay in ignored artifacts and may include assertion diagnostics; inspect before sharing. Credentials are read from ignored environment configuration and never included in command argv or metric reports. No live LLM or paid API behavior is covered.
+
+The measured connection-starvation remediation changes only authentication read-transaction lifetime. A short-lived Session uses the injected bind and closes before downstream service sessions acquire connections. Immutable actor/tenant/session/role IDs are returned; all current-session predicates and deterministic immediate write revalidation remain intact. Focused authentication/invalidation and single-connection-pool tests validate this boundary; the prior full regression passed 723 tests. The security-gate follow-up changes runtime packaging/tooling, not backend authorization logic.
+
+## Phase 12 offline scan follow-up
+
+See [exact identities, findings and exposure review](IMAGE_SECURITY.md), [machine record](IMAGE_SECURITY.json) and [complete final inventory](image-security-final.csv). Grype 0.120.1 ran with disabled networking, read-only archive/DB mounts and no Docker socket/credential/repository mount. All three final images were independently scanned; no scan uploaded application artifacts. Backend and worker each retain 55 high/54 medium matches; frontend packaging remediation leaves zero high/three medium scanner matches. No critical matches were reported. That earlier image still bundled Node/OpenSSL 3.5.8; the subsequent Node 26 candidate and new vendor-library findings are assessed in RUNTIME_REVIEW.
+
+**Data boundary exception:** an early remediation `npm ci` automatically audited 397 packages and transmitted dependency metadata to npm's registry audit service. The first aborted build also had Next telemetry enabled; anonymous build metadata transmission cannot be ruled out. This violated the requested metadata boundary; it is recorded rather than omitted. Corrected builds disable npm audit/fund/update checks and telemetry, and run Next build under `--network=none`. Offline image scans were egress-disabled throughout. No whole-task zero-transmission attestation is made.
+
+Verdict remains **PARTIAL** for unresolved findings/manual component risk and the documented transmission exception. No suppressions, severity downgrades or implicit acceptance were applied.
+
+## Runtime investigation
+
+[RUNTIME_REVIEW](RUNTIME_REVIEW.md) now distinguishes 14 unique Debian High advisories from 110 duplicated image matches and records all affected package versions, actual loaded libraries, attack preconditions, fix availability and confidence limits. The offline wheel-SBOM assessment adds two High PCRE2 advisories missed by full-image package matching. No severity/ignore threshold was changed. Current stable Debian candidates equal installed libc/zlib/OpenSSL versions; unsupported library deletion or distro mixing was rejected.
+
+Official Node 26.12.0 on the same Alpine family resolves the observed static OpenSSL 3.5.8 copy with 3.5.9. Build/runtime versions match; unused Yarn/Corepack/pnpm shims are removed. This supported Current-channel choice has explicit lifecycle/compatibility limits and requires actual browser verification; no production readiness is implied. Backend/worker still need no Node, npm, compiler or Python build tools. Psycopg's mapped private native libraries remain an unresolved vendor provenance/update concern. See the per-CVE and vendor-SBOM reports rather than treating zero frontend High image matches as complete coverage.
+
+## Final runtime verification
+
+Fresh full backend regression: **727 passed, zero failed/skipped, one upstream warning, 838.59 seconds**; evaluation catalog **601/601**, no measured critical failures/evidence gaps. Ruff/format passed (133 files). Under Node **26.12.0**, frontend lint/typecheck and **50 Vitest tests** passed; production Docker build, Compose configuration and Alembic drift check passed.
+
+Final browser rerun: **64/64 passed** (52 default, four release, eight isolated negative), zero skipped/flaky cases, retries disabled. Before this final run both stacks were explicitly recreated and all six service image IDs matched the scanned digests. An earlier successful 64-case cohort is preserved separately because the old backend/worker image metadata could not be inspected. Runtime mappings were refreshed after recreation. Live health/readiness returned **200**. Restart recovery passed with durable snapshot preserved, queued job completed, one receipt/one business record and zero duplicate mutations. This is graceful queued-job restart evidence, not crash-at-commit proof. Full reviewed results: [RUNTIME_VERIFICATION.json](RUNTIME_VERIFICATION.json), [runtime inventory](RUNTIME_INVENTORY.json).
+
+**PARTIAL:** no release-policy waiver exists for the 14 unique image High CVEs plus two additional native PCRE2 High advisories. New scans/build checks uploaded no project artifacts or metadata; historical npm-audit transmission and possible telemetry remain disclosed. No full coordinator, performance or clean-volume installation rerun is implied; those prior results retain their original scope. No push, deploy, publish, live LLM, production acceptance or Phase 13.

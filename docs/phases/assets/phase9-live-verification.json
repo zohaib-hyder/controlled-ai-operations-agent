@@ -1,0 +1,15 @@
+{
+  "A": {
+    "status": "COMPLETED",
+    "job_id": "81fb7077-64d1-40ed-afd0-7b6c2b39f347"
+  },
+  "B": "same_job_no_duplicate_mutation",
+  "J": "foreign_job_404",
+  "C": "worker_process_restart_preserved_and_completed_queue",
+  "D": "expired_claim_recovered",
+  "E": "expired_approval_blocked",
+  "F": "current_permission_revocation_blocked",
+  "G": "real_sqlstate_40001_retry_completed",
+  "H": "three_conflicts_dead_lettered",
+  "I": "ambiguous_consumption_retained_no_blind_retry"
+}

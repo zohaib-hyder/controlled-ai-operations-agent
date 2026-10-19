@@ -1,0 +1,27 @@
+# Separate synthetic local instance. Requires Compose supporting !override.
+# Always use -p northstar-release12 with BOTH compose files, never against the main project.
+services:
+  db:
+    environment:
+      POSTGRES_DB: northstar_demo
+    ports: !override
+      - "127.0.0.1:55433:5432"
+  backend:
+    image: controlled-ai-operations-backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-northstar}:${POSTGRES_PASSWORD}@db:5432/northstar_demo
+      APP_ENV: development
+      AI_PROVIDER: mock
+      TRUSTED_ORIGINS: '["http://localhost:13000","http://127.0.0.1:13000","http://localhost:3000"]'
+    ports: !override
+      - "127.0.0.1:18000:8000"
+  worker:
+    image: controlled-ai-operations-worker
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-northstar}:${POSTGRES_PASSWORD}@db:5432/northstar_demo
+      APP_ENV: development
+      AI_PROVIDER: mock
+  frontend:
+    image: controlled-ai-operations-frontend
+    ports: !override
+      - "127.0.0.1:13000:3000"

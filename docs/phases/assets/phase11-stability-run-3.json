@@ -1,0 +1,18 @@
+{
+  "dataset_version": "1.0",
+  "dataset_sha256": "a0f62c2f6a407ab911ba5956948e5568392b5a653fc976939b30f2c382e4e17b",
+  "scenario_count": 601,
+  "counts": {
+    "passed": 601
+  },
+  "regression_test_counts": {
+    "passed": 710,
+    "failed": 0,
+    "skipped": 0
+  },
+  "critical_failure": false,
+  "execution_scope": "full_regression",
+  "evidence_gaps": [],
+  "critical_measured_failures": [],
+  "pytest_duration_seconds": 848.54
+}

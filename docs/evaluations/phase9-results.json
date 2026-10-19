@@ -1,0 +1,537 @@
+{
+  "scenario_count": 55,
+  "failure_scenario_count": 50,
+  "safe_outcomes": {
+    "correct": 55,
+    "total": 55
+  },
+  "safe_recovery": {
+    "correct": 20,
+    "total": 20
+  },
+  "reconciliation_correctness": {
+    "correct": 15,
+    "total": 15
+  },
+  "retry_classification": {
+    "correct": 10,
+    "total": 10
+  },
+  "dead_letter_correctness": {
+    "correct": 5,
+    "total": 5
+  },
+  "cancellation_correctness": {
+    "correct": 5,
+    "total": 5
+  },
+  "queued_authority_blocks": {
+    "correct": 10,
+    "total": 10
+  },
+  "duplicate_mutations": {
+    "count": 0,
+    "total": 55
+  },
+  "unauthorized_mutations": {
+    "count": 0,
+    "total": 55
+  },
+  "cases": [
+    {
+      "action": "reactivate_account",
+      "scenario": "role_revoked",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "lease_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "exhaustion",
+      "expected": "DEAD_LETTERED",
+      "actual": "DEAD_LETTERED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "success",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "before_execution",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "after_commit",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "policy_changed",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "policy_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "cancel",
+      "expected": "CANCELLED",
+      "actual": "CANCELLED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "resource_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "after_commit",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "serialization",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "session_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "role_revoked",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "lease_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "session_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "exhaustion",
+      "expected": "DEAD_LETTERED",
+      "actual": "DEAD_LETTERED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "serialization",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "policy_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "success",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "cancel",
+      "expected": "CANCELLED",
+      "actual": "CANCELLED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "serialization",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "before_execution",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "success",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "exhaustion",
+      "expected": "DEAD_LETTERED",
+      "actual": "DEAD_LETTERED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "session_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "policy_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "after_commit",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "exhaustion",
+      "expected": "DEAD_LETTERED",
+      "actual": "DEAD_LETTERED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "policy_changed",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "resource_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "role_revoked",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "lease_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "cancel",
+      "expected": "CANCELLED",
+      "actual": "CANCELLED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "serialization",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "cancel",
+      "expected": "CANCELLED",
+      "actual": "CANCELLED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "role_revoked",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "lease_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "cancel",
+      "expected": "CANCELLED",
+      "actual": "CANCELLED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "serialization",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "success",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "role_revoked",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "lease_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "session_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "resource_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "add_ticket_note",
+      "scenario": "session_expiry",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "before_execution",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "after_commit",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "close_duplicate_ticket",
+      "scenario": "resource_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "reactivate_account",
+      "scenario": "before_execution",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "success",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "create_customer_note",
+      "scenario": "after_commit",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "exhaustion",
+      "expected": "DEAD_LETTERED",
+      "actual": "DEAD_LETTERED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "before_execution",
+      "expected": "COMPLETED",
+      "actual": "COMPLETED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    },
+    {
+      "action": "request_account_reactivation",
+      "scenario": "resource_changed",
+      "expected": "FAILED",
+      "actual": "FAILED",
+      "duplicate_mutations": 0,
+      "unauthorized_mutations": 0,
+      "verified": true
+    }
+  ]
+}

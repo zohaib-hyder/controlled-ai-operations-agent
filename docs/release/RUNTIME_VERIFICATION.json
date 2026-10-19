@@ -1,0 +1,287 @@
+{
+  "recorded_at": "2026-10-19T13:08:49.365649+00:00",
+  "verdict": "PARTIAL",
+  "candidate_accepted": false,
+  "baseline": "private-baseline",
+  "backend": {
+    "regression_test_counts": {
+      "passed": 727,
+      "failed": 0,
+      "skipped": 0
+    },
+    "scenario_count": 601,
+    "counts": {
+      "passed": 601
+    },
+    "critical_failure": false,
+    "critical_measured_failures": [],
+    "evidence_gaps": [],
+    "dataset_sha256": "a0f62c2f6a407ab911ba5956948e5568392b5a653fc976939b30f2c382e4e17b",
+    "source_sha256": {
+      "backend/app/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/agents/checkpoints.py": "2d07b6602ea62cdbe27abda0c2b620883e31b4eedfc448f0dff4c001104b2a19",
+      "backend/app/agents/contracts.py": "8dd245431041dd0a663e35731ca7782731074280cf2a28b35962fac80543c4ab",
+      "backend/app/agents/orchestrator.py": "a716f64d77a955ee645d87dc5113a8ede4f9eeb175175ffc34590443046e1a24",
+      "backend/app/agents/persistence_contracts.py": "3daea2a3f0aa99a8291eaf4a4f2cce5f0994b6a3e8c4877b3b98f022f0663438",
+      "backend/app/agents/planner.py": "b0dbec6d913daaa8d731a4ac9e3f442d2a847447e4327b88357b1ac39dc98273",
+      "backend/app/agents/providers.py": "65429e30737f64bd67ddb178f31d7a1ad8eb8688670da237a3e0f1c25097c034",
+      "backend/app/api/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/api/actions.py": "6eb07ff5f438d169becf2c54b6f4f436af4f082005b9083ad6210367e5dcf4ff",
+      "backend/app/api/auth.py": "0a80d43bdfd6d9e143607dd9b8c08aca0b6e0ae6400977dc34ab69cd37323c27",
+      "backend/app/api/business.py": "5411c88caee4bab804280c34abcbdda2942eee9c16753e5d9abb96e204ed66a2",
+      "backend/app/api/execution.py": "6c4ae2e06a729adf7d06ce529f1c9c37752c9af02ec6496226d2fe848551df78",
+      "backend/app/api/investigations.py": "c7065f91bc5d52da70575d356bdb9cdd7f3460dec77315dfef293711e356b0ab",
+      "backend/app/api/jobs.py": "b9539809c5a4035384a556847029080f1ee83fce44f8fd19a383f5e02919da70",
+      "backend/app/api/operations.py": "68200a439a47d4030c29fdf2ce452d4de0147fe9cd9be90b880b2d2a6cd5ce26",
+      "backend/app/api/system.py": "5de1fe57fcddd3848e4fed4c6cdb75b7e1887580fc0af92ddca79d93a92176a2",
+      "backend/app/api/tools.py": "09d10d6c28663944dbdae41dca19446ac0c9a4a7c2bc61528ee84665947f19aa",
+      "backend/app/core/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/core/config.py": "c88aa8e3152d9ca44742bfb5ca5eb23190545b2cd3b239c82d7fd2de32bf4255",
+      "backend/app/core/logging.py": "31407563fdfe64a9661492076e7c7071a41c7953357feac3b32580c002614002",
+      "backend/app/core/passwords.py": "6f9ec87aa982c8b9d2d29b2f4d455c78aa89df2076e1207068a2d2b27f21f533",
+      "backend/app/core/permissions.py": "86c368ec19823d77468dee1798c124fe7ab6ddec8e3f1a7d94c0f3b74c98eb92",
+      "backend/app/core/tool_body_limit.py": "0d315de9b41827249b7a003cd1445bc6291ab3fc4bd39f25b588edc3fcee31f6",
+      "backend/app/db/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/db/seed.py": "67458f2f38dbd0aae2af132de59f119d56d86dbd99ceafa4f99019b1833a1091",
+      "backend/app/db/seed_auth.py": "9600afb33aac380bd7908fbf46a2e21b3899f2f433e997a15372a2e4bf474a94",
+      "backend/app/db/session.py": "9252fe0e7e45dc622083e8239a72b2dc69cf7c30d7b925d519f996110e35b1c4",
+      "backend/app/evaluations/__init__.py": "857dbbd1ba67520a3a3d99725fbd87a2835f2b991aa1db545555a3ce52a195cf",
+      "backend/app/evaluations/isolation.py": "a3476abc3edf8f34448f05fcecb4acbc6d89b7be5a2136643e4e003cfcb0d209",
+      "backend/app/evaluations/measurements.py": "aaed3728d25854a3d70c3cefce49e5b39410863a0f701fe1055219cc9163c1a5",
+      "backend/app/evaluations/pytest_plugin.py": "d6837d06fabb816066b0cb56af5603f5ebea484bb10c80e8073e86210de15d7a",
+      "backend/app/evaluations/red_team.py": "c62541d01da41661e76ffd95c2d534255fb2e9a94e668b2caa715aff55c87c2e",
+      "backend/app/evaluations/reporting.py": "102178e6e3b1bcbaf766a57da3eb7d913cda4700a6c686604c764a47d2601b5d",
+      "backend/app/execution/service.py": "e94332757647636cbf9c945355711e8a7eeae8e41e897b24a373492c987f61b1",
+      "backend/app/jobs/authority.py": "bf0cc01a793f8104961195f90303f21034ae579982e62c0237e92ecc3051bdf0",
+      "backend/app/jobs/contracts.py": "c55486ecf01299f5ae7744ddb8f893a86388b5797e9dc7980b25da591979e736",
+      "backend/app/jobs/metrics.py": "3650a44f1e29d7df46f674f1b6e30fe7350ca8b34e6117d96a8c8391cb83381c",
+      "backend/app/jobs/service.py": "a0edee065dfcc67baefaa3c52622da7644849a60b12aa0a739912c00ed64c7f7",
+      "backend/app/jobs/worker.py": "45515d1cfa65435f0a48ffafed62459787b4d253db1ee54b7b203cdeed12bd2a",
+      "backend/app/main.py": "1461c9d7a618d66017129e0885f2584a05aea7cfac6e4cda8d7b14d34cf0cdf9",
+      "backend/app/models/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/models/entities.py": "cb8acafc7c19f063d963eb3b0b51a415ac6b656fa7e889fe1d250765e58b436d",
+      "backend/app/operations/contracts.py": "398b192b7f777d43fed50c583ce615df2fd6e06e33145a406c1ba21ed4278ba2",
+      "backend/app/operations/incidents.py": "9c4f0ccc360475884f36091b336bab5fa05e8ef762f0e53485049e59671fd44d",
+      "backend/app/operations/service.py": "9a90bd3cc1af9eb533b0f176fba9e32cd67852ab3f218b38807f55b22ee55580",
+      "backend/app/operations/worker.py": "0da7d95730847121887717b9e08efa9037a08598c566b4a901546c29fe4af3c0",
+      "backend/app/policies/catalog.py": "91d698c82da730aa926b5baa917bd6e00ced0b3ce595ebe4c2191e6e603c6db4",
+      "backend/app/policies/engine.py": "561ececd046fc4e484d1789acf44eeec3bfd165be9a6065db1854840458010b1",
+      "backend/app/schemas/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/schemas/actions.py": "71f665954f258fe11862ca5272349abb9a4c2b26488d5dfc2753fcd4615d7f7b",
+      "backend/app/schemas/auth.py": "9444b374a76ea87cec65add8f35c25c0b1b0e87a0e4108cfd0d1ddcac7c88680",
+      "backend/app/schemas/business.py": "5bf28beebec2aeadbc9698ed89f09301e20eabe2b54fe329d5cd46f5f5dfe1b3",
+      "backend/app/schemas/evidence.py": "071f15e4742f15352a5ecb9dc8e1b23951f21450b8a9d29f7d5d23a93a444790",
+      "backend/app/schemas/execution.py": "fd9a2d805c0aea45842b5909c52844b7f08b634e4da7308fdf94699dd1dba280",
+      "backend/app/schemas/planning.py": "2f5f1839889839108c404f1dc0adaa9543f5eccabb6ed853037519362595c126",
+      "backend/app/schemas/system.py": "f14e6aba89587f3185f734f6fcfecc90a3e6acfccf777422d96a05bd9ce9de0f",
+      "backend/app/services/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "backend/app/services/authentication.py": "2f9d1f8c355a33d4afdef1615710c52050813495f4717d2de6844d2487f99420",
+      "backend/app/services/evidence.py": "bb6d67f6fa02e1bee3550d7a3c9bb516e5e115ded4971b6e311bf7576dbcb603",
+      "backend/app/services/investigations.py": "afbead8e19ffacb862b30eca85b9daeb5d3a661bea34c13b7d7fe85015dee49e",
+      "backend/app/services/repository.py": "60f5d2f77d7ce2127e5cc2d13be7ef70631866c5f5454eb2e8ad21643de291f4",
+      "backend/app/services/security_audit.py": "1a6e2603296f6fdd1dc2562f8c0f601c33a514278231043b76716d98ca73e6e5",
+      "backend/app/services/tenants.py": "3a1e31d733d6fdec641d8d2b9f9d62ac7d33f46ab48ca275a96a8b7694f55089",
+      "backend/app/tools/__init__.py": "53fedba566209f71e09ef95f506ecb5d813794f7e8189789aa5dd87c518e73a2",
+      "backend/app/tools/context.py": "e5e55e385bf4755e9cc4eb4fa055dd38bbd7e7b59e1cfccf96f4a5b12973ed3c",
+      "backend/app/tools/contracts.py": "6182612718b3a0f6a37db269889df98f9aaaa8716400ed95f33b26c666a34f9d",
+      "backend/app/tools/errors.py": "76401f0ba8da76ea5896f481ddb8a63318d422c324f925f4184d4215d0cf0dfc",
+      "backend/app/tools/executor.py": "f11e5508d7b08119cbefb5c7b1299afa2ba3be638c0816ec93ca0aecbb05a572",
+      "backend/app/tools/handlers.py": "cb40b3975d86a8311ce5755d85f87995469f9ad37c5fbaf804ba5a6006e4660d",
+      "backend/app/tools/registry.py": "5bfd4be2ef0666e48b5ca53055616da8a14f2a118997dbd1ac11a0fbcecd9bb0",
+      "backend/tests/conftest.py": "89941c4502c93acab8edc0f546c0c2df9b72bf922add9936851911ef8d076e46",
+      "backend/tests/test_agents.py": "bd5cdab86ce10f5b9daa47a96546fcb7fb7c86b456fb8d2108a6aa18d00e7192",
+      "backend/tests/test_authentication.py": "346fa2799abbc315ce350b032067a2654d5f68aa17ffe2c1ffdb05ebff1ef557",
+      "backend/tests/test_authentication_pool.py": "aba8a0c9c3e8167125b2f659ff6f9302bca29ab5b0532e65af2fe214fb744ac0",
+      "backend/tests/test_contracts.py": "b6db17bfebf0ebd1a6fa8ed12c4dfa88b62dead4b3e5a55a90f4ad9dedb53d82",
+      "backend/tests/test_controlled_execution.py": "54e254033d2f9d3b8bb422e9f3268288c94187bb02d56d5ca1d98e79d11185c6",
+      "backend/tests/test_data.py": "28c637b26433d84df222a7d3f655587c94e057cacba42290d01e87ef2d255f51",
+      "backend/tests/test_durable_jobs.py": "b18428e42b514c43e861f632e7d06d77994bce3619ee93223562b805d6022eaa",
+      "backend/tests/test_dynamic_planning.py": "397ffef777f7d4a6aa8cd734fa3479d8f2c9eba7917a988086a7d1234a11452e",
+      "backend/tests/test_evaluation_harness.py": "b1f194041fb8c9cad565d75faa29ec17755dc87a4743e2c4092ba251fc7db84f",
+      "backend/tests/test_evidence.py": "6f17a42b81bb000d40419cedda5f84280c4506779e5a5f822ef95cded3c0594c",
+      "backend/tests/test_execution_eval.py": "a4bfb95b3bdf47318ead6ca268e516a0219cf6eb200f96727e8363b322280c29",
+      "backend/tests/test_image_scan_tooling.py": "bcb2126837b41dbb9ccd04ece4aecaa320b07bcb1bbf8d3f6b381177c1de72bd",
+      "backend/tests/test_operations.py": "f2e8d0d5a47559132cdac51a5e017f69d570caddea72810f62203884072eca1e",
+      "backend/tests/test_persistence.py": "ff26506b68c14f432f7fd7bd7a1a7419c95eb3c7c7b75f57a4676db20452b5e2",
+      "backend/tests/test_phase11_boundaries.py": "5b6f9209816e7e9b5881da2ae3e0c28caf480413553b1588f826a7f2ab63c3ac",
+      "backend/tests/test_policy_engine.py": "0d950b5a62e4093857c2990a78e3bc73638f8b30c68f36b614f4fdd5e172f889",
+      "backend/tests/test_red_team.py": "d5c31d5016f541ded38713dbec7b950ba5747876b4a1847fddfb03db496d1b80",
+      "backend/tests/test_release_tooling.py": "098beaf1627d9937d7e7a58953f8de0c70c946fa7c622b9c818c6bf66ef501f5",
+      "backend/tests/test_retrieval_evaluation.py": "749ed52b92ce5a0ba0a672fc2e31f666fa7e9b5604319d06bfb1e862c019187e",
+      "backend/tests/test_system.py": "60503852b2d37a88c64d4a25e932c8595de82db4efb46fa24c320d82130aced2",
+      "backend/tests/test_tools.py": "127e1f5fd63c9df3ad8fa0aee145f7bc08546631b0888e90476d33a3743f8bd0"
+    }
+  },
+  "frontend_checks": [
+    {
+      "name": "compose-config",
+      "command": [
+        "docker",
+        "compose",
+        "config",
+        "--quiet"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "status": "PASS",
+      "duration_seconds": 0.249
+    },
+    {
+      "name": "schema-drift",
+      "command": [
+        "docker",
+        "compose",
+        "run",
+        "--rm",
+        "backend",
+        "alembic",
+        "check"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "status": "PASS",
+      "duration_seconds": 4.3
+    },
+    {
+      "name": "frontend-check-image",
+      "command": [
+        "docker",
+        "build",
+        "-f",
+        "infra/docker/frontend.Dockerfile",
+        "--target",
+        "build",
+        "--tag",
+        "controlled-ai-operations-frontend-checks:phase12",
+        "."
+      ],
+      "exit_code": 0,
+      "error": null,
+      "status": "PASS",
+      "duration_seconds": 57.315
+    },
+    {
+      "name": "frontend-node26-checks",
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--pull",
+        "never",
+        "--network",
+        "none",
+        "--entrypoint",
+        "/bin/sh",
+        "controlled-ai-operations-frontend-checks:phase12",
+        "-c",
+        "node --version && npm run lint && npm run typecheck && npm test"
+      ],
+      "exit_code": 0,
+      "error": null,
+      "status": "PASS",
+      "duration_seconds": 19.989
+    }
+  ],
+  "browser_cohorts": {
+    "default": {
+      "startTime": "2026-10-19T13:05:05.078Z",
+      "duration": 79767.725,
+      "expected": 52,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "release": {
+      "startTime": "2026-10-19T13:06:29.295Z",
+      "duration": 22686.150999999998,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "negative": {
+      "startTime": "2026-10-19T13:06:53.786Z",
+      "duration": 47112.125,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "browser_pre_binding_cohort": "64 passed; retained separately; final results repeated after exact scanned image binding",
+  "image_binding": {
+    "main": {
+      "backend": {
+        "tag_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "container_image_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "exact_match": true
+      },
+      "frontend": {
+        "tag_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "container_image_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "exact_match": true
+      },
+      "worker": {
+        "tag_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "container_image_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "exact_match": true
+      }
+    },
+    "isolated": {
+      "backend": {
+        "tag_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "container_image_id": "sha256:0c004681eed92863fc624cb73e65acf54cd05f5ea674ccf23823238b8d1f877c",
+        "exact_match": true
+      },
+      "frontend": {
+        "tag_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "container_image_id": "sha256:91cca9203d30b912187f9926740d00daada2d115cdbbb57db58c60e8f85f87a7",
+        "exact_match": true
+      },
+      "worker": {
+        "tag_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "container_image_id": "sha256:084f2503e55d718b9e8b58c5e7129bbe5508b200c8d490a54b89370ebebdf86f",
+        "exact_match": true
+      }
+    }
+  },
+  "recovery": {
+    "exit_code": 0,
+    "duration_seconds": 29.44137816699731,
+    "results": {
+      "status": "PASS",
+      "scope": "Local queued-job persistence and process restarts; not failover or interrupted-commit proof",
+      "durable_snapshot_preserved": true,
+      "queued_job_completed": true,
+      "receipt_count": 1,
+      "business_record_count": 1,
+      "duplicate_mutations": 0,
+      "job_id": "0761bae9-6c71-4928-ade4-24432ca1efcf",
+      "receipt_id": "0c347135-5cc9-4fbf-af43-0107dbf311d7",
+      "backend_restart": true,
+      "frontend_restart": true,
+      "database_restart": true,
+      "worker_restart": true,
+      "duration_seconds": 27.08244187499804
+    }
+  },
+  "live_health": {
+    "health": 200,
+    "ready": 200,
+    "frontend": 200
+  },
+  "runtime_inventory": "RUNTIME_INVENTORY.json",
+  "high_exposure": "RUNTIME_HIGH_FINDINGS.json",
+  "vendor_profile": "VENDOR_SBOM_REVIEW.json",
+  "new_project_metadata_uploads": false,
+  "historical_transmission_exception_preserved": true,
+  "limitations": [
+    "16 unique High CVEs across separate image/vendor profiles remain unresolved; no implicit waiver",
+    "Node 26 Current channel is not an LTS production qualification",
+    "Mapped libraries do not establish vulnerable function reachability",
+    "Graceful queued restart is not OS-kill-at-commit proof",
+    "Historical wall-budget failure root remains unconfirmed; eight-second budget unchanged",
+    "No new full release coordinator/performance/clean-volume install rerun; original evidence remains historical",
+    "No hosted CI, live LLM or production readiness claim"
+  ]
+}

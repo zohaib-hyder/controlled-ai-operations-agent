@@ -1,0 +1,261 @@
+{
+  "cases": [
+    {
+      "case": "ambiguous",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "authorization",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "closed_ticket",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "cross_tenant_account",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "cross_tenant_customer",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "duplicate_eligible",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "duplicate_missing_original",
+      "expected": "DENY",
+      "actual": "DENY"
+    },
+    {
+      "case": "empty_note",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "evidence",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "expired_policy",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "expiry",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "extra_argument",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "forged_ref",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "future",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "injection",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "invalid_version",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "missing_evidence",
+      "expected": "DENY",
+      "actual": "DENY"
+    },
+    {
+      "case": "note_allowed",
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "override_denied",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "oversize_note",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "policy",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "policy_injection",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "reactivate_active",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "reactivate_conflict",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "reactivate_eligible",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "reactivate_security",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "reactivate_unpaid",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "request_active",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "request_conflict",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "request_eligible",
+      "expected": "REQUIRE_APPROVAL",
+      "actual": "REQUIRE_APPROVAL",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "request_security",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "request_unpaid",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "resource",
+      "expected": "STALE",
+      "actual": "STALE"
+    },
+    {
+      "case": "script",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "secret",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "security_override",
+      "expected": "DENY",
+      "actual": "DENY"
+    },
+    {
+      "case": "short_note",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "ticket_note_allowed",
+      "expected": "ALLOW",
+      "actual": "ALLOW",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "unknown",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "wrong_account",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    },
+    {
+      "case": "wrong_customer",
+      "expected": "DENY",
+      "actual": "DENY",
+      "tenant_leakage": 0
+    }
+  ],
+  "accuracy": {
+    "numerator": 41,
+    "denominator": 41
+  },
+  "unsafe_allow": {
+    "numerator": 0,
+    "denominator": 39
+  },
+  "unsafe_require_approval": {
+    "numerator": 0,
+    "denominator": 38
+  },
+  "false_denial": {
+    "numerator": 0,
+    "denominator": 5
+  },
+  "stale_rejection": {
+    "numerator": 10,
+    "denominator": 10
+  },
+  "cross_tenant_binding_leakage": {
+    "numerator": 0,
+    "denominator": 2
+  }
+}

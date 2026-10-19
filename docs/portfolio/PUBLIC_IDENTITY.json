@@ -1,0 +1,11 @@
+{
+  "approved_public_author_name": "Zohaib Hyder",
+  "approved_public_email": "250129637+zohaib-hyder@users.noreply.github.com",
+  "email_status": "Exact public email explicitly approved by owner for author and committer",
+  "commits_authorized": true,
+  "private_identity_inheritance_allowed": false,
+  "git_initialized": true,
+  "git_config_written": true,
+  "approved_public_committer_name": "Zohaib Hyder",
+  "scope": "ONE initial local commit only; no push/publication/deployment"
+}

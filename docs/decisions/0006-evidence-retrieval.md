@@ -1,0 +1,9 @@
+# 0006 — Evidence retrieval and reconciliation
+
+Phase 5 extends the six authorized tools, not their authorization or executor. The orchestrator normalizes each successful result once, before its existing atomic evidence/checkpoint write. A canonical source collection is embedded in the existing append-only evidence JSON envelope; this preserves tenant/investigation/tool-execution composite foreign keys, ordering, checkpoint references and historical records. Optional additive fields preserve Phase 3/4 payload readability. Reconciliation and grounded findings are stored with the terminal result; partial views can derive them from persisted evidence without executing tools.
+
+Canonical IDs are UUID5 over investigation, tenant, execution, source type, identifier and version. Summaries are deterministic templates over allowlisted structured facts. Source prose cannot become instructions or factual findings. Historical transactions retain actual creation time separately from last-update time and are marked historical; operational freshness uses configurable thresholds and never substitutes collection time for a missing source timestamp.
+
+Policy applicability dates/category/resource/state/scenario require migration 0005. Search filters effective windows and selects the highest effective version per tenant/key, then ranks normalized bounded keywords with stable ties. Future versions never suppress currently effective versions. Historical policy payloads remain valid with optional metadata. Retrieval is advisory and grants no action permission.
+
+Conflicts, gaps and findings use strict schemas and bounded lists. Citation validation requires both an existing evidence ID and exact deterministic factual summary. No extra tool execution, business write, approval workflow, embedding service or Phase 6 behavior is introduced.

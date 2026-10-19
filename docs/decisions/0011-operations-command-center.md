@@ -1,0 +1,5 @@
+# 0011: Tenant-scoped operational read models and independent incident metadata
+
+Accepted for Phase 10. Reuse durable investigations, policy receipts, approvals, execution receipts, jobs and audit events. Do not build a second execution path or infer successful operations from UI state. Use PostgreSQL aggregate queries and a bounded normalized union, repeatable-read snapshots, strict UTC ranges and separately documented current backlogs. Preserve existing content API permissions while exposing role-scoped metadata through operations APIs.
+
+Add persisted worker observations because process liveness and global log counters cannot establish tenant pipeline health. Add deterministic, deduplicated incidents with append-only response history and no business side effects. Detection runs from the existing worker or an explicitly authorized endpoint, never dashboard GETs. Alert configuration only affects observability. Avoid external monitoring, notification delivery, paid dependencies and unnecessary infrastructure. No Phase 11 implementation.

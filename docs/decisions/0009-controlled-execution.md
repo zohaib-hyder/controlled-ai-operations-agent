@@ -1,0 +1,11 @@
+# 0009 — Controlled local transactional execution
+
+The audit found that the Phase 7 PDP already validates live tenant resources with locks and canonical evidence against creator-scoped investigation history. Phase 8 reuses that evaluator inside a serializable execution transaction; a narrowly explicit internal review read permits approved reviewers to inspect another actor's evidence without broadening public investigation access. Phase 7 receipt APIs remain eligibility-only.
+
+Proposal creators request approval and execute their own proposals. Reviewer/admin approval permission is separate from operator/admin execution permission; no actor may approve their own proposal. Reviewer identity and active current permission are rechecked at execution; a revoked original reviewer session invalidates the grant as well. Session IDs are internal references, never session tokens.
+
+A tenant advisory lock serializes controlled operations, with row locks on sessions/users, proposals, approval and business/evidence/policy rows. Serializable transactions protect against policy/ledger insert phantoms. No automatic serialization or network retry is performed. Atomic database mutations, verification, receipt, business record and approval consumption make same-key recovery safe. A unique proposal execution forbids a second mutation even with another key. Failed verification rolls business writes back to a savepoint before persisting FAILED; the proposal cannot be blindly retried.
+
+An uncertain database commit returns an explicit reconciliation error and instructs reuse of the same idempotency key. If storage is inaccessible it cannot honestly persist an uncertainty receipt; committed state must be retrieved when storage returns. No remote side effects are introduced. The agent and static read-only tool registry receive no execution capability.
+
+Duplicate closure also binds the live tenant-owned parent account and applies any account-state policy restriction against that parent. The verifier hashes fields outside each action's allowed change set and checks inserted business record kinds, so a handler cannot validate its own unintended field changes merely by returning a matching after hash.

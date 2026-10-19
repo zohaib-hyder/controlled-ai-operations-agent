@@ -1,0 +1,35 @@
+{
+  "scope": "Synthetic local Northstar Services verification only",
+  "migration": "0004_persistent_investigations",
+  "restart": {
+    "investigation_id": "af5b4c02-e884-41ad-8cb9-7a1d1a9c5713",
+    "backend_container_restarted": true,
+    "result_events_evidence_equal_after_restart": true,
+    "status": "COMPLETED",
+    "event_count": 26,
+    "evidence_count": 6,
+    "checkpoint_sequence": 26,
+    "result_sha256": "4957c41bddaa75cdaff893c60550f5ba1cd4deb3f80a45eb6970e3f2850ec22e",
+    "events_sha256": "31cb8a325e299d7c55d6267edf855cce3b10eb0741d6bd7e982238dd20375215",
+    "evidence_sha256": "fb79157d2b6e3ed6b4d623484f0a11375881ce5b12b9d96c28a575a410685a2a"
+  },
+  "recovery": {
+    "after_calls": 6,
+    "before_calls": 1,
+    "checkpoint": 25,
+    "get_customer_execution_count": 1,
+    "preserved_first_evidence_id": "de809c9a-434a-4095-b8a3-2d1f2e6b95fb",
+    "recovered_id": "17abfecd-080c-45fe-9a5d-b0671c3ecb41",
+    "recovery_attempts": 1,
+    "status": "COMPLETED"
+  },
+  "seed_counts": {
+    "tenants": 2,
+    "users": 8,
+    "customers": 20,
+    "accounts": 20,
+    "tickets": 30,
+    "transactions": 40,
+    "policies": 10
+  }
+}

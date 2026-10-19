@@ -1,0 +1,64 @@
+{
+  "health": {
+    "status": "ok"
+  },
+  "ready": {
+    "status": "ready"
+  },
+  "A_note": {
+    "proposal_id": "4402e670-7175-42c0-8e43-c9dff952fd38",
+    "decision": "ALLOW",
+    "reason_codes": [
+      "eligible_note"
+    ]
+  },
+  "B_reactivation": {
+    "proposal_id": "153e8049-100b-41e6-a223-df11194f6b3f",
+    "decision": "REQUIRE_APPROVAL",
+    "reason_codes": [
+      "eligible_for_review"
+    ]
+  },
+  "C_security": {
+    "proposal_id": "3373cf2a-b775-4a5e-a9b6-52c1319efcb4",
+    "decision": "DENY",
+    "reason_codes": [
+      "security_override_prohibited"
+    ]
+  },
+  "D_conflict": {
+    "proposal_id": "8f3e8207-896a-414f-ba6c-63a8a8b8611e",
+    "decision": "DENY",
+    "reason_codes": [
+      "unresolved_high_severity_conflict",
+      "ineligible_block_reason",
+      "unresolved_payment"
+    ]
+  },
+  "F_cross_tenant": {
+    "proposal_id": "1ce0fb1b-d0e5-4275-b334-d55205864e08",
+    "decision": "DENY",
+    "reason_codes": [
+      "target_not_found",
+      "missing_target_evidence"
+    ]
+  },
+  "E_stale": {
+    "status": "STALE",
+    "reasons": [
+      "resource_changed",
+      "eligibility_changed"
+    ],
+    "revalidated_decision": "DENY"
+  },
+  "G_policy_version": {
+    "status": "STALE",
+    "reasons": [
+      "resource_changed",
+      "policy_changed",
+      "eligibility_changed"
+    ]
+  },
+  "evaluation_business_mutations": 0,
+  "synthetic_fixtures_restored": true
+}

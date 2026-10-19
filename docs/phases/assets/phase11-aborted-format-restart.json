@@ -1,0 +1,10 @@
+{
+  "scenario_count": 601,
+  "counts": {
+    "missing": 601
+  },
+  "critical_failure": true,
+  "pytest_exit_code": -15,
+  "run_directory": "/tmp/northstar-phase11-complete/20261018T181826676579Z-42092",
+  "reason": "Intentionally aborted to correct a formatting-only precheck. SIGINT became agent cancellation; SIGTERM stopped the test subprocess. No results from this incomplete run establish acceptance. Disposable test rows cleared before fresh verification."
+}

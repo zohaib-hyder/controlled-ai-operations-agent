@@ -1,0 +1,595 @@
+{
+  "files_scanned": 369,
+  "blocking_pattern_matches": [],
+  "reviewed_matches": [
+    {
+      "path": ".env.example",
+      "line": 4,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "line": 32,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "line": 65,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "AGENTS.md",
+      "line": 72,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "README.md",
+      "line": 104,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "backend/app/core/config.py",
+      "line": 14,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "backend/tests/test_durable_jobs.py",
+      "line": 358,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_dynamic_planning.py",
+      "line": 100,
+      "category": "email",
+      "disposition": "reserved invalid-domain URL parser rejection fixture; not an identity"
+    },
+    {
+      "path": "backend/tests/test_dynamic_planning.py",
+      "line": 52,
+      "category": "literal_credential_review",
+      "disposition": "reviewed explicit synthetic provider-key fixture; not a configured credential"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 22,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 23,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 24,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 25,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 27,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 32,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "backend/tests/test_release_tooling.py",
+      "line": 46,
+      "category": "credential_url",
+      "disposition": "reviewed synthetic connection failure/reset-guard test fixture"
+    },
+    {
+      "path": "docker-compose.yml",
+      "line": 23,
+      "category": "credential_url",
+      "disposition": "environment substitution, no embedded credential"
+    },
+    {
+      "path": "docker-compose.yml",
+      "line": 66,
+      "category": "credential_url",
+      "disposition": "environment substitution, no embedded credential"
+    },
+    {
+      "path": "docs/evaluations/PHASE_11_DATASET.md",
+      "line": 24,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_11_STABILITY.md",
+      "line": 33,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_11_STABILITY.md",
+      "line": 39,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_11_STABILITY.md",
+      "line": 40,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_11_STABILITY.md",
+      "line": 41,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_5_RETRIEVAL.md",
+      "line": 24,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_6_AGENT_EVAL.md",
+      "line": 22,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/evaluations/PHASE_8_EXECUTION_EVAL.md",
+      "line": 12,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_0.md",
+      "line": 132,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_0.md",
+      "line": 158,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_1.md",
+      "line": 116,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_1.md",
+      "line": 133,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 54,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 55,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 56,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 59,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 61,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 72,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 73,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_10.md",
+      "line": 108,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 55,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 58,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 59,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 61,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 62,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 63,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 132,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 133,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_11.md",
+      "line": 134,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_12.md",
+      "line": 112,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_13A.md",
+      "line": 34,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_13A.md",
+      "line": 37,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_2.md",
+      "line": 46,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_2.md",
+      "line": 47,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_2.md",
+      "line": 63,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_3.md",
+      "line": 42,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_3.md",
+      "line": 43,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_3.md",
+      "line": 61,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 50,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 51,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 52,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 53,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 57,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_4.md",
+      "line": 77,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_5.md",
+      "line": 81,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_5.md",
+      "line": 86,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_6.md",
+      "line": 92,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_7.md",
+      "line": 31,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_7.md",
+      "line": 43,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_8.md",
+      "line": 22,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_8.md",
+      "line": 29,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_8.md",
+      "line": 31,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_8.md",
+      "line": 33,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 83,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 87,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 91,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 95,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 106,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/phases/PHASE_9.md",
+      "line": 109,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/portfolio/DEMO_GUIDE.md",
+      "line": 62,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/portfolio/PUBLIC_IDENTITY.json",
+      "line": 3,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "docs/portfolio/VERIFICATION.json",
+      "line": 85,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "docs/portfolio/VERIFICATION.json",
+      "line": 111,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "docs/portfolio/VERIFICATION.json",
+      "line": 113,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "docs/release/COMMANDS.md",
+      "line": 10,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/LOCAL_DEMO.md",
+      "line": 39,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/LOCAL_DEMO.md",
+      "line": 46,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/LOCAL_DEMO.md",
+      "line": 76,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/PERFORMANCE_BASELINE.md",
+      "line": 26,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/PERFORMANCE_BASELINE.md",
+      "line": 92,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "docs/release/RELEASE_CANDIDATE.md",
+      "line": 11,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "frontend/release-negative-e2e/approval-boundaries.spec.ts",
+      "line": 13,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "frontend/release-negative-e2e/approval-boundaries.spec.ts",
+      "line": 45,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    },
+    {
+      "path": "infra/docker/release.compose.yml",
+      "line": 12,
+      "category": "credential_url",
+      "disposition": "environment substitution, no embedded credential"
+    },
+    {
+      "path": "infra/docker/release.compose.yml",
+      "line": 21,
+      "category": "credential_url",
+      "disposition": "environment substitution, no embedded credential"
+    },
+    {
+      "path": "scripts/publication_checks.py",
+      "line": 11,
+      "category": "email",
+      "disposition": "exact owner-approved public Git noreply identity"
+    },
+    {
+      "path": "scripts/release_acceptance.py",
+      "line": 308,
+      "category": "credential_url",
+      "disposition": "documented public disposable synthetic local DB placeholder"
+    }
+  ],
+  "binary_files_requiring_visual_review": [
+    "docs/portfolio/assets/approval-evidence.png",
+    "docs/portfolio/assets/approval-queue.png",
+    "docs/portfolio/assets/controlled-execution-jobs.png",
+    "docs/portfolio/assets/correlation-diagnostics.png",
+    "docs/portfolio/assets/incidents-empty.png",
+    "docs/portfolio/assets/investigation-evidence.png",
+    "docs/portfolio/assets/operations-command-center.png",
+    "docs/portfolio/assets/policy-proposal.png"
+  ],
+  "local_links_checked": 160,
+  "broken_links": [],
+  "external_links_not_fetched": 17,
+  "limitations": [
+    "Local pattern and reviewed fixture checks are not a proof of absence or independent forensic audit",
+    "Markdown fragment anchors are not validated; external URLs are deliberately not fetched",
+    "Ignored development outputs are excluded from publication candidates; complete final source-only tree must also be inspected",
+    "Binary images require metadata and visual review separately"
+  ]
+}

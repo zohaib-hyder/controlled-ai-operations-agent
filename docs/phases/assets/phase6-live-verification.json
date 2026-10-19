@@ -1,0 +1,203 @@
+{
+  "A_payment": {
+    "investigation_id": "76df2cea-9b71-4de8-a187-91ddfda5350d",
+    "status": "COMPLETED",
+    "stop_reason": "completed",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 8,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "FINISH",
+      "STOP"
+    ],
+    "tool_calls": 6
+  },
+  "B_security": {
+    "investigation_id": "17375d61-1b82-4aec-a1f7-4949ce04f827",
+    "status": "NEEDS_REVIEW",
+    "stop_reason": "security_review_required",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 6,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "ESCALATE",
+      "STOP"
+    ],
+    "tool_calls": 6
+  },
+  "C_duplicate": {
+    "investigation_id": "9b328ce1-1234-4bde-9635-0dfc851008a6",
+    "status": "COMPLETED",
+    "stop_reason": "completed",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 8,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "search_policy",
+      "list_recent_transactions"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "FINISH",
+      "STOP"
+    ],
+    "tool_calls": 6
+  },
+  "D_conflict": {
+    "investigation_id": "14b8112d-2026-4c3f-942b-1f946c2afe43",
+    "status": "NEEDS_REVIEW",
+    "stop_reason": "conflicting_evidence",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 6,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "ESCALATE",
+      "STOP"
+    ],
+    "tool_calls": 6
+  },
+  "E_invalid_tool": {
+    "investigation_id": "4caee6e2-4e9f-4669-9102-bd93938a4500",
+    "status": "FAILED",
+    "stop_reason": "unknown_tool",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 2,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "STOP"
+    ],
+    "tool_calls": 2
+  },
+  "F_repeated_call": {
+    "investigation_id": "6fdb1f50-97ac-49dd-bf84-e4067635fa2e",
+    "status": "BUDGET_EXCEEDED",
+    "stop_reason": "repeated_tool_call",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 2,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "STOP"
+    ],
+    "tool_calls": 2
+  },
+  "G_cancellation": {
+    "investigation_id": "e6c56f14-7e26-46b0-b875-1a3442416beb",
+    "status": "CANCELLED",
+    "stop_reason": "persistent_cancellation_requested",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 0,
+    "tools": [],
+    "decisions": [],
+    "tool_calls": 0
+  },
+  "H_restart_recovery": {
+    "investigation_id": "e107c424-e90d-4f13-b36f-655108ee534b",
+    "status": "COMPLETED",
+    "stop_reason": "completed",
+    "planner_type": "deterministic_mock",
+    "planner_version": "2.0",
+    "iterations": 9,
+    "tools": [
+      "get_customer",
+      "list_customer_tickets",
+      "get_ticket",
+      "get_account_status",
+      "list_recent_transactions",
+      "search_policy"
+    ],
+    "decisions": [
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "CALL_TOOL",
+      "FINISH",
+      "STOP"
+    ],
+    "tool_calls": 6,
+    "before_calls": 2,
+    "original_source_ids_preserved": true,
+    "customer_execution_count": 1,
+    "recovery_attempts": 1,
+    "wall_seconds": 30.0,
+    "charged_elapsed_ms": 5666.194
+  },
+  "health": {
+    "status": "ok"
+  },
+  "ready": {
+    "status": "ready"
+  },
+  "I_phase5_compatibility": {
+    "investigation_id": "eb6b7d79-277b-499b-bd77-9f5ce0e225ff",
+    "legacy_readable": true,
+    "planner_version": "1.0",
+    "iteration_count": 8,
+    "evidence_envelopes": 6
+  }
+}

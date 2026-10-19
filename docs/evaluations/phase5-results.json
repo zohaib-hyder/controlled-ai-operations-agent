@@ -1,0 +1,290 @@
+{
+  "metrics": {
+    "cases": 28,
+    "recall_at_k": 1.0,
+    "precision_at_k": 0.8571428571428571,
+    "hits": 24,
+    "expected_references": 24,
+    "retrieved_references": 28,
+    "policy_accuracy": 1.0,
+    "policy_correct": 17,
+    "policy_cases": 17,
+    "citation_validity": 1.0,
+    "citations": 28,
+    "unsupported_factual_findings": 0,
+    "conflict_recall": 1,
+    "conflict_cases": 1,
+    "cross_tenant_leakage": 0,
+    "k": "3 for policy, 1 for direct resources"
+  },
+  "cases": [
+    {
+      "id": "policy-0-billing",
+      "expected": [
+        "19890fc2-9036-58b2-971e-8a95fe4b60da"
+      ],
+      "retrieved": [
+        "19890fc2-9036-58b2-971e-8a95fe4b60da"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-unpaid",
+      "expected": [
+        "19890fc2-9036-58b2-971e-8a95fe4b60da"
+      ],
+      "retrieved": [
+        "19890fc2-9036-58b2-971e-8a95fe4b60da"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-security",
+      "expected": [
+        "cdc8e0d4-746d-55a2-a0cf-e2974d2b51c9"
+      ],
+      "retrieved": [
+        "613b735a-2241-5d44-b362-34353872f9dd",
+        "cdc8e0d4-746d-55a2-a0cf-e2974d2b51c9"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-review",
+      "expected": [
+        "cdc8e0d4-746d-55a2-a0cf-e2974d2b51c9"
+      ],
+      "retrieved": [
+        "cdc8e0d4-746d-55a2-a0cf-e2974d2b51c9"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-duplicate",
+      "expected": [
+        "2a913d22-d31c-5454-bc98-be3ed901aa22"
+      ],
+      "retrieved": [
+        "2a913d22-d31c-5454-bc98-be3ed901aa22"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-closure",
+      "expected": [
+        "2a913d22-d31c-5454-bc98-be3ed901aa22"
+      ],
+      "retrieved": [
+        "2a913d22-d31c-5454-bc98-be3ed901aa22"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-reactivation",
+      "expected": [
+        "613b735a-2241-5d44-b362-34353872f9dd"
+      ],
+      "retrieved": [
+        "19890fc2-9036-58b2-971e-8a95fe4b60da",
+        "613b735a-2241-5d44-b362-34353872f9dd"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-0-consistent",
+      "expected": [
+        "613b735a-2241-5d44-b362-34353872f9dd"
+      ],
+      "retrieved": [
+        "613b735a-2241-5d44-b362-34353872f9dd"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-0",
+      "expected": [
+        "eb7065bc-b505-5ef6-b755-dd2db234010d"
+      ],
+      "retrieved": [
+        "eb7065bc-b505-5ef6-b755-dd2db234010d"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-1",
+      "expected": [
+        "dcfd5903-70c1-5c99-aa37-e7e4335e31be"
+      ],
+      "retrieved": [
+        "dcfd5903-70c1-5c99-aa37-e7e4335e31be"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-2",
+      "expected": [
+        "c730362e-e9fe-572d-ac45-bcc2a248fa1f"
+      ],
+      "retrieved": [
+        "c730362e-e9fe-572d-ac45-bcc2a248fa1f"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-3",
+      "expected": [
+        "745df2cf-b27e-5664-a2fe-2f3c8aaf4f1f"
+      ],
+      "retrieved": [
+        "745df2cf-b27e-5664-a2fe-2f3c8aaf4f1f"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-4",
+      "expected": [
+        "70647d1d-629a-56aa-be6e-ad7bbe0cb888"
+      ],
+      "retrieved": [
+        "70647d1d-629a-56aa-be6e-ad7bbe0cb888"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "account-5",
+      "expected": [
+        "5c1ed554-d12b-56da-8340-2bf18de021fc"
+      ],
+      "retrieved": [
+        "5c1ed554-d12b-56da-8340-2bf18de021fc"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "foreign-0",
+      "expected": [],
+      "retrieved": [],
+      "hits": 0
+    },
+    {
+      "id": "injection-ticket-0",
+      "expected": [
+        "860b0c0a-d4c7-5aaa-9ace-77bcde0e7bb1"
+      ],
+      "retrieved": [
+        "860b0c0a-d4c7-5aaa-9ace-77bcde0e7bb1"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "missing-account",
+      "expected": [],
+      "retrieved": [],
+      "hits": 0
+    },
+    {
+      "id": "policy-1-billing",
+      "expected": [
+        "446c2267-a566-5198-b638-0cb86c9bcf71"
+      ],
+      "retrieved": [
+        "446c2267-a566-5198-b638-0cb86c9bcf71"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-unpaid",
+      "expected": [
+        "446c2267-a566-5198-b638-0cb86c9bcf71"
+      ],
+      "retrieved": [
+        "446c2267-a566-5198-b638-0cb86c9bcf71"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-security",
+      "expected": [
+        "7b8ec7c8-cf78-5599-b437-056ec7e9ab13"
+      ],
+      "retrieved": [
+        "7b8ec7c8-cf78-5599-b437-056ec7e9ab13",
+        "b8c84441-3f5a-51d6-9c31-4211a723bbf3"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-review",
+      "expected": [
+        "7b8ec7c8-cf78-5599-b437-056ec7e9ab13"
+      ],
+      "retrieved": [
+        "7b8ec7c8-cf78-5599-b437-056ec7e9ab13"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-duplicate",
+      "expected": [
+        "0338cbec-5b5d-590d-8656-f92a0c404b79"
+      ],
+      "retrieved": [
+        "0338cbec-5b5d-590d-8656-f92a0c404b79"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-closure",
+      "expected": [
+        "0338cbec-5b5d-590d-8656-f92a0c404b79"
+      ],
+      "retrieved": [
+        "0338cbec-5b5d-590d-8656-f92a0c404b79"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-reactivation",
+      "expected": [
+        "b8c84441-3f5a-51d6-9c31-4211a723bbf3"
+      ],
+      "retrieved": [
+        "446c2267-a566-5198-b638-0cb86c9bcf71",
+        "b8c84441-3f5a-51d6-9c31-4211a723bbf3"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "policy-1-consistent",
+      "expected": [
+        "b8c84441-3f5a-51d6-9c31-4211a723bbf3"
+      ],
+      "retrieved": [
+        "b8c84441-3f5a-51d6-9c31-4211a723bbf3"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "foreign-1",
+      "expected": [],
+      "retrieved": [],
+      "hits": 0
+    },
+    {
+      "id": "injection-ticket-1",
+      "expected": [
+        "8bdba7b9-2152-5724-9cf3-9b313cd03519"
+      ],
+      "retrieved": [
+        "8bdba7b9-2152-5724-9cf3-9b313cd03519"
+      ],
+      "hits": 1
+    },
+    {
+      "id": "empty-policy",
+      "expected": [],
+      "retrieved": [],
+      "hits": 0
+    }
+  ]
+}
